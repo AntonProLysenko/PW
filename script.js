@@ -1,8 +1,8 @@
 var swiper = new Swiper('.swiper-container', {
     direction: 'vertical',
-    sliderPerView: 2,
+    sliderPerView: 1,
     spaceBetween: 0,
-    mousewheel: false,
+    mousewheel: true,
     pagination: {
         el:'.swiper-pagination',
         type: 'progressbar',
