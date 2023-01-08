@@ -10,6 +10,7 @@ body{
     height: 100%;
     width:100%;
     background: #eee;
+    overflow-y: hidden; 
 }
 
 
@@ -39,6 +40,7 @@ body{
     /* padding: 0 80px; */
 }
 
+/*Scrollbar*/
 .swiper-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
 .swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite, 
 .swiper-pagination-progressbar.swiper-pagination-vertical, 
