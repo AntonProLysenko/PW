@@ -39,6 +39,16 @@ body{
     /* padding: 0 80px; */
 }
 
+.swiper-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
+.swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite, 
+.swiper-pagination-progressbar.swiper-pagination-vertical, 
+.swiper-vertical>.swiper-pagination-progressbar {
+    position: absolute;
+    left:95%;
+    top: 25%;
+    height:50vh;
+}
+
 
 .home{
     background-color: #1C1C1C;
