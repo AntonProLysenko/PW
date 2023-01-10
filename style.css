@@ -29,6 +29,13 @@ body{
 }
 
 
+@media only screen and (max-width: 800px){
+    .content-container{
+        flex-direction: column-reverse;
+    }
+
+
+}
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -46,16 +53,6 @@ body{
     /* background: rgb(229, 13, 13); */
 }
 
-.content-container{
-    height: 100%;
-    width: 100%;
-    margin-right: 2%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    /* margin-left:100px; */
-}
 
 .page-container{
     display: flex;
@@ -110,22 +107,60 @@ body{
     justify-content: space-evenly;
     align-items: center;
 
+    padding: 20px;
+   
+    position: relative;
+
 }
+
+.content-container{
+    height: 100%;
+    width: 98vw;
+    padding-right: 2vw;
+    /* margin: 0 100px; */
+    /* transform-origin:center center; */
+    resize: both;
+    /* resize: both;
+    position: relative; */
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin-left:100px; */
+}
+
+
+
+.main-title>h1{
+    color: rgb(254 176 59);
+    font-size: 15vmin;
+
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Unbounded', cursive;
+}
+
 
 
 
 .project-slider{
     height: 50vmin;
-    width:50vmax;
+    width:50%;
+    min-width: 350px;
+    min-height: 200px;
+   
+    /* min-width: 600px; */
 
     display: flex;
    
     align-items: center;
     overflow: hidden;
 }
+
 .carousel{
     height: 100%;
     width: 100%;
+     /* width:50%; */
 }
 
 .carousel-control-next, .carousel-control-prev {
@@ -134,37 +169,62 @@ body{
 
 .carousel-item{
     position: relative;
+
 }
 
 .carousel-item>img{
     height: 50vmin;
-    width:max-content;
+    /* width:max-content; */
     border-radius: 3px;
 }
 .details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+
+    
     transition: .5s ease;
     opacity: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%);
+
+
+    color: whitesmoke;
 }
+.links>a{
+    color: whitesmoke;
+     text-decoration:none 
+}
+
+.links{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+
+
+
 .carousel-item:hover.carousel-item>img{
     opacity: 0.1;
 }
 .carousel-item:hover .details{
-    color: whitesmoke;
+
     opacity: 1;
 }
 
-.main-title>h1{
-    color: rgb(254 176 59);
-    font-size: 10rem;
 
-    font-family: 'Heebo', sans-serif;
-    font-family: 'Unbounded', cursive;
-}
 
 
 .contact{
