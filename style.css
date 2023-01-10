@@ -23,7 +23,8 @@ body{
     width:100%;
     background: #eee;
     overflow: hidden; 
-    display: block;
+    display: flex;
+    flex-direction: column;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -33,17 +34,35 @@ body{
     height: 100%;
 }
 
+.swiper-slide{
+    width:98%
+}
+
 .parent-slider>.swiper-wrapper>.swiper-slide {
     text-align: center;
     font-size: 18px;
     box-sizing: border-box;
+
     /* background: rgb(229, 13, 13); */
+}
+
+.content-container{
+    height: 100%;
+    width: 100%;
+    margin-right: 2%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin-left:100px; */
 }
 
 .page-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+   
 } 
 /* .carousel-item>img{
     height: auto;
@@ -67,7 +86,7 @@ body{
 .swiper-pagination-progressbar.swiper-pagination-vertical, 
 .swiper-vertical>.swiper-pagination-progressbar {
     position: absolute;
-    left:98%;
+    left:98vw;
     top: 25%;
     height:50vh;
 }
@@ -90,15 +109,10 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+
 }
 
-.projects>h1{
-    color: rgb(254 176 59);
-    font-size: 10rem;
 
-    font-family: 'Heebo', sans-serif;
-font-family: 'Unbounded', cursive;
-}
 
 .project-slider{
     height: 50vmin;
@@ -114,9 +128,12 @@ font-family: 'Unbounded', cursive;
     width: 100%;
 }
 
+.carousel-control-next, .carousel-control-prev {
+    width: 7%;
+}
+
 .carousel-item{
     position: relative;
-    
 }
 
 .carousel-item>img{
@@ -139,6 +156,14 @@ font-family: 'Unbounded', cursive;
 .carousel-item:hover .details{
     color: whitesmoke;
     opacity: 1;
+}
+
+.main-title>h1{
+    color: rgb(254 176 59);
+    font-size: 10rem;
+
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Unbounded', cursive;
 }
 
 
