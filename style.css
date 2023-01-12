@@ -41,9 +41,9 @@ body{
     height: 100%;
 }
 
-.swiper-slide{
-    width:98%
-}
+/* .swiper-slide{
+    width:100%
+} */
 
 .parent-slider>.swiper-wrapper>.swiper-slide {
     text-align: center;
@@ -228,9 +228,36 @@ body{
 
 
 .contact{
-    background-color: #000;
+    background-color: #13182e;
+    background-image: linear-gradient(45deg, #2b3147 0%, #171a24 100%);
 } 
 
+
+.field {
+    margin-bottom: 10px;
+  }
+  
+  .field label {
+    display: block;
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .field input {
+    display: block;
+    min-width: 250px;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    padding: 6px 30px;
+    font-size: 14px;
+    background-color: #4460aa;
+    color: #fff;
+    border: none;
+  }
 
 
 
