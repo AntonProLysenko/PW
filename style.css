@@ -155,6 +155,8 @@ body{
    
     align-items: center;
     overflow: hidden;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .carousel{
@@ -203,6 +205,16 @@ body{
      text-decoration:none 
 }
 
+.links>a:hover{
+    font-size: xx-large;
+    color:rgb(254 176 59);
+}
+
+.links>a:active{
+   color:rgb(140, 88, 11);
+    font-size: medium;
+}
+
 .links{
     width: 100%;
     display: flex;
@@ -232,32 +244,61 @@ body{
     background-image: linear-gradient(45deg, #2b3147 0%, #171a24 100%);
 } 
 
+.contact>.content-container{
+    flex-direction: row-reverse;
+}
 
+.contact>h1{
+    color:  #4460aa;;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
 .field {
     margin-bottom: 10px;
   }
-  
-  .field label {
-    display: block;
-    font-size: 12px;
-    color: #777;
-  }
-  
-  .field input {
+    
+  .field input,.field textarea {
     display: block;
     min-width: 250px;
     line-height: 1.5;
     font-size: 14px;
+
+    padding: 4px;
+    border: none;
+    border-radius: 2px;
+  }
+
+  .field textarea:focus, .field input:focus {
+    border: 2px solid rgb(254 176 59);;
   }
   
   input[type="submit"] {
-    display: block;
+    /* display: block; */
     padding: 6px 30px;
     font-size: 14px;
     background-color: #4460aa;
     color: #fff;
     border: none;
+    border-radius: 2px;
+    width:50%
   }
+
+  input[type="submit"]:hover{
+    background-color: rgb(209, 143, 44);
+  }
+
+  input[type="submit"]:active{
+    background-color: rgb(140, 88, 11);
+  }
+
+
+.contact-title>.links{
+    font-size:35px;
+}
 
 
 

@@ -21,13 +21,13 @@ let mainSwiper = new Swiper('.parent-slider', {
 }) 
 
 
-AOS.init();
 
-// You can also pass an optional settings object
-// below listed default settings
-AOS.init({
-  duration: 1200
-})
+
+// // You can also pass an optional settings object
+// // below listed default settings
+// AOS.init({
+//   duration: 1200
+// })
 
 
 
