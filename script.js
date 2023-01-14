@@ -42,17 +42,28 @@ navLinks.forEach((link,idx)=>{
 
 
 
-// let activeNav = document.querySelector(".swiper-pagination-bullet-active")
+//Changing icons on window size
+function updateIcons() {
+  if(window.innerWidth <= 600){
+    navLinks.forEach((link,idx)=>{
+        link.innerHTML = icons[idx]
+        // console.log(evt.target);
+      })
+  }else{
+    navLinks.forEach((link,idx)=>{
+      link.innerHTML = nav[idx]
+      // console.log(evt.target);
+    })
+  }
+}
 
-// // 
-// activeNav.innerHTML = icons[0]
-// console.log( activeNav)
-// activeNav.innerHtml='<i class="fa-sharp fa-solid fa-house"></i>'
+updateIcons();
+window.addEventListener("resize", updateIcons);
 
-// // You can also pass an optional settings object
-// // below listed default settings
-// AOS.init({
-//   duration: 1200
+
+
+// $('.carousel').carousel({
+//   touch: true
 // })
 
 
