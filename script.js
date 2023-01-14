@@ -1,3 +1,22 @@
+let nav = ['Home', 'About', 'Works', "Connect"]
+// var mySwiper = new Swiper ('.swiper-container', {
+//     // If we need pagination
+//     pagination: {
+//       el: '.swiper-pagination',
+// 			clickable: true,
+//         renderBullet: function (index, className) {
+//           return '<span class="' + className + '">' + (menu[index]) + '</span>';
+//         },
+//     },
+//   })
+
+
+
+
+
+
+
+
 let mainSwiper = new Swiper('.parent-slider', {
     direction: 'vertical',
     sliderPerView: 1,
@@ -16,7 +35,10 @@ let mainSwiper = new Swiper('.parent-slider', {
   },
     pagination: {
         el:'.swiper-pagination',
-        type: 'progressbar',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (nav[index]) + '</span>';
+        },
     }
 }) 
 

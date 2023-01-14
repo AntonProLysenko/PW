@@ -21,7 +21,7 @@ body{
     position:relative;
     height: 100%;
     width:100%;
-    background: #eee;
+    background:rgb(32 32 35);
     overflow: hidden; 
     display: flex;
     flex-direction: column;
@@ -29,9 +29,12 @@ body{
 }
 
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 600px){
     .content-container{
         flex-direction: column-reverse;
+    }
+    .contact>.content-container{
+        flex-direction: column;
     }
 
 
@@ -89,23 +92,54 @@ body{
 }
 
 
+.swiper-pagination-bullet {
+    margin-bottom: 30px;
+	padding: 5px 10px;
+	border-radius: 0;
+	width: auto;
+	height: 60px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 12px;
+	color:rgb(255, 255, 255);
+	opacity: 1;
+	background: rgba(0,0,0,0);
+
+
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Unbounded', cursive;
+
+    font-size: small;
+}
+.swiper-pagination-bullet-active {
+	color:#fff;
+	background: rgba(0,0,0,0);
+
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Unbounded', cursive;
+
+    font-size: large;
+}
+
+
 .home{
     background-color: #1C1C1C;
 }
 
 .about{
-    background-color: #fff;
+    background-color:#1a1c1e;
+    background-image: linear-gradient(45deg, #2b2e31 0%, #1a1c1e 100%);
 }
 
 .projects{
     background-color: #2a2c3a;
-    background-image: linear-gradient(45deg, #2a2c3a 0%, #21222d 100%);
+    background-image: linear-gradient(45deg, #23242c 0%, #1a1b23 100%);
     
   
 
-    flex-direction: row;
+    /* flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center; */
 
     padding: 20px;
    
@@ -156,7 +190,7 @@ body{
     align-items: center;
     overflow: hidden;
 
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 
 .carousel{
@@ -244,9 +278,9 @@ body{
     background-image: linear-gradient(45deg, #2b3147 0%, #171a24 100%);
 } 
 
-.contact>.content-container{
+/* .contact>.content-container{
     flex-direction: row-reverse;
-}
+} */
 
 .contact>h1{
     color:  #4460aa;;
@@ -255,7 +289,7 @@ body{
 #form{
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
 }
 .field {
     margin-bottom: 10px;
@@ -284,7 +318,8 @@ body{
     color: #fff;
     border: none;
     border-radius: 2px;
-    width:50%
+    width:50%;
+    align-self: flex-start;
   }
 
   input[type="submit"]:hover{
