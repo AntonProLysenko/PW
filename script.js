@@ -36,7 +36,7 @@ let navLinks = document.querySelectorAll(".swiper-pagination-bullet")
 navLinks.forEach((link,idx)=>{
   link.addEventListener("click",(evt)=>{
     link.innerHTML = icons[idx]
-    // console.log(evt.target);
+   
   })
 })
 
@@ -44,15 +44,15 @@ navLinks.forEach((link,idx)=>{
 
 //Changing icons on window size
 function updateIcons() {
-  if(window.innerWidth <= 600){
+  if(window.innerWidth <= 1200){
     navLinks.forEach((link,idx)=>{
         link.innerHTML = icons[idx]
-        // console.log(evt.target);
+       
       })
   }else{
     navLinks.forEach((link,idx)=>{
       link.innerHTML = nav[idx]
-      // console.log(evt.target);
+  
     })
   }
 }
@@ -60,11 +60,6 @@ function updateIcons() {
 updateIcons();
 window.addEventListener("resize", updateIcons);
 
-
-
-// $('.carousel').carousel({
-//   touch: true
-// })
 
 
 
