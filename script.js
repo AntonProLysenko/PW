@@ -1,6 +1,6 @@
 let nav = ['Home', 'About', 'Works', "Connect"]
 
-let icons = ['<i class="fa-sharp fa-solid fa-house"></i>','<i class="fa-solid fa-address-card"></i>','<i class="fa-solid fa-layer-group"></i>','<i class="fa-regular fa-comments"></i>']
+let icons = ['<i class="fa-sharp fa-solid fa-house"></i>','<i class="fa-solid fa-address-card"></i>','<i class="fa-solid fa-layer-group"></i>','<i class="fa-solid fa-comments"></i>']
 
 
 
@@ -24,7 +24,7 @@ let mainSwiper = new Swiper('.parent-slider', {
         el:'.swiper-pagination',
         clickable: true,
         renderBullet:(index, className)=>{
-          return '<span id = "smth" class="' + className + '">' + (nav[index]) + '</span>';
+          return '<span class="' + className + '">' + (nav[index]) + '</span>';
         }
     }
 
@@ -35,9 +35,8 @@ let navLinks = document.querySelectorAll(".swiper-pagination-bullet")
 
 navLinks.forEach((link,idx)=>{
   link.addEventListener("click",(evt)=>{
-    // evt.stopPropagation()
     link.innerHTML = icons[idx]
-    console.log(evt.target);
+    // console.log(evt.target);
   })
 })
 
