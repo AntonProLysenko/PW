@@ -18,6 +18,8 @@ html {
 
 html,
 body{
+    font-family: "Major Mono Display", monospace;
+    font-weight: bold;
     position:relative;
     height: 100%;
     width:100%;
@@ -143,7 +145,145 @@ body{
 
 .home{
     background-color: #1C1C1C;
+
 }
+
+.profile-pic{
+    width: 50vw;
+}
+
+.welcoming{
+    white-space: nowrap; /* keep text in one line */
+    overflow: hidden; /* hide text behind the cursor */
+    margin: 0.5rem auto;
+    font-family: 'Unbounded', cursive;
+
+    font-size: 2rem;
+    font-weight: bold;
+    color:   #7bc5cf  
+}
+
+
+
+
+.wrapper {
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .line-1,
+  .line-2,
+  #line-3 {
+    white-space: nowrap; /* keep text in one line */
+    overflow: hidden; /* hide text behind the cursor */
+    margin: 0.5rem auto;
+    font-family: "Major Mono Display", monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    color:   #7bc5cf  
+  }
+  
+  .line-1 {
+    animation: animated-text__1 6s steps(30, end) 1s 1 normal both;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+  }
+  
+  .line-2 {
+    animation: animated-text__2 5s steps(30, end) 1s 1 normal both;
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+  }
+
+  #line-3{
+    visibility: hidden;
+  }
+
+
+  
+  @keyframes animated-text__1 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 45rem;
+    }
+  }
+  
+  @keyframes animated-text__2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 45rem;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .arrows {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 15px;
+
+  }
+  
+  .arrows path {
+    stroke: #2994D1;
+    fill: transparent;
+    stroke-width: 2px;  
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite; 
+  }
+  
+  @keyframes arrow
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  @-webkit-keyframes arrow /*Safari and Chrome*/
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  .arrows{
+    animation-delay:9s;
+    -webkit-animation-delay:9s; /* Safari 和 Chrome */
+  }
+  .arrows path.a1 {
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a2 {
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a3 { 
+    animation-delay:0s;
+    -webkit-animation-delay:0s; /* Safari 和 Chrome */
+  }
 
 .about{
     background-color:#1a1c1e;
@@ -303,7 +443,7 @@ body{
   }
 
   .field textarea:focus, .field input:focus {
-    border: 2px solid rgb(254 176 59);;
+    border: 2px solid  #13d0e9  ;;
   }
   
   input[type="submit"] {
@@ -311,7 +451,8 @@ body{
     padding: 6px 30px;
     font-size: 14px;
     font-weight: bold;
-    background-color: rgb(3 231 161);
+    background-color: #33bbce  ;
+    /* text-align: center; */
     color: rgb(25 27 38);
     border: none;
     border-radius: 2px;
@@ -339,123 +480,3 @@ body{
 
 
 
-
-
-
-.wrapper {
-    margin-top: 5%;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .line-1,
-  .line-2,
-  #line-3 {
-    white-space: nowrap; /* keep text in one line */
-    overflow: hidden; /* hide text behind the cursor */
-    margin: 0.5rem auto;
-    font-family: "Major Mono Display", monospace;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .line-1 {
-    animation: animated-text__1 6s steps(30, end) 1s 1 normal both;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-  }
-  
-  .line-2 {
-    animation: animated-text__2 5s steps(30, end) 1s 1 normal both;
-    -webkit-animation-delay: 6s;
-    animation-delay: 6s;
-  }
-
-  #line-3{
-    visibility: hidden;
-  }
-
-
-  
-  @keyframes animated-text__1 {
-    from {
-      width: 0;
-    }
-    to {
-      width: 45rem;
-    }
-  }
-  
-  @keyframes animated-text__2 {
-    from {
-      width: 0;
-    }
-    to {
-      width: 45rem;
-    }
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .arrows {
-    width: 60px;
-    height: 72px;
-    position: absolute;
-    left: 50%;
-    margin-left: -30px;
-    bottom: 20px;
-
-  }
-  
-  .arrows path {
-    stroke: #2994D1;
-    fill: transparent;
-    stroke-width: 1px;  
-    animation: arrow 2s infinite;
-    -webkit-animation: arrow 2s infinite; 
-  }
-  
-  @keyframes arrow
-  {
-  0% {opacity:0}
-  40% {opacity:1}
-  80% {opacity:0}
-  100% {opacity:0}
-  }
-  
-  @-webkit-keyframes arrow /*Safari and Chrome*/
-  {
-  0% {opacity:0}
-  40% {opacity:1}
-  80% {opacity:0}
-  100% {opacity:0}
-  }
-  
-  .arrows{
-    animation-delay:9s;
-    -webkit-animation-delay:9s; /* Safari 和 Chrome */
-  }
-  .arrows path.a1 {
-    animation-delay:-1s;
-    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
-  }
-  
-  .arrows path.a2 {
-    animation-delay:-0.5s;
-    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
-  }
-  
-  .arrows path.a3 { 
-    animation-delay:0s;
-    -webkit-animation-delay:0s; /* Safari 和 Chrome */
-  }
