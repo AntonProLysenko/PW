@@ -124,7 +124,7 @@ body{
 	background: rgba(0,0,0,0);
 
 
-    font-family: 'Heebo', sans-serif;
+
     font-family: 'Unbounded', cursive;
 
     font-size: small;
@@ -132,12 +132,11 @@ body{
 .swiper-pagination-bullet-active {
 	color:#fff;
 	background: rgba(0,0,0,0);
-
-    font-family: 'Heebo', sans-serif;
+ 
     font-family: 'Unbounded', cursive;
-
+    font-weight: 100;
     font-size: x-large;
-    color: rgb(254 176 59);
+    color:rgb(70, 183, 149);
 }
 
 
@@ -161,11 +160,12 @@ body{
 
 
 .main-title>h1{
-    color: rgb(254 176 59);
+    color: rgb(237, 177, 93);
     font-size: 15vmin;
 
-    font-family: 'Heebo', sans-serif;
+    
     font-family: 'Unbounded', cursive;
+    font-weight: bolder;
 }
 
 
@@ -309,8 +309,9 @@ body{
     /* display: block; */
     padding: 6px 30px;
     font-size: 14px;
-    background-color: #4460aa;
-    color: #fff;
+    font-weight: bold;
+    background-color: rgb(3 231 161);
+    color: rgb(25 27 38);
     border: none;
     border-radius: 2px;
     width:50%;
@@ -318,6 +319,7 @@ body{
   }
 
   input[type="submit"]:hover{
+    color: #fff;
     background-color: rgb(209, 143, 44);
   }
 
