@@ -62,6 +62,13 @@ window.addEventListener("resize", updateIcons);
 
 
 
+let scroll = document.getElementById('line-3')
+setTimeout(function(){
+scroll.style.visibility = "visible";
+  },9000);
+
+
+
 
 const btn = document.getElementById('email-form-button');
 
