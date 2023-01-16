@@ -1,9 +1,8 @@
 let nav = ['Home', 'About', 'Works', "Connect"]
-
 let icons = ['<i class="fa-sharp fa-solid fa-house"></i>','<i class="fa-solid fa-address-card"></i>','<i class="fa-solid fa-layer-group"></i>','<i class="fa-solid fa-comments"></i>']
 
 
-
+//Swiper
 let mainSwiper = new Swiper('.parent-slider', {
     direction: 'vertical',
     sliderPerView: 1,
@@ -31,6 +30,11 @@ let mainSwiper = new Swiper('.parent-slider', {
  
 }) 
 
+
+let secondWelcoming = document.getElementById('line-2')
+let firstWelcoming = document.getElementById('line-1')
+let scroll = document.getElementById('line-3')
+let myPicture = document.querySelector('.profile-pic')
 let navLinks = document.querySelectorAll(".swiper-pagination-bullet")
 
 navLinks.forEach((link,idx)=>{
@@ -42,34 +46,62 @@ navLinks.forEach((link,idx)=>{
 
 
 
-//Changing icons on window size
-function updateIcons() {
+
+function mobileView() {
   if(window.innerWidth <= 1200){
+    scroll.style.visibility = "hidden";   
+    secondWelcoming.style.fontSize = "1rem" 
+    firstWelcoming.style.fontSize = "1rem"
+    secondWelcoming.style.width = "50vw" 
+    
+    secondWelcoming.innerText = "Please Swipe Down to see more"
+ 
+
+    
+//Changing icons on window size
     navLinks.forEach((link,idx)=>{
         link.innerHTML = icons[idx]
-       
+        link.style.fontSize = "x-large"
       })
+  // }else if(window.innerWidth <= 1100){
+  //   myPicture.style.display = "none";  
+    
+  //   console.log(myPicture);
+     
   }else{
+//Showing arrows with delay
+    setTimeout(function(){
+      scroll.style.visibility = "visible";
+        },9000);
+      
     navLinks.forEach((link,idx)=>{
       link.innerHTML = nav[idx]
-  
     })
   }
 }
 
-updateIcons();
-window.addEventListener("resize", updateIcons);
-
-
-
-let scroll = document.getElementById('line-3')
-setTimeout(function(){
-scroll.style.visibility = "visible";
-  },9000);
+mobileView();
+window.addEventListener("resize", mobileView);
 
 
 
 
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+//Sending Email
 const btn = document.getElementById('email-form-button');
 
 document.getElementById('form')
