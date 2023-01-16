@@ -150,6 +150,7 @@ body{
 .profile-pic{
   width:50%;
   position: relative;
+  align-self: flex-end;
 }
 
 .profile-pic>img{
