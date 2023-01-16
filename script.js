@@ -53,7 +53,7 @@ function mobileView() {
     secondWelcoming.style.fontSize = "1rem" 
     firstWelcoming.style.fontSize = "1rem"
     secondWelcoming.style.width = "50vw" 
-    
+
     secondWelcoming.innerText = "Please Swipe Down to see more"
  
 
@@ -63,10 +63,6 @@ function mobileView() {
         link.innerHTML = icons[idx]
         link.style.fontSize = "x-large"
       })
-  // }else if(window.innerWidth <= 1100){
-  //   myPicture.style.display = "none";  
-    
-  //   console.log(myPicture);
      
   }else{
 //Showing arrows with delay
