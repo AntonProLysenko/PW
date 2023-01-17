@@ -103,6 +103,7 @@ body{
     }
 
     .wrapper2{
+
       margin-left: -10px;
       text-align: start;
       position: absolute;
@@ -188,7 +189,6 @@ body{
       min-width:150%;
     }
   .wrapper{
-    margin-top: 15vh;
     margin-right:15vw;
     display: flex;
     flex-direction: column;
@@ -427,9 +427,9 @@ body{
   }
   
   #line-2 {
-    animation: animated-text__2 6s steps(29, end) 1s 1 normal both;
-    -webkit-animation-delay: 7s;
-    animation-delay: 7s;
+    animation: animated-text__2 5s steps(29, end) 1s 1 normal both;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
   }
 
   #line-3{
