@@ -64,12 +64,14 @@ function mobileView() {
         link.style.fontSize = "x-large"
       })
      
-  }else{
+
+  
+    }else{
 //Showing arrows with delay
     setTimeout(function(){
       scroll.style.visibility = "visible";
         },9000);
-      
+      //Swaping nav to text
     navLinks.forEach((link,idx)=>{
       link.innerHTML = nav[idx]
     })
