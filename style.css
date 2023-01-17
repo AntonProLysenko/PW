@@ -123,10 +123,10 @@ body{
       left: 102%;
       transform: translate(-50%,-50%);
       height: 100vh;
-      min-width:100%;
+      min-width:150%;
     }
   .wrapper{
-    margin-top: 25vh;
+    margin-top: 15vh;
     margin-right:15vw;
     display: flex;
     flex-direction: column;
@@ -141,7 +141,7 @@ body{
 
 
 
-@media only screen and (min-width: 821px){
+@media only screen and (min-width: 730px){
   .content-container{
     flex-direction: row;
     padding-right: 2vw;
