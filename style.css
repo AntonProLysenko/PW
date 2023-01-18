@@ -191,14 +191,15 @@ body{
 
 
 
-@media only screen and (orientation:lanscape){
+@media only screen and (orientation:landscape){
   .content-container{
     flex-direction: row;
     width:98vw;
   }
 .project-slider{
   height: 50vmin;
-  width:50%;
+  max-width:50vw;
+  min-width:50vw;
 }
 
 .welcome-wrapper{
@@ -340,13 +341,12 @@ body{
     padding: 20px;
 }
 
+
+
   input[type="submit"] {
 
     align-self:flex-start;
   }
-
-
-
 }
 
 
