@@ -422,7 +422,7 @@ body{
     font-family: 'Unbounded', cursive;
     font-weight: 100;
     font-size: x-large;
-    color:   #00DFFC   
+    color:   #5fcedc   
    
 }
 
@@ -490,7 +490,7 @@ body{
     font-family: "Major Mono Display", monospace;
     font-size: 1.2rem;
     font-weight: bold;
-    color:   #7bc5cf  
+    color:   #3a9aa7  
   }
   
   #line-1 {
@@ -525,7 +525,7 @@ body{
   }
   
   .arrows path {
-    stroke: #2994D1;
+    stroke: #0ac1d9;
     fill: transparent;
     stroke-width: 2px;  
     animation: arrow 2s infinite;
@@ -595,7 +595,7 @@ body{
 
 .about{
     background-color:#1a1c1e;
-    background-image: linear-gradient(45deg, #1f2523 0%, #050805 100%);
+    background-image: linear-gradient(45deg, #241c12 0%, #111824 100%);
 }
 .about-text{
   color: whitesmoke;
@@ -608,7 +608,7 @@ body{
 .about-text>h3{
   text-align: center;
   margin-bottom: 3vmin;
-  color:#13d0e9
+  color:#7bc5cf
 }
 
 .about-text>.links{
@@ -650,7 +650,7 @@ body{
 
 .projects{
     background-color: #2a2c3a;
-    background-image: linear-gradient(45deg, #23242c 0%, #1a1b23 100%);
+    background-image: linear-gradient(45deg, #1C1C1C 0%, #0f1b1e 100%);
     position: relative;
 }
 
@@ -717,7 +717,7 @@ body{
 
 .links>a:hover{
     /* font-size: xx-large; */
-    color: #00DFFC  ;
+    color: #7bc5cf  ;
 }
 
 .links>a:active{
@@ -782,7 +782,7 @@ body{
 
 .contact{
     background-color: #13182e;
-    background-image: linear-gradient(45deg, #2b3147 0%, #171a24 100%);
+    background-image: linear-gradient(45deg, #1C1C1C 0%, #171a24 100%);
 } 
 
 /* .contact>.content-container{
