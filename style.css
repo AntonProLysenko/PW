@@ -200,6 +200,10 @@ body{
   height: 50vmin;
   width:50%;
 }
+
+.welcome-wrapper{
+  max-height: 98vh;
+}
 }
 
 
