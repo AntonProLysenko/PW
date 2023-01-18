@@ -37,12 +37,7 @@ let scroll = document.getElementById('line-3')
 let myPicture = document.querySelector('.profile-pic')
 let navLinks = document.querySelectorAll(".swiper-pagination-bullet")
 
-navLinks.forEach((link,idx)=>{
-  link.addEventListener("click",(evt)=>{
-    link.innerHTML = icons[idx]
-   
-  })
-})
+
 
 
 
@@ -56,16 +51,12 @@ function mobileView() {
 
     secondWelcoming.innerText = "Please Swipe Down to see more"
  
-
-    
 //Changing icons on window size
     navLinks.forEach((link,idx)=>{
         link.innerHTML = icons[idx]
         link.style.fontSize = "x-large"
       })
      
-
-  
     }else{
 //Showing arrows with delay
     setTimeout(function(){
@@ -115,7 +106,7 @@ document.getElementById('form')
     .then(() => {
       btn.value = 'Send Email';
       alert('Sent!');
-      
+
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
