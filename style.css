@@ -46,20 +46,7 @@ body{
 
   
 
-    .content-container{
-        flex-direction: column-reverse;
-        /* padding-right: 0; */
-    }
-    .home>.content-container,
-    .contact>.content-container{
-        flex-direction: column;
-        padding-right: 0px;
-        width: 100vw;
-    }
 
-    .home>.content-container{
-      justify-content: flex-start;
-    }
     
     
     .welcome-wrapper{
@@ -163,21 +150,64 @@ body{
 
 
 }
-@media only screen and (min-width: 541px){
-  .profile-pic{
-    margin-top: 10%;
+@media only screen and (orientation: portrait){
+
+  .content-container{
+    flex-direction: column-reverse;
+    min-width: 100vw;
+    /* padding-right: 0; */
+}
+
+  
+  .about>.content-container,
+  .projects>.content-container{
+    flex-direction: column-reverse;
+    width:100vw;
   }
+
+  .contact>.content-container{
+    width:100vw;
+    flex-direction: column;
+  }
+
+
+
+
+.home>.content-container,
+.contact>.content-container{
+    flex-direction: column;
+    padding-right: 0px;
+    width: 100vw;
+}
+
+.home>.content-container{
+  justify-content: flex-start;
+}
 }
 
 
 
 
 
-@media only screen and (min-width: 541px) and (orientation: portrait){
+
+
+@media only screen and (orientation:lanscape){
   .content-container{
-    flex-direction: column-reverse;
-    padding-right: 0;
+    flex-direction: row;
+    width:98vw;
   }
+.project-slider{
+  height: 50vmin;
+  width:50%;
+}
+}
+
+
+
+
+
+@media only screen and (min-width: 541px){
+
   .home>.content-container{
       flex-direction: column;
       padding-right: 0px;
@@ -235,24 +265,14 @@ body{
 
     align-self:flex-start;
   }
-  .projects>.content-container{
-    flex-direction: column-reverse;
-  }
- 
-  .contact>.content-container{
-    flex-direction: column;
-  }
-  .project-slider{
-    width:100vw;
-  }
-
+  
 } 
 
 
 
 
 
-@media only screen and (min-width: 730px)and (orientation:landscape){
+@media only screen and (min-width: 730px){
   .content-container{
     flex-direction: row;
     padding-right: 2vw;
@@ -321,12 +341,12 @@ body{
     align-self:flex-start;
   }
 
-  .project-slider{
-    height: 50vmin;
-    width:50%;
-  }
+
 
 }
+
+
+
 
 
 
