@@ -1,5 +1,5 @@
 # Personl Website
-##Core Website
+## Core Website
 
 
 
