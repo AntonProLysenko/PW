@@ -186,6 +186,7 @@ body{
 
 .about-text{
   width:90vw;
+  text-align: center;
 }
 }
 
@@ -211,6 +212,8 @@ body{
 }
 .about-text{
   width:50vw;
+  text-align: center;
+
 }
 }
 
@@ -600,7 +603,7 @@ body{
 .about-text{
   color: whitesmoke;
   font-size: 1.7vmin;
-  text-align: left;
+  
   font-family: 'Unbounded', cursive;
   font-weight: 100;
   
@@ -782,7 +785,7 @@ body{
 
 .contact{
     background-color: #13182e;
-    background-image: linear-gradient(45deg, #1C1C1C 0%, #171a24 100%);
+    background-image: linear-gradient(45deg, #101220 0%, #162834 100%);
 } 
 
 /* .contact>.content-container{
