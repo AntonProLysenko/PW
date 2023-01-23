@@ -39,6 +39,13 @@ let navLinks = document.querySelectorAll(".swiper-pagination-bullet")
 
 
 
+// navLinks.forEach((link,idx)=>{
+//   link.addEventListener("click",(evt)=>{
+//     // evt.stopPropagation()
+//     link.innerHTML = icons[idx]
+//   })
+// })
+
 
 
 
