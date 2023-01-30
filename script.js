@@ -1,3 +1,5 @@
+// import { sobaka } from "./sobaka";
+
 let nav = ['Home', 'About', 'Works', "Connect"]
 let icons = ['<i class="fa-sharp fa-solid fa-house"></i>','<i class="fa-solid fa-address-card"></i>','<i class="fa-solid fa-layer-group"></i>','<i class="fa-solid fa-comments"></i>']
 
@@ -99,9 +101,11 @@ window.addEventListener("resize", mobileView);
 
 //Sending Email
 const btn = document.getElementById('email-form-button');
+const frm = document.querySelector('#form')
+const emailBox = document.querySelector('.email')
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
+ frm.addEventListener('submit', function(event) {
+  
    event.preventDefault();
 
    btn.value = 'Sending...';
@@ -112,8 +116,8 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
+      frm.reset();
       alert('Sent!');
-
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
