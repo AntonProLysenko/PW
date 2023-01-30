@@ -117,7 +117,7 @@ const emailBox = document.querySelector('.email')
     .then(() => {
       btn.value = 'Send Email';
       frm.reset();
-      emailBox.innerHTML = "<p>Thank You For Reaching Out to Me!</p><p>I’ll Get Back to You As Soon as I Read Your Email1</p>"
+      emailBox.innerHTML = "<p>Thank You For Reaching Out to Me!</p><p>I’ll Get Back to You As Soon as I Read Your Emai1</p>"
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
