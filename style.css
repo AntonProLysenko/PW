@@ -849,10 +849,15 @@ body{
 .contact-title>.links{
     font-size:35px;
 }
+.email{
+  min-width: 250px;
+  max-width: 350px;
+}
 
 .email>p{
   color:#0ac1d9;
 }
+
 
 
 
