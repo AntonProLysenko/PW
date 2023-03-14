@@ -35,7 +35,7 @@ let mainSwiper = new Swiper('.parent-slider', {
 
 let secondWelcoming = document.getElementById('line-2')
 let firstWelcoming = document.getElementById('line-1')
-let scroll = document.getElementById('line-3')
+let scrollArrows = document.getElementById('line-3')
 let myPicture = document.querySelector('.profile-pic')
 let navLinks = document.querySelectorAll(".swiper-pagination-bullet")
 
@@ -53,7 +53,7 @@ let navLinks = document.querySelectorAll(".swiper-pagination-bullet")
 
 function mobileView() {
   if(window.innerWidth <= 1200){
-    scroll.style.visibility = "hidden";   
+    scrollArrows.style.visibility = "hidden";   
     secondWelcoming.style.fontSize = "1rem" 
     firstWelcoming.style.fontSize = "1rem"
     secondWelcoming.style.width = "50vw" 
@@ -69,8 +69,8 @@ function mobileView() {
     }else{
 //Showing arrows with delay
     setTimeout(function(){
-      scroll.style.visibility = "visible";
-        },9000);
+      scrollArrows.style.visibility = "visible";
+        },4700);
       //Swaping nav to text
     navLinks.forEach((link,idx)=>{
       link.innerHTML = nav[idx]

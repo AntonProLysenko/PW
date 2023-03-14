@@ -439,6 +439,11 @@ body{
     font-family: 'Unbounded', cursive;
     font-weight: bolder;
 }
+.main-title>h3, .main-title>h4{
+    color: rgb(237, 129, 93);
+     font-family: 'Unbounded', cursive;
+    font-weight: bolder;
+}
 
 
 
@@ -496,16 +501,16 @@ body{
     color:   #3a9aa7  
   }
   
-  #line-1 {
+  /* #line-1 {
     animation: animated-text__1 4s steps(21, end) 1s 1 normal both;
     -webkit-animation-delay: 3s;
     animation-delay: 3s;
   }
-  
+   */
   #line-2 {
     animation: animated-text__2 5s steps(29, end) 1s 1 normal both;
-    -webkit-animation-delay: 7s;
-    animation-delay: 7s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
   }
 
   #line-3{
@@ -552,22 +557,22 @@ body{
   }
   
   .arrows{
-    animation-delay:9s;
-    -webkit-animation-delay:9s; /* Safari 和 Chrome */
+    animation-delay:4.7s;
+    -webkit-animation-delay:4.7s; /* Safari  Chrome */
   }
   .arrows path.a1 {
     animation-delay:-1s;
-    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+    -webkit-animation-delay:-1s; /* Safari  Chrome */
   }
   
   .arrows path.a2 {
     animation-delay:-0.5s;
-    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+    -webkit-animation-delay:-0.5s; /* Safari  Chrome */
   }
   
   .arrows path.a3 { 
     animation-delay:0s;
-    -webkit-animation-delay:0s; /* Safari 和 Chrome */
+    -webkit-animation-delay:0s; /* Safari  Chrome */
   }
 
 
