@@ -32,12 +32,12 @@ let mainSwiper = new Swiper('.parent-slider', {
  
 }) 
 
-
+let mainTitleDescription = document.querySelector(".main-title-description");
 let secondWelcoming = document.getElementById('line-2')
 let firstWelcoming = document.getElementById('line-1')
-let scrollArrows = document.getElementById('line-3')
+let scrollArrows = document.getElementById('line-3');
 let myPicture = document.querySelector('.profile-pic')
-let navLinks = document.querySelectorAll(".swiper-pagination-bullet")
+let navLinks = document.querySelectorAll('.swiper-pagination-bullet')
 
 
 
@@ -53,9 +53,14 @@ let navLinks = document.querySelectorAll(".swiper-pagination-bullet")
 
 function mobileView() {
   if(window.innerWidth <= 1200){
+
+    console.log(mainTitleDescription.style);
+    
     scrollArrows.style.visibility = "hidden";   
+    mainTitleDescription.innerHTML = "</br> Software Engineer"
+    mainTitleDescription.style.marginRight = "50px"
     secondWelcoming.style.fontSize = "1rem" 
-    firstWelcoming.style.fontSize = "1rem"
+    // firstWelcoming.style.fontSize = "1rem"
     secondWelcoming.style.width = "50vw" 
 
     secondWelcoming.innerText = "Please Swipe Down to see more"

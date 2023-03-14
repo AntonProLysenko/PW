@@ -444,6 +444,9 @@ body{
      font-family: 'Unbounded', cursive;
     font-weight: bolder;
 }
+/* .main-title-description{
+    color:   #5fcedc  ;
+} */
 
 
 
@@ -498,7 +501,9 @@ body{
     font-family: "Major Mono Display", monospace;
     font-size: 1.2rem;
     font-weight: bold;
-    color:   #3a9aa7  
+    color:   #5fcedc;
+    filter:drop-shadow(1px 1px 5px  rgb(0, 0, 0))
+  
   }
   
   /* #line-1 {
