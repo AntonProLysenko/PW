@@ -90,6 +90,8 @@ window.addEventListener("resize", mobileView);
 //Modal
 
 let modal = document.querySelector(".modal")
+let overlay = document.querySelector(".overlay")
+
 let closeButton = document.querySelector(".close")
 let openButton = document.querySelector(".open")
 
@@ -98,9 +100,12 @@ closeButton.addEventListener("click", closeHandler)
 
 function openHandler(){
   modal.style.display = "block"
+  overlay.style.display = "block"
 }
+
 function closeHandler(){
   modal.style.display = "none"
+  overlay.style.display = "none";
 }
 
 
