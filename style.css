@@ -629,6 +629,17 @@ body{
   margin-top: 10vmin;
 }
 
+.modal{
+  background-color: #13d0e9;
+  width:auto;
+  height: auto;
+  top:25vh;
+  bottom: 25vh;
+  left:25vw;
+  right:25vw;
+
+}
+
 .fa-user-tie{
   font-size: x-large;
 }

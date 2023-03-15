@@ -87,6 +87,22 @@ mobileView();
 window.addEventListener("resize", mobileView);
 
 
+//Modal
+
+let modal = document.querySelector(".modal")
+let closeButton = document.querySelector(".close")
+let openButton = document.querySelector(".open")
+
+openButton.addEventListener("click", openHandler)
+closeButton.addEventListener("click", closeHandler)
+
+function openHandler(){
+  modal.style.display = "block"
+}
+function closeHandler(){
+  modal.style.display = "none"
+}
+
 
 
 
