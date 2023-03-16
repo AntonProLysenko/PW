@@ -39,6 +39,97 @@ body{
 
 
 
+@media only screen and (orientation: portrait){
+
+  .content-container{
+    flex-direction: column-reverse;
+    min-width: 100vw;
+    /* padding-right: 0; */
+  }
+
+  
+  .about>.content-container,
+  .projects>.content-container{
+    flex-direction: column-reverse;
+    width:100vw;
+  }
+
+  .contact>.content-container{
+    width:100vw;
+    flex-direction: column;
+  }
+
+
+
+
+  .home>.content-container,
+  .contact>.content-container{
+      flex-direction: column;
+      padding-right: 0px;
+      width: 100vw;
+  }
+
+  .home>.content-container{
+    justify-content: flex-start;
+  }
+
+  .about-text{
+    font-size:4vmin;
+    width:85vw;
+    text-align:justify;
+    margin-top: -13vh
+  }
+   .modal{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    height: 85vh;
+    width: 90vw;
+
+  }
+  .project-slider{/*important! Prevent from jumping while sliding*/
+    height: 50vmin;
+    max-width:95vw;
+    min-width:95vw;
+  }
+}
+
+
+
+
+
+
+
+@media only screen and (orientation:landscape){
+  .content-container{
+    flex-direction: row;
+    width:98vw;
+  }
+  .project-slider{/*important! Prevent from jumping while sliding*/
+    height: 50vmin;
+    max-width:53vw;
+    min-width:53vw;
+  }
+
+  .welcome-wrapper{
+    max-height: 98vh;
+  }
+  .main-title-secondary{
+    margin-left: -50px;
+  }
+  .about-text{
+    width:50vw;
+    text-align: center;
+    font-size:3vmin;
+    text-align: justify;
+  }
+  .modal{
+    top:50%;
+    left:50%;
+    height: fit-content;
+    width: 50vw;
+  }
+}
 
 
 /*Mobile phone vertical*/
@@ -97,12 +188,7 @@ body{
   .wrapper>p{
     margin-block-start: 0em;
     margin-block-end: 0em;
-  }
-
-  /* #line-1{
-    text-align: start;
-  } */
-
+  }  
 
 
 
@@ -143,83 +229,7 @@ body{
 
 
 
-@media only screen and (orientation: portrait){
 
-  .content-container{
-    flex-direction: column-reverse;
-    min-width: 100vw;
-    /* padding-right: 0; */
-  }
-
-  
-  .about>.content-container,
-  .projects>.content-container{
-    flex-direction: column-reverse;
-    width:100vw;
-  }
-
-  .contact>.content-container{
-    width:100vw;
-    flex-direction: column;
-  }
-
-
-
-
-  .home>.content-container,
-  .contact>.content-container{
-      flex-direction: column;
-      padding-right: 0px;
-      width: 100vw;
-  }
-
-  .home>.content-container{
-    justify-content: flex-start;
-  }
-
-  .about-text{
-    font-size:4vmin;
-    width:85vw;
-    text-align:justify;
-    margin-top: -13vh
-  }
-  .project-slider{/*important! Prevent from jumping while sliding*/
-    height: 50vmin;
-    max-width:95vw;
-    min-width:95vw;
-  }
-}
-
-
-
-
-
-
-
-@media only screen and (orientation:landscape){
-  .content-container{
-    flex-direction: row;
-    width:98vw;
-  }
-  .project-slider{/*important! Prevent from jumping while sliding*/
-    height: 50vmin;
-    max-width:53vw;
-    min-width:53vw;
-  }
-
-  .welcome-wrapper{
-    max-height: 98vh;
-  }
-  .main-title-secondary{
-    margin-left: -50px;
-  }
-  .about-text{
-    width:50vw;
-    text-align: center;
-    font-size:3vmin;
-    text-align: justify;
-  }
-}
 
 
 
@@ -257,10 +267,6 @@ body{
   .wrapper>p{
     align-self: flex-start;
   }
-
-
-
-
 
 
   @keyframes animated-text__1 {
@@ -325,6 +331,11 @@ body{
 
   .content-container{
     width: 98vw;
+  }
+
+  .modal{
+    height: fit-content;
+    width:50vw;
   }
 
 
@@ -490,7 +501,7 @@ body{
     font-family: 'Unbounded', cursive;
     font-size: 2rem;
     font-weight: bolder;
-    color:   #7bc5cf ; 
+    color:   #5fcedc ; 
 }
 
   #line-1,
@@ -502,9 +513,8 @@ body{
     font-family: "Major Mono Display", monospace;
     font-size: 1.2rem;
     font-weight: bold;
-    color:   #5fcedc;
+    color:   #0ac1d9;
     filter:drop-shadow(1px 1px 5px  rgb(0, 0, 0))
-  
   }
   
   /* #line-1 {
@@ -611,6 +621,11 @@ body{
     background-color:#1a1c1e;
     background-image: linear-gradient(45deg, #1C1C1C 0%, #111c24 100%);
 }
+.info{
+  display: flex;
+  flex-direction: column;
+}
+
 .about-text{
   color: whitesmoke;
   
@@ -629,16 +644,23 @@ body{
   text-align: center;
   margin-top: 10vmin;
 }
+.strong{
+  color: rgb(237, 129, 93)
+}
+.open{
+  align-self: flex-start;
+  border: none;
+  background-color: none;
+  padding: 2px;
+}
 
 .modal{
-  background-color: #13d0e9;
-  width:auto;
-  height: auto;
-  top:25vh;
-  bottom: 25vh;
-  left:25vw;
-  right:25vw;
 
+  font-size: 1rem;
+  font-weight: normal;
+  background-color: #13d0e9;
+  position: absolute;
+  transform: translate(-50%,-50%);
 }
 .overlay{
   position: fixed;
