@@ -650,8 +650,14 @@ body{
 .open{
   align-self: flex-start;
   border: none;
-  background-color: none;
+  background-color: transparent;
+  color:white;
+  font-weight: bold;
   padding: 2px;
+}
+
+.open:hover{
+  color:#0ac1d9
 }
 
 .modal{
