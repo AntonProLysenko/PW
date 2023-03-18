@@ -84,9 +84,10 @@ mobileView();
 window.addEventListener("resize", mobileView);
 
 
+
+
+
 //Modal
-
-
 let overlay = document.querySelector(".overlay")
 
 let closeButton = document.querySelector(".close")
@@ -104,30 +105,15 @@ function openHandler(evt){
   mainSwiper.mousewheel = false;
 }
 
-  function closeHandler(evt){
-    if (evt.target == overlay || evt.target == closeButton || evt.target == navLinks){
-      modal.style.display = "none";
-      overlay.style.display = "none";
-    }
-     mainSwiper.allowTouchMove = true;
-     mainSwiper.mousewheel = true;
+
+function closeHandler(evt){
+  if (evt.target == overlay || evt.target == closeButton || evt.target == navLinks){
+    modal.style.display = "none";
+    overlay.style.display = "none";
   }
-
-
-
-
-
-
-
-  
-//  //prevent swiping when modal is open
-//     while (modal.style.display === "block"|| overlay.style.display === "block") {
-//       mainSwiper.allowTouchMove = false;
-//       mainSwiper.mousewheel = false;
-
-//       console.log("while working");
-      
-//     }
+    mainSwiper.allowTouchMove = true;
+    mainSwiper.mousewheel = true;
+}
 
 
 
