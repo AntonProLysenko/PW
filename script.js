@@ -109,6 +109,8 @@ function openHandler(evt){
       modal.style.display = "none";
       overlay.style.display = "none";
     }
+     mainSwiper.allowTouchMove = true;
+     mainSwiper.mousewheel = true;
   }
 
 
