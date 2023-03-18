@@ -10,6 +10,7 @@ let mainSwiper = new Swiper('.parent-slider', {
     sliderPerView: 1,
     spaceBetween: 0,
     mousewheel: true,
+    allowTouchMove:true,
     effect: 'creative',
   creativeEffect: {
     prev: {
@@ -38,7 +39,7 @@ let firstWelcoming = document.getElementById('line-1')
 let scrollArrows = document.getElementById('line-3');
 let myPicture = document.querySelector('.profile-pic')
 let navLinks = document.querySelectorAll('.swiper-pagination-bullet')
-
+let modal = document.querySelector(".modal");
 
 
 // navLinks.forEach((link,idx)=>{
@@ -52,10 +53,7 @@ let navLinks = document.querySelectorAll('.swiper-pagination-bullet')
 
 
 function mobileView() {
-  if(window.innerWidth <= 1200){
-
-    console.log(mainTitleDescription.style);
-    
+  if(window.innerWidth <= 1200){    
     scrollArrows.style.visibility = "hidden";   
     mainTitleDescription.innerHTML = "</br> Software Engineer"
     mainTitleDescription.style.marginRight = "50px"
@@ -70,6 +68,7 @@ function mobileView() {
         link.innerHTML = icons[idx]
         link.style.fontSize = "x-large"
       })
+
      
     }else{
 //Showing arrows with delay
@@ -86,10 +85,14 @@ function mobileView() {
 mobileView();
 window.addEventListener("resize", mobileView);
 
-
+//prevent swiping when modal is open
+      if ((modal.style.display == "block")) {
+        mainSwiper.allowTouchMove = false;
+        mainSwiper.mousewheel = false;
+      }
 //Modal
 
-let modal = document.querySelector(".modal")
+
 let overlay = document.querySelector(".overlay")
 
 let closeButton = document.querySelector(".close")
@@ -97,16 +100,20 @@ let openButton = document.querySelector(".open")
 
 openButton.addEventListener("click", openHandler)
 closeButton.addEventListener("click", closeHandler)
+overlay.addEventListener("click",closeHandler)
 
-function openHandler(){
+function openHandler(evt){
+
   modal.style.display = "block"
   overlay.style.display = "block"
 }
 
-function closeHandler(){
-  modal.style.display = "none"
-  overlay.style.display = "none";
-}
+  function closeHandler(evt){
+    if (evt.target == overlay || evt.target == closeButton || evt.target == navLinks){
+      modal.style.display = "none";
+      overlay.style.display = "none";
+    }
+  }
 
 
 
