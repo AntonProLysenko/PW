@@ -201,7 +201,8 @@ body{
   }
 
   .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
-      top:97%
+      top:97%;
+      left:0.1%;
   }
 
   @keyframes animated-text__1 {
