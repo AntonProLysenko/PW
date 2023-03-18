@@ -147,6 +147,9 @@ body{
     .welcome-wrapper> .main-title >h1{
           font-size: 12vmin;
   }
+  .welcoming{
+    display: none;
+  }
 
 
   .profile-pic{
@@ -224,6 +227,10 @@ body{
   .content-container{
     width: 100vw;
   }
+  .modal{
+    font-size: 16px;
+  }
+ 
 }
 
 
@@ -336,6 +343,7 @@ body{
   .modal{
     height: fit-content;
     width:50vw;
+     font-size: 24px; 
   }
 
 
@@ -679,10 +687,9 @@ color: rgb(237, 129, 93);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 7px;
 
-  color: white;
-  font-size: 1.5rem;
+  color: white; 
   font-weight: normal;
-font-family: 'Noto Sans Lepcha', sans-serif;
+  font-family: 'Noto Sans Lepcha', sans-serif;
    
   position: absolute;
   transform: translate(-50%,-50%);
