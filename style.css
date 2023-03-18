@@ -80,12 +80,11 @@ body{
     margin-top: -13vh
   }
    .modal{
-    top:50%;
+    top:45%;
     left:50%;
     transform: translate(-50%,-50%);
     height: 80vh;
     width: 90vw;
-
   }
   .project-slider{/*important! Prevent from jumping while sliding*/
     height: 50vmin;

@@ -10,7 +10,7 @@ let mainSwiper = new Swiper('.parent-slider', {
     sliderPerView: 1,
     spaceBetween: 0,
     mousewheel: true,
-    allowTouchMove:true,
+    
     effect: 'creative',
   creativeEffect: {
     prev: {
@@ -29,8 +29,7 @@ let mainSwiper = new Swiper('.parent-slider', {
           return '<span class="' + className + '">' + (nav[index]) + '</span>';
         }
     }
-
- 
+  
 }) 
 
 let mainTitleDescription = document.querySelector(".main-title-description");
@@ -53,24 +52,23 @@ let modal = document.querySelector(".modal");
 
 
 function mobileView() {
-  if(window.innerWidth <= 1200){    
-    scrollArrows.style.visibility = "hidden";   
-    mainTitleDescription.innerHTML = "</br> Software Engineer"
-    mainTitleDescription.style.marginRight = "50px"
-    secondWelcoming.style.fontSize = "1rem" 
+  if(window.innerWidth <= 1200){
+    scrollArrows.style.visibility = "hidden";
+    mainTitleDescription.innerHTML = "</br> Software Engineer";
+    mainTitleDescription.style.marginRight = "50px";
+    secondWelcoming.style.fontSize = "1rem";
     // firstWelcoming.style.fontSize = "1rem"
-    secondWelcoming.style.width = "50vw" 
+    secondWelcoming.style.width = "50vw";
 
-    secondWelcoming.innerText = "Please Swipe Down to see more"
- 
-//Changing icons on window size
-    navLinks.forEach((link,idx)=>{
-        link.innerHTML = icons[idx]
-        link.style.fontSize = "x-large"
-      })
+    secondWelcoming.innerText = "Please Swipe Down to see more";
 
-     
-    }else{
+    //Changing icons on window size
+    navLinks.forEach((link, idx) => {
+      link.innerHTML = icons[idx];
+      link.style.fontSize = "x-large";
+    });
+
+  }else{
 //Showing arrows with delay
     setTimeout(function(){
       scrollArrows.style.visibility = "visible";
@@ -85,11 +83,7 @@ function mobileView() {
 mobileView();
 window.addEventListener("resize", mobileView);
 
-//prevent swiping when modal is open
-      if ((modal.style.display == "block")) {
-        mainSwiper.allowTouchMove = false;
-        mainSwiper.mousewheel = false;
-      }
+
 //Modal
 
 
@@ -106,6 +100,8 @@ function openHandler(evt){
 
   modal.style.display = "block"
   overlay.style.display = "block"
+  mainSwiper.allowTouchMove = false;
+  mainSwiper.mousewheel = false;
 }
 
   function closeHandler(evt){
@@ -122,7 +118,14 @@ function openHandler(evt){
 
 
   
+//  //prevent swiping when modal is open
+//     while (modal.style.display === "block"|| overlay.style.display === "block") {
+//       mainSwiper.allowTouchMove = false;
+//       mainSwiper.mousewheel = false;
 
+//       console.log("while working");
+      
+//     }
 
 
 
