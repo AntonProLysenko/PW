@@ -83,7 +83,7 @@ body{
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    height: 85vh;
+    height: 80vh;
     width: 90vw;
 
   }
@@ -154,8 +154,8 @@ body{
     position: absolute;
     top:70%; 
     left: 102.5%; 
-      transform: translate(-50%,-50%); 
-      height: 100%;
+    transform: translate(-50%,-50%); 
+    height: 100%;
     min-width:150%;
   } 
 
