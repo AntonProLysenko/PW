@@ -695,6 +695,7 @@ color: rgb(237, 129, 93);
   color: white; 
   font-weight: normal;
   font-family: 'Noto Sans Lepcha', sans-serif;
+  text-align: justify;
    
   position: absolute;
   transform: translate(-50%,-50%);
