@@ -706,7 +706,7 @@ color: rgb(237, 129, 93);
 }
 
 
-.overlay{
+.overlay::after{
   position: fixed;
   top: 0;
   left: 0;
