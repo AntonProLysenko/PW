@@ -1,0 +1,83 @@
+.projects {
+    background-color: #2a2c3a;
+    background-image: linear-gradient(45deg, #1C1C1C 0%, #0f1b1e 100%);
+    background-image: -moz-linear-gradient(45deg, #1C1C1C, #0f1b1e);
+    position: relative;
+}
+
+
+
+
+
+.project-slider {
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.carousel {
+    height: 100%;
+    min-width: 100%;
+    width: 50%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 7%;
+}
+
+.carousel-item {
+    position: relative;
+
+    img {
+        height: 50vmin;
+        width: max-content;
+        border-radius: 3px;
+    }
+
+}
+
+.carousel-item:hover.carousel-item{
+    img {
+        opacity: 0.1;
+    }
+        .details {
+            opacity: 1;
+        }
+}
+
+// .carousel-item:hover 
+
+
+
+.details {
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+
+
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    backdrop-filter: blur(3px);
+
+
+    color: whitesmoke;
+
+    p {
+        width: 90%
+    }
+}
+
