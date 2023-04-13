@@ -38,8 +38,8 @@ let firstWelcoming = document.getElementById('line-1')
 let scrollArrows = document.getElementById('line-3');
 let myPicture = document.querySelector('.profile-pic')
 let navLinks = document.querySelectorAll('.swiper-pagination-bullet')
+let activeNav = document.querySelector(".swiper-pagination");
 let modal = document.querySelector(".modal");
-
 
 // navLinks.forEach((link,idx)=>{
 //   link.addEventListener("click",(evt)=>{
@@ -83,8 +83,22 @@ function mobileView() {
 mobileView();
 window.addEventListener("resize", mobileView);
 
+let checkr = false
+document.addEventListener("click", (evt)=>{
+  //  navLinks[1] === evt.target || navLinks[1].firstChild === evt.target;
+  
 
+   navLinks.forEach((link)=>{
+      if(link === evt.target || link.firstChild === evt.target){
+        return checkr = true
+      }
+      
+   })
 
+   console.log(checkr);
+   
+})
+checkr = false
 
 
 //Modal

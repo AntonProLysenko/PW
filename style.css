@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding:0;
 
@@ -28,7 +28,7 @@ body{
     display: flex;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
-}
+} */
 
 
 
@@ -381,7 +381,7 @@ body{
 
     align-self:flex-start;
   }
-}
+} 
 
 
 
@@ -389,7 +389,7 @@ body{
 
 
 
-
+/* 
 
 .swiper-container {
     width: 100%;
@@ -426,9 +426,9 @@ body{
 
 
 
-/*Scroll-navbar*/
+/*Scroll-navbar*//*
 .swiper-pagination-bullet {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 	padding: 5px 10px; 
 	border-radius: 0;
 	width: auto;
@@ -436,21 +436,16 @@ body{
 	color:rgb(255, 255, 255);
 	opacity: 1;
 	background: rgba(0,0,0,0);
-
-
-
-    font-family: 'Unbounded', cursive;
-
-    font-size: small;
+  font-family: 'Unbounded', cursive;
+  font-size: small;
 }
 .swiper-pagination-bullet-active {
 	color:#fff;
 	background: rgba(0,0,0,0);
- 
-    font-family: 'Unbounded', cursive;
-    font-weight: 100;
-    font-size: x-large;
-    color:   #5fcedc   
+  font-family: 'Unbounded', cursive;
+  font-weight: 100;
+  font-size: x-large;
+  color:   #5fcedc   
    
 }
 
@@ -459,19 +454,20 @@ body{
   z-index: 1;
 }
 .main-title>h1{
-    color: rgb(237, 177, 93);
-    font-size: 12vmin;
-    font-family: 'Unbounded', cursive;
-    font-weight: bolder;
+  color: rgb(237, 177, 93);
+  font-size: 12vmin;
+  font-family: 'Unbounded', cursive;
+  font-weight: bolder;
 }
 .main-title>h3, .main-title>h4{
-    color: rgb(237, 129, 93);
-     font-family: 'Unbounded', cursive;
-    font-weight: bolder;
+  color: rgb(237, 129, 93);
+  font-family: 'Unbounded', cursive;
+  font-weight: bolder;
 }
 /* .main-title-description{
     color:   #5fcedc  ;
 } */
+ 
 
 
 
@@ -489,15 +485,14 @@ body{
 
 
 
-
-.home{
+/* .home{
     background-color: #1C1C1C;
 
 }
 .profile-pic{
   width:50%; 
   /* position: relative;
-  align-self: flex-end; */
+  align-self: flex-end; *//*
  
 }
 
@@ -520,8 +515,8 @@ body{
   #line-1,
   #line-2,
   #line-3 {
-    white-space: nowrap; /* keep text in one line */
-    overflow: hidden; /* hide text behind the cursor */
+    white-space: nowrap; /* keep text in one line *//*
+    overflow: hidden; /* hide text behind the cursor *//*
     margin: 1rem auto;
     font-family: "Major Mono Display", monospace;
     font-size: 1.2rem;
@@ -535,7 +530,7 @@ body{
     -webkit-animation-delay: 3s;
     animation-delay: 3s;
   }
-   */
+   *//*
   #line-2 {
     animation: animated-text__2 5s steps(29, end) 1s 1 normal both;
     -webkit-animation-delay: 3s;
@@ -577,7 +572,7 @@ body{
   100% {opacity:0}
   }
   
-  @-webkit-keyframes arrow /*Safari and Chrome*/
+  @-webkit-keyframes arrow /*Safari and Chrome*//*
   {
   0% {opacity:0}
   40% {opacity:1}
@@ -587,22 +582,22 @@ body{
   
   .arrows{
     animation-delay:4.7s;
-    -webkit-animation-delay:4.7s; /* Safari  Chrome */
+    -webkit-animation-delay:4.7s; /* Safari  Chrome *//*
   }
   .arrows path.a1 {
     animation-delay:-1s;
-    -webkit-animation-delay:-1s; /* Safari  Chrome */
+    -webkit-animation-delay:-1s; /* Safari  Chrome *//*
   }
   
   .arrows path.a2 {
     animation-delay:-0.5s;
-    -webkit-animation-delay:-0.5s; /* Safari  Chrome */
+    -webkit-animation-delay:-0.5s; /* Safari  Chrome *//*
   }
   
   .arrows path.a3 { 
     animation-delay:0s;
-    -webkit-animation-delay:0s; /* Safari  Chrome */
-  }
+    -webkit-animation-delay:0s; /* Safari  Chrome *//*
+  } */
 
 
 

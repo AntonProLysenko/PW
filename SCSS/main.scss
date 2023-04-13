@@ -1,0 +1,149 @@
+// @import "mobile";
+@import "home";
+@import "about";
+@import "works";
+@import "contact";
+
+
+$white:#ffffff;
+$transparent:#00000000;
+$main-bg: #202023;
+$main-title:#edb15d;
+$secondary-title:#ed815d;
+$active-link:#5fcedc;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+
+html,
+body {
+    background: $main-bg;
+    font-family: "Major Mono Display", monospace;
+    font-weight: bold;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+
+.parent-slider{
+    .swiper-wrapper{
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+
+.content-container {
+    height: 100%;
+    resize: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+.home,
+.about,
+.projects,
+.contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+
+
+
+/*Scroll-navbar*/
+.swiper-pagination-bullet {
+    margin-bottom: 30px;
+    padding: 5px 10px;
+    border-radius: 0;
+    width: auto;
+    height: 60px;
+    color: $white;
+    opacity: 1;
+    background: $transparent;
+    font-family: 'Unbounded', cursive;
+    font-size: small;
+}
+
+.swiper-pagination-bullet-active {
+    color: $white;
+    background: $transparent;
+    font-family: 'Unbounded', cursive;
+    font-weight: 100;
+    font-size: x-large;
+    color: $active-link;
+}
+
+.main-title {
+    position: relative;
+    z-index: 1;
+}
+
+.main-title{
+    h1 {
+        color: $main-title;
+        font-size: 12vmin;
+        font-family: 'Unbounded', cursive;
+        font-weight: bolder;
+    }
+}
+
+.main-title>h3,
+.main-title>h4 {
+    color: $secondary-title;
+    font-family: 'Unbounded', cursive;
+    font-weight: bolder;
+}
+
+//  .main-title-description{
+//     color:   #5fcedc  ;
+// } 
