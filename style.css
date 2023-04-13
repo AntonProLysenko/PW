@@ -882,7 +882,7 @@ color: rgb(237, 129, 93);
 
 
 
-
+/* 
 
 .contact{
     background-color: #13182e;
@@ -891,7 +891,7 @@ color: rgb(237, 129, 93);
 
 /* .contact>.content-container{
     flex-direction: row-reverse;
-} */
+} *//*
 
 
 .contact>h1{
@@ -923,7 +923,7 @@ color: rgb(237, 129, 93);
   }
   
   input[type="submit"] {
-    /* display: block; */
+    /* display: block; *//*
     padding: 6px 0px;
     font-size: 14px;
     font-weight: bold;
@@ -933,7 +933,7 @@ color: rgb(237, 129, 93);
     border: none;
     border-radius: 2px;
     width:50%;
-    /* align-self: flex-start; */
+    /* align-self: flex-start; *//*
   }
 
   input[type="submit"]:hover{
@@ -957,7 +957,7 @@ color: rgb(237, 129, 93);
 
 .email>p{
   color:#0ac1d9;
-}
+} */
 
 
 

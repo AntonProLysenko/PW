@@ -1,6 +1,6 @@
 // import { sobaka } from "./sobaka";
 
-let nav = ['Home', 'About', 'Works', "Connect"]
+let nav = ['Home', 'About', 'Works', "Contact"]
 let icons = ['<i class="fa-sharp fa-solid fa-house"></i>','<i class="fa-solid fa-address-card"></i>','<i class="fa-solid fa-layer-group"></i>','<i class="fa-solid fa-comments"></i>']
 
 

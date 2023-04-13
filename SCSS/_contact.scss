@@ -1,0 +1,86 @@
+$active-link: #33bbce;
+
+
+
+.contact {
+    background-color: #13182e;
+    background-image: linear-gradient(45deg, #101220 0%, #162834 100%);
+}
+
+/* .contact>.content-container{
+    flex-direction: row-reverse;
+} */
+
+
+
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.field {
+    margin-bottom: 10px;
+    input,
+    textarea {
+        display: block;
+        min-width: 250px;
+        line-height: 1.5;
+        font-size: 14px;
+    
+        padding: 4px;
+        border: none;
+        border-radius: 2px;
+    }
+
+    textarea:focus,
+    input:focus {
+        border: 2px solid #13d0e9;
+    }   
+}
+
+
+
+
+
+input[type="submit"] {
+    /* display: block; */
+    padding: 6px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: $active-link;
+    text-align: center;
+    color: rgb(25 27 38);
+    border: none;
+    border-radius: 2px;
+    width: 50%;
+    /* align-self: flex-start; */
+}
+
+input[type="submit"]:hover {
+    color: #fff;
+    background-color: rgb(209, 143, 44);
+
+}
+
+input[type="submit"]:active {
+    background-color: rgb(140, 88, 11);
+}
+
+
+.contact-title{
+    .links {
+        font-size: 35px;
+    }
+}
+
+.email {
+    min-width: 250px;
+    max-width: 350px;
+
+    p {
+        color: #0ac1d9;
+    }
+}
+
