@@ -624,7 +624,7 @@ body{
 
 
 
-
+/* 
 .about{
     background-color:#1a1c1e;
     background-image: linear-gradient(45deg, #1C1C1C 0%, #111c24 100%);
@@ -716,7 +716,7 @@ color: rgb(237, 129, 93);
 
 .fa-user-tie{
   font-size: x-large;
-}
+} */
 
 
 
@@ -749,6 +749,7 @@ color: rgb(237, 129, 93);
 .projects{
     background-color: #2a2c3a;
     background-image: linear-gradient(45deg, #1C1C1C 0%, #0f1b1e 100%);
+    background-image:-moz-linear-gradient(45deg, #1C1C1C, #0f1b1e);
     position: relative;
 }
 
@@ -811,19 +812,20 @@ color: rgb(237, 129, 93);
 .details>p{
   width:90%
 }
-.links>a{
+
+/* .links>a{
     color: whitesmoke;
      text-decoration:none 
 }
 
 .links>a:hover{
-    /* font-size: xx-large; */
+    /* font-size: xx-large; *//*
     color: #0ac1d9 ;
 }
 
 .links>a:active{
    color:rgb(140, 88, 11);
-    /* font-size: medium; */
+    /* font-size: medium; *//*
 }
 
 .links{
@@ -833,7 +835,7 @@ color: rgb(237, 129, 93);
     justify-content: space-evenly;
     align-items: center;
 
-}
+} */
 
 
 
