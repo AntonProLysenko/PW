@@ -72,6 +72,9 @@ function mobileView() {
 //Showing arrows with delay
     setTimeout(function(){
       scrollArrows.style.visibility = "visible";
+
+      console.log("here");
+      
         },4700);
       //Swaping nav to text
     navLinks.forEach((link,idx)=>{

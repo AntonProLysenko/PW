@@ -1,5 +1,9 @@
+$home-background:#1c1c1c;
+$welcoming-color:#5fcedc;
+$animation-collor:#0ac1d9;
+
 .home {
-    background-color: #1C1C1C;
+    background-color: $home-background;
 
 }
 
@@ -10,10 +14,12 @@
 
 }
 
-.profile-pic>img {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
+.profile-pic{
+    img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 
@@ -23,7 +29,7 @@
     font-family: 'Unbounded', cursive;
     font-size: 2rem;
     font-weight: bolder;
-    color: #5fcedc;
+    color: $welcoming-color;
 }
 
 #line-1,
@@ -37,8 +43,8 @@
     font-family: "Major Mono Display", monospace;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #0ac1d9;
-    filter: drop-shadow(1px 1px 5px rgb(0, 0, 0))
+    color: $animation-collor;
+    
 }
 
 /* #line-1 {
@@ -51,6 +57,7 @@
     animation: animated-text__2 5s steps(29, end) 1s 1 normal both;
     -webkit-animation-delay: 3s;
     animation-delay: 3s;
+    filter: drop-shadow(1px 1px 5px rgb(0, 0, 0))
 }
 
 #line-3 {
