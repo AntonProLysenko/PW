@@ -151,8 +151,8 @@ const emailBox = document.querySelector('.email')
 
    btn.value = 'Sending...';
 
-   const serviceID = 'service_ryfc24s';
-   const templateID = 'template_g9yxsbq';
+   const serviceID = "default_service";
+   const templateID = "template_qrke2c8";
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
@@ -161,6 +161,7 @@ const emailBox = document.querySelector('.email')
       emailBox.innerHTML = "<p>Thank You For Reaching Out to Me!</p><p>I’ll Get Back to You As Soon as I Read Your Emai1</p>"
     }, (err) => {
       btn.value = 'Send Email';
+      emailBox.innerHTML ="<p>Ooops...!</p><p>Seems like an error on my side, please email me <a href='mailto:mail@antonlys.com'>mail@antonlys.com</a></p>";
       alert(JSON.stringify(err));
     });
 });
