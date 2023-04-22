@@ -8,6 +8,7 @@
     .content-container {
         @include dir(column-reverse);
         min-width: 100vw;
+        
     }
 
 
@@ -55,6 +56,10 @@
         max-height: fit-content;
     }
 
+    .timeline-container{
+       display: none;
+    }
+
     .project-slider {
         /*important! Prevent from jumping while sliding*/
         height: 50vmin;
@@ -91,6 +96,10 @@
         margin-left: -50px;
     }
 
+    .info{
+        max-width: 50vw;
+    }
+
     .about-text {
         width: 50vw;
         text-align: center;
@@ -104,6 +113,12 @@
         height: fit-content;
         width: 50vw;
         max-height: 98vh;
+    }
+
+    .timeline-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }
 
