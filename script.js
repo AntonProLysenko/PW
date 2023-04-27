@@ -14,15 +14,15 @@ let mainSwiper = new Swiper('.parent-slider', {
     effect: 'creative',
   creativeEffect: {
     prev: {
-      // will set `translateZ(-400px)` on previous slides
-      translate: [-100, -400, -200],
+      // directions of slide dissapiring[x,y,z]
+      translate: [50, -400, -300],
     },
     next: {
-      // will set `translateX(100%)` on next slides
-      translate: ["25%", "100%", 0],
+      // directions of appearing the slide[x,y,z]
+      translate: ["-10%", "100%", 0],
     },
   },
-    pagination: {
+    pagination: {//navbar
         el:'.swiper-pagination',
         clickable: true,
         renderBullet:(index, className)=>{
@@ -175,9 +175,16 @@ let animText = document.querySelectorAll(".contact-purpose")
 const connectObserver = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     entry.target.classList.toggle("line-4", entry.isIntersecting);
+
+    if(entry.isIntersecting){ 
+      connectObserver.unobserve(entry.target);
+
+      console.log("stop observer");
+      
+    }
   })
-  console.log(entries);
-  
+},{
+  threshold:0,
 })
 
 animText.forEach(line=>{
