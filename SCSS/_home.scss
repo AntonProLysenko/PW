@@ -55,8 +55,8 @@ $animation-collor:#0ac1d9;
    */
 #line-2 {
     animation: animated-text__2 5s steps(29, end) 1s 1 normal both;
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
     filter: drop-shadow(1px 1px 5px rgb(0, 0, 0))
 }
 
@@ -107,7 +107,7 @@ $animation-collor:#0ac1d9;
 
 @-webkit-keyframes arrow
 
-/*Safari and Chrome*/
+// Safari and Chrome
     {
     0% {
         opacity: 0
@@ -126,11 +126,11 @@ $animation-collor:#0ac1d9;
     }
 }
 
-.arrows {
-    animation-delay: 4.7s;
-    -webkit-animation-delay: 4.7s;
-    /* Safari  Chrome */
-}
+// .arrows {
+//     // animation-delay: 1.7s;
+//     // -webkit-animation-delay: 1.7s;
+//     /* Safari  Chrome */
+// }
 
 .arrows path.a1 {
     animation-delay: -1s;
