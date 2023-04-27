@@ -112,6 +112,21 @@ input[type="submit"]:active {
         // filter: drop-shadow(1px 1px 5px rgb(0, 0, 0))
 
 }
+.line-5{
+    white-space: nowrap;
+        /* keep text in one line */
+        overflow: hidden;
+        /* hide text behind the cursor */
+        margin: 1rem auto;
+        font-family: "Major Mono Display", monospace;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: $animation-collor;
+
+    animation: animated-text__2 5s steps(29, end) 1s 1 normal both;
+        -webkit-animation-delay: 6.5s;
+        animation-delay: 6.5s;
+}
 
 /* #line-1 {
     animation: animated-text__1 4s steps(21, end) 1s 1 normal both;

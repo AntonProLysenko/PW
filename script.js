@@ -172,14 +172,18 @@ const emailBox = document.querySelector('.email')
 //animation dellay for connect page
 let animText = document.querySelectorAll(".contact-purpose")
 
-const connectObserver = new IntersectionObserver(entries=>{
+const connectObserver2 = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    entry.target.classList.toggle("line-5", entry.isIntersecting);
+  })
+})
+
+const connectObserver1 = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     entry.target.classList.toggle("line-4", entry.isIntersecting);
 
     if(entry.isIntersecting){ 
-      connectObserver.unobserve(entry.target);
-
-      console.log("stop observer");
+      connectObserver1.unobserve(entry.target);
       
     }
   })
@@ -187,9 +191,11 @@ const connectObserver = new IntersectionObserver(entries=>{
   threshold:0,
 })
 
-animText.forEach(line=>{
-  connectObserver.observe(line)
-})
+// animText.forEach(line=>{
+//   connectObserver1.observe(line)
+// })
+connectObserver1.observe(animText[0])
+connectObserver2.observe(animText[1])
 
 
 
