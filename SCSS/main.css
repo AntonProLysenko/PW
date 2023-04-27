@@ -324,7 +324,7 @@
    */
 #line-2 {
   animation: animated-text__2 5s steps(29, end) 1s 1 normal both;
-  animation-delay: 3s;
+  animation-delay: 1s;
   filter: drop-shadow(1px 1px 5px rgb(0, 0, 0));
 }
 
@@ -363,12 +363,6 @@
     opacity: 0;
   }
 }
-.arrows {
-  animation-delay: 4.7s;
-  -webkit-animation-delay: 4.7s;
-  /* Safari  Chrome */
-}
-
 .arrows path.a1 {
   animation-delay: -1s;
   -webkit-animation-delay: -1s;
@@ -647,11 +641,10 @@ input[type=submit]:active {
   /* hide text behind the cursor */
   margin: 1rem auto;
   font-family: "Major Mono Display", monospace;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: bold;
   color: #0ac1d9;
   animation: animated-text__2 5s steps(29, end) 1s 1 normal both;
-  animation-delay: 3s;
 }
 
 /* #line-1 {

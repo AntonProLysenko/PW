@@ -15,11 +15,11 @@ let mainSwiper = new Swiper('.parent-slider', {
   creativeEffect: {
     prev: {
       // will set `translateZ(-400px)` on previous slides
-      translate: [0, 0, -400],
+      translate: [-100, -400, -200],
     },
     next: {
       // will set `translateX(100%)` on next slides
-      translate: ['100%', 0, 0],
+      translate: ["25%", "100%", 0],
     },
   },
     pagination: {
@@ -29,7 +29,6 @@ let mainSwiper = new Swiper('.parent-slider', {
           return '<span class="' + className + '">' + (nav[index]) + '</span>';
         }
     }
-  
 }) 
 
 let mainTitleDescription = document.querySelector(".main-title-description");
@@ -75,7 +74,7 @@ function mobileView() {
 
       // console.log("here");
       
-        },4700);
+        },1700);
       //Swaping nav to text
     navLinks.forEach((link,idx)=>{
       link.innerHTML = nav[idx]
@@ -166,8 +165,12 @@ const emailBox = document.querySelector('.email')
     });
 });
 
+
+
+
+
 //animation dellay for connect page
-let animText = document.querySelector(".contact-purpose")
+let animText = document.querySelectorAll(".contact-purpose")
 
 const connectObserver = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
@@ -177,7 +180,9 @@ const connectObserver = new IntersectionObserver(entries=>{
   
 })
 
-connectObserver.observe(animText)
+animText.forEach(line=>{
+  connectObserver.observe(line)
+})
 
 
 
