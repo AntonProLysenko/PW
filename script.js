@@ -175,6 +175,9 @@ let animText = document.querySelectorAll(".contact-purpose")
 const connectObserver2 = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     entry.target.classList.toggle("line-5", entry.isIntersecting);
+     if (entry.isIntersecting) {
+       connectObserver2.unobserve(entry.target);
+     }
   })
 })
 
@@ -184,6 +187,7 @@ const connectObserver1 = new IntersectionObserver(entries=>{
 
     if(entry.isIntersecting){ 
       connectObserver1.unobserve(entry.target);
+     
       
     }
   })
@@ -191,9 +195,7 @@ const connectObserver1 = new IntersectionObserver(entries=>{
   threshold:0,
 })
 
-// animText.forEach(line=>{
-//   connectObserver1.observe(line)
-// })
+
 connectObserver1.observe(animText[0])
 connectObserver2.observe(animText[1])
 
