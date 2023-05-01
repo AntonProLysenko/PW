@@ -179,14 +179,14 @@ const leftArrow = document.querySelector(".left-arrow"),
   slider = document.querySelector(".slider");
 
 function scrollRight() {
-  if ((slider.scrollWidth - slider.clientWidth)-20 <= slider.scrollLeft) {
+  if ((slider.scrollWidth - slider.clientWidth)-20 <= slider.scrollLeft) {//added -20 for more stable scrolling statement(each browser measures with in own way)
     slider.scrollTo({
       left: 0,
       behavior: "smooth",
     });
   } else {
     slider.scrollBy({
-      left: slider.clientWidth,
+      left: slider.clientWidth-20,//again aded 20 since browsers measures width on own secret conditions//issue appears in safari
       behavior: "smooth",
     });
   }
@@ -194,7 +194,7 @@ function scrollRight() {
 
 function scrollLeft() {
   slider.scrollBy({
-    left: -slider.clientWidth,
+    left: -slider.clientWidth+20,//sama thing, Safari
     behavior: "smooth",
   });
 }
@@ -202,10 +202,10 @@ function scrollLeft() {
 // Auto slider
 // let timerId = setInterval(scrollRight, 7000);
 
-function resetTimer() {
-  clearInterval(timerId);
-  timerId = setInterval(scrollRight, 7000);
-}
+// function resetTimer() {
+//   clearInterval(timerId);
+//   timerId = setInterval(scrollRight, 7000);
+// }
 
 // Scroll Events
 slider.addEventListener("click", function (ev) {
