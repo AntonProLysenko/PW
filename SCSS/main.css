@@ -567,12 +567,20 @@ h3 {
   width: 90%;
 }
 
+.slider-container {
+  width: 50vw;
+  height: 30vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 .slider {
   font-family: "Roboto", sans-serif;
   color: black;
   font-weight: 600;
   max-height: 30vh;
-  width: 50vw;
+  width: 100%;
   max-width: 50vw;
   /* position: relative; */
   display: flex;
@@ -581,13 +589,8 @@ h3 {
   scroll-snap-type: x mandatory;
 }
 
-.slider-container {
-  width: 50vw;
-  position: relative;
-}
-
 .slider__slide {
-  height: 30vh;
+  height: 100%;
   min-width: 50vw;
   width: 100%;
   font-size: 4rem;
@@ -621,36 +624,39 @@ h3 {
   transform: translateY(-50%);
   width: 30px;
   height: 35px;
-  /* background-color: black; */
   z-index: 2;
   cursor: pointer;
 }
 
 .right-arrow {
-  right: 1rem;
+  right: 0rem;
 }
 
 .left-arrow {
-  left: 1rem;
+  left: 0rem;
 }
 
 /*Arrows Drawing*/
 .right-arrow::before {
   transform: rotate(45deg);
+  right: 0px;
 }
 
 .right-arrow::after {
   transform: rotate(-45deg);
-  bottom: 14px;
+  bottom: 15px;
+  right: 0px;
 }
 
 .left-arrow::before {
   transform: rotate(-45deg);
+  left: 0px;
 }
 
 .left-arrow::after {
   transform: rotate(45deg);
-  bottom: 14px;
+  bottom: 15px;
+  left: 0px;
 }
 
 .right-arrow::before,
