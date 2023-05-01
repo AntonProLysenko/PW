@@ -567,6 +567,111 @@ h3 {
   width: 90%;
 }
 
+.slider {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-weight: 600;
+  max-height: 30vh;
+  width: 50vw;
+  max-width: 50vw;
+  /* position: relative; */
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-container {
+  width: 50vw;
+  position: relative;
+}
+
+.slider__slide {
+  height: 30vh;
+  min-width: 50vw;
+  width: 100%;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+}
+
+.slider__slide_yellow {
+  background-color: #ffa602;
+}
+
+.slider__slide_red {
+  background-color: #ff6362;
+}
+
+.slider__slide_purple {
+  background-color: #bc5090;
+}
+
+.slider__slide_dark-purple {
+  background-color: #58508d;
+}
+
+/* Arrows */
+.right-arrow,
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 35px;
+  /* background-color: black; */
+  z-index: 2;
+  cursor: pointer;
+}
+
+.right-arrow {
+  right: 1rem;
+}
+
+.left-arrow {
+  left: 1rem;
+}
+
+/*Arrows Drawing*/
+.right-arrow::before {
+  transform: rotate(45deg);
+}
+
+.right-arrow::after {
+  transform: rotate(-45deg);
+  bottom: 14px;
+}
+
+.left-arrow::before {
+  transform: rotate(-45deg);
+}
+
+.left-arrow::after {
+  transform: rotate(45deg);
+  bottom: 14px;
+}
+
+.right-arrow::before,
+.right-arrow::after,
+.left-arrow::before,
+.left-arrow::after {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 10px;
+  background-color: white;
+}
+
+/* Hide the scrollbar */
+.slider::-webkit-scrollbar {
+  display: none;
+  /* Safari, Google Chrome, Opera,  */
+  scrollbar-width: none;
+}
+
 .contact {
   background-color: #13182e;
   background-image: linear-gradient(45deg, #101220 0%, #162834 100%);

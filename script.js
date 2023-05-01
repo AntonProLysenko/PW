@@ -31,6 +31,7 @@ let mainSwiper = new Swiper('.parent-slider', {
     }
 }) 
 
+
 let mainTitleDescription = document.querySelector(".main-title-description");
 let secondWelcoming = document.getElementById('line-2')
 let firstWelcoming = document.getElementById('line-1')
@@ -164,6 +165,66 @@ const emailBox = document.querySelector('.email')
       alert(JSON.stringify(err));
     });
 });
+
+
+//Project Slider
+
+const leftArrow = document.querySelector(".left-arrow"),
+  rightArrow = document.querySelector(".right-arrow"),
+  slider = document.querySelector(".slider");
+
+function scrollRight() {
+  if (slider.scrollWidth - slider.clientWidth <= slider.scrollLeft) {
+    slider.scrollTo({
+      left: 0,
+      behavior: "smooth",
+    });
+  } else {
+    slider.scrollBy({
+      left: slider.clientWidth,
+      behavior: "smooth",
+    });
+  }
+}
+
+function scrollLeft() {
+  slider.scrollBy({
+    left: -slider.clientWidth,
+    behavior: "smooth",
+  });
+}
+
+// Auto slider
+// let timerId = setInterval(scrollRight, 7000);
+
+function resetTimer() {
+  clearInterval(timerId);
+  timerId = setInterval(scrollRight, 7000);
+}
+
+// Scroll Events
+slider.addEventListener("click", function (ev) {
+  if (ev.target === leftArrow) {
+    scrollLeft();
+    // resetTimer();
+  }
+});
+
+slider.addEventListener("click", function (ev) {
+  if (ev.target === rightArrow) {
+
+    console.log("slider.scrollWidth" + slider.scrollWidth);
+
+    console.log("slider.clientWidth" + slider.clientWidth);
+    
+    console.log("slider.scrollLeft" + slider.scrollLeft);
+    
+
+    scrollRight();
+    // resetTimer();
+  }
+});
+
 
 
 
