@@ -40,9 +40,8 @@
   .timeline-container {
     display: none;
   }
-  .project-slider {
+  .slider-container {
     /*important! Prevent from jumping while sliding*/
-    height: 50vmin;
     max-width: 95vw;
     min-width: 95vw;
     margin-top: -13vh;
@@ -528,6 +527,7 @@ h3 {
 
 .slider-container {
   width: 50%;
+  max-width: 50vw;
   height: 50vh;
   position: relative;
   display: flex;
@@ -538,7 +538,7 @@ h3 {
   color: black;
   max-height: 50vh;
   width: 100%;
-  max-width: 50vw;
+  max-width: 100%;
   /* position: relative; */
   display: flex;
   overflow-x: auto;

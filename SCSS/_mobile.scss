@@ -60,9 +60,9 @@
        display: none;
     }
 
-    .project-slider {
+   .slider-container {
         /*important! Prevent from jumping while sliding*/
-        height: 50vmin;
+        // height: 50vmin;
         max-width: 95vw;
         min-width: 95vw;
         margin-top: -13vh
