@@ -526,60 +526,17 @@ h3 {
   width: 7%;
 }
 
-.carousel-item {
-  position: relative;
-}
-.carousel-item img {
-  height: 50vmin;
-  width: -moz-max-content;
-  width: max-content;
-  border-radius: 3px;
-}
-
-.carousel-item:hover.carousel-item img {
-  opacity: 0.1;
-}
-.carousel-item:hover.carousel-item .details {
-  opacity: 1;
-}
-
-.details {
-  font-size: 1rem;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  color: whitesmoke;
-}
-.details p {
-  width: 90%;
-}
-
 .slider-container {
-  width: 50vw;
-  height: 30vh;
+  width: 50%;
+  height: 50vh;
   position: relative;
   display: flex;
-  justify-content: center;
 }
 
 .slider {
   font-family: "Roboto", sans-serif;
   color: black;
-  font-weight: 600;
-  max-height: 30vh;
+  max-height: 50vh;
   width: 100%;
   max-width: 50vw;
   /* position: relative; */
@@ -591,29 +548,57 @@ h3 {
 
 .slider__slide {
   height: 100%;
-  min-width: 50vw;
+  min-width: 100%;
   width: 100%;
   font-size: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: center;
+  justify-content: center;
+  scroll-snap-align: start;
 }
 
-.slider__slide_yellow {
-  background-color: #ffa602;
+.slider__slide:hover.slider__slide img {
+  opacity: 0.1;
+  filter: blur(3px);
+}
+.slider__slide:hover.slider__slide .details {
+  opacity: 1;
 }
 
-.slider__slide_red {
-  background-color: #ff6362;
+.slide_content {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
-
-.slider__slide_purple {
-  background-color: #bc5090;
+.slide_content img {
+  border-radius: 3px;
+  width: 100%;
+  height: 99%;
+  position: relative;
+  top: 50%;
 }
-
-.slider__slide_dark-purple {
-  background-color: #58508d;
+.slide_content .details {
+  font-size: 1rem;
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -50%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: whitesmoke;
+}
+.slide_content .details p {
+  width: 90%;
 }
 
 /* Arrows */

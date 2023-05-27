@@ -214,6 +214,17 @@ slider.addEventListener("click", function (ev) {
   if (ev.target === rightArrow) {
     scrollRight();
     // resetTimer();
+
+    console.log("slider.scrollWidth " + slider.scrollWidth);
+    
+    console.log("slider.clientWidth " + slider.clientWidth);
+    
+    console.log("slider.scrollLeft " + slider.scrollLeft);
+
+
+    console.log("calcul " + (slider.scrollWidth - slider.clientWidth));
+    
+    
   }
 });
 
