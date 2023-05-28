@@ -63,8 +63,9 @@
    .slider-container {
         /*important! Prevent from jumping while sliding*/
         // height: 50vmin;
-        max-width: 95vw;
-        min-width: 95vw;
+        // max-width: 95vw;
+        // min-width: 95vw;
+        width:90vw;
         margin-top: -13vh
     }
 }
@@ -81,11 +82,13 @@
         width: 98vw;
     }
 
-    .project-slider {
+    .slider-container {
         /*important! Prevent from jumping while sliding*/
-        height: 50vmin;
-        max-width: 53vw;
-        min-width: 53vw;
+        // height: 50vmin;
+        // max-width: 53vw;
+        // min-width: 53vw;
+        height:50vh;
+        width:50vw;
     }
 
     .welcome-wrapper {

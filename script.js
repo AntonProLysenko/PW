@@ -60,7 +60,7 @@ function mobileView() {
     // firstWelcoming.style.fontSize = "1rem"
     secondWelcoming.style.width = "50vw";
 
-    secondWelcoming.innerText = "Please Swipe Down to see more";
+    secondWelcoming.innerText = "Please Swipe Up to See More";
 
     //Changing icons on window size
     navLinks.forEach((link, idx) => {
@@ -167,6 +167,11 @@ const emailBox = document.querySelector('.email')
 });
 
 
+
+
+
+
+
 //Project Slider
 
 const leftArrow = document.querySelector(".left-arrow"),
@@ -216,12 +221,8 @@ slider.addEventListener("click", function (ev) {
     // resetTimer();
 
     console.log("slider.scrollWidth " + slider.scrollWidth);
-    
     console.log("slider.clientWidth " + slider.clientWidth);
-    
     console.log("slider.scrollLeft " + slider.scrollLeft);
-
-
     console.log("calcul " + (slider.scrollWidth - slider.clientWidth));
     
     
