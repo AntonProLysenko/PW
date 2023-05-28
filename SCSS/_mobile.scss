@@ -244,7 +244,7 @@
 
 
 /*Vertical Tablet*/
-@media only screen and (min-width: 541px) {
+@media only screen and (min-width: 541px) and (orientation: portrait) {
 
     .home {
         .content-container {
@@ -278,6 +278,9 @@
             align-self: flex-start;
         }
     }
+    .slider-container{
+        margin-right: 45px
+    }
 
 
     @keyframes animated-text__1 {
@@ -304,6 +307,7 @@
 
         align-self: flex-start;
     }
+
 
 }
 
