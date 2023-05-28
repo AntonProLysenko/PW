@@ -179,7 +179,7 @@ const leftArrow = document.querySelector(".left-arrow"),
   slider = document.querySelector(".slider");
 
 function scrollRight() {
-  if (slider.scrollWidth - slider.clientWidth <= slider.scrollLeft) {
+  if ((slider.scrollWidth - slider.clientWidth)-20 <= slider.scrollLeft) {
     slider.scrollTo({
       left: 0,
       behavior: "smooth",
