@@ -198,12 +198,17 @@
             
               <div class="content-container">
                 <div class="slider-container">
-                
+                  
                   <div class="slider">
-  
+                    
                     <div class="slider__slide">
-                      <div class="slide_content">
-                        <img src="./assets/img/salem.jpg" alt="Salem Crown Apartments Website Screenshot">
+                      <div class="slide_content" id="salem">
+                        <!-- had to add fake arrows since safari has messed up staking order and before hovering over it renders real arrows under the div with background, fakes hiding on hover effect -->
+                              <div class="fake-left-arrow "></div>
+                              <div class="fake-right-arrow "></div>
+                        <!-- <div class=""> -->
+                          <!-- <img src="./assets/img/salem.jpg" alt="Salem Crown Apartments Website Screenshot"> 
+                        </div>-->
                         <div class="details salem">
                           <h2>Salem Crown Apartments</h2>
                           <p>Apartment Website built with React <br />Full MERN Stack app with JWT-Token Autharization</p>
@@ -221,16 +226,17 @@
                             </a>
                           </div>
                         </div>
+                 
                       </div>
                     </div>
 
 
                     <div class="slider__slide">
-                      <div class="slide_content">
-                        <img src="./assets/img/trello.jpg"  alt="The Task App Screenshot">
-                        <div class="details trello">
+                      <div class="slide_content" id="trello">
+                        <!-- <img src="./assets/img/trello.jpg"  alt="The Task App Screenshot"> -->
+                        <div class="details">
                           <h2>The Task App</h2>
-                          <p>Task app bears resemblance to a Trello board<br />Full CRUD app with JWT-Token Autharization That Works for
+                          <p>Full CRUD app with JWT-Token Autharization That Works for
                             Multiple Users Requests</p>
                             
                             <div class="links">  
@@ -252,8 +258,8 @@
 
 
                     <div class="slider__slide">
-                      <div class="slide_content">
-                        <img src="./assets/img/trivia.jpg"  alt="Trivia Minigame Screenshot">
+                      <div class="slide_content" id="trivia">
+                        <!-- <img src="./assets/img/trivia.jpg"  alt="Trivia Minigame Screenshot"> -->
                         <div class="details trivia">
                           <h2>Trivia</h2>
                           <p>Trivia game based on jservice API <br />User have a posibility to get multiple questions in one click</p>
@@ -277,9 +283,9 @@
                       
                     </div>
                     <div class="slider__slide">
-                      <div class="slide_content">
+                      <div class="slide_content" id="frog">
 
-                        <img src="./assets/img/theFrog.jpg"  alt="The Frog main menu Screenshot">
+                        <!-- <img src="./assets/img/theFrog.jpg"  alt="The Frog main menu Screenshot"> -->
                         <div class="details frog">
                           <h2>The Frog</h2>
                           <p>Pure Vanila Javascript Game <br />Single Level Platformer with touchscreen support</p>
@@ -299,7 +305,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> 
                     <div class="left-arrow"></div>
                     <div class="right-arrow"></div>
                   </div>
