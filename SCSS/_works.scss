@@ -56,12 +56,14 @@
     // max-width: 50vw;
     max-height: 40vh;
     display: flex;
-    // justify-content: center;
     position: relative;
+    box-sizing: border-box;
+    aspect-ratio: 4/3;
+  
 }
 
 .slider {
-     font-family: "Roboto", sans-serif; 
+    font-family: "Roboto", sans-serif; 
     color: black;
 
     max-height: 40vh;
@@ -69,12 +71,10 @@
     max-width: 100%;
     min-width: 100%;
 
-
-    // position: relative; 
-
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
+
 
     scroll-snap-type: x mandatory;
 }
@@ -164,20 +164,15 @@ background-size: 100% 100%;
    
     // position: relative;
     
-
-
     // img{
-        
     //     // border-radius: 3px;
     //     // height:100%;
     //     // min-height: 100%;
     //     // width:100%;
     //     // min-width: 100%;
-
     //     // // position: relative;
     //     // // top: 50%;
     //     // z-index:120;
-
     // }
 
     .details { 
@@ -195,14 +190,8 @@ background-size: 100% 100%;
         align-items: center;
         justify-content: center;
 
-        // position: relative;
-        z-index: 0;
-        // bottom:50%;
-
         transition: .5s ease;
         opacity: 0;
-        // visibility: hidden;
-        // z-index: 300;
 
         color: whitesmoke;
 
@@ -210,8 +199,6 @@ background-size: 100% 100%;
             width: 90%
         }
     }
-
-    
 }
 
 
@@ -226,9 +213,7 @@ background-size: 100% 100%;
     width: 30px;
     height: 35px;
     // background-color: black; 
-    // z-index: 5000;
     cursor: pointer;
-    // position: relative;
 }
 
 .right-arrow {
