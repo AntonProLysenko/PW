@@ -136,7 +136,10 @@ body {
 
 .main-title{
     h1 {
-        color: $main-title;
+        // background-color: $main-title;
+ 
+
+        // color: $main-title;
         font-size: 12vmin;
         font-family: 'Unbounded', cursive;
         font-weight: bolder;
@@ -148,6 +151,29 @@ body {
     color: $secondary-title;
     font-family: 'Unbounded', cursive;
     font-weight: bolder;
+}
+
+.double-lined{
+    h1{
+        background-color: transparent;
+            // background-image: linear-gradient(180deg, $main-title 80%, #232222 100%);
+
+                background-image: linear-gradient(180deg,  #edb15d 81%, #232222 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+    }
+}
+.single-lined{
+    h1{
+        background-color: transparent;
+            // background-image: linear-gradient(180deg, $main-title 50%, #232222 100%);
+            background-color: #f7af20;
+                background-image: linear-gradient(180deg, #f79e20 9%, #edb15d 65%, #232222 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+    }
 }
 
 //  .main-title-description{
