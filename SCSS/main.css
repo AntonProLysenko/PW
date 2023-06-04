@@ -233,7 +233,7 @@ h3 {
   display: flex;
   position: relative;
   box-sizing: border-box;
-  aspect-ratio: 4/3;
+  aspect-ratio: 9/3;
 }
 
 .slider {
@@ -268,9 +268,8 @@ h3 {
   -webkit-backdrop-filter: blur(3px);
   -moz-background-filter: blur(3px);
 }
-
-.fake-left-arrow,
-.fake-right-arrow {
+.slider__slide:hover .fake-left-arrow,
+.slider__slide:hover .fake-right-arrow {
   display: none;
 }
 
@@ -566,7 +565,7 @@ input[type=submit]:active {
   .slider-container {
     /*important! Prevent from jumping while sliding*/
     height: 50vh;
-    width: 40vw;
+    width: 45vw;
   }
   .welcome-wrapper {
     max-height: 98vh;
@@ -929,8 +928,8 @@ body {
 }
 
 .double-lined h1 {
-  background-color: transparent;
-  background-image: linear-gradient(180deg, #edb15d 81%, #232222 100%);
+  background-color: #edb15d;
+  background-image: linear-gradient(180deg, #edb15d 70%, #232222 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -938,8 +937,8 @@ body {
 
 .single-lined h1 {
   background-color: transparent;
-  background-color: #f7af20;
-  background-image: linear-gradient(180deg, #f79e20 9%, #edb15d 65%, #232222 100%);
+  background-color: #edb15d;
+  background-image: linear-gradient(168deg, #f79029 5%, #edb15d 65%, #232222 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
