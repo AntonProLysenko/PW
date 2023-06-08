@@ -8,8 +8,6 @@
 $white:#ffffff;
 $transparent:#00000000;
 $main-bg: #202023;
-$main-title:#edb15d;
-$secondary-title:#ed815d;
 $active-link:#5fcedc;
 
 
@@ -129,37 +127,17 @@ body {
     color: $active-link;
 }
 
-.main-title {
-    position: relative;
-    z-index: 1;
-}
 
-.main-title{
-    h1 {
-        // background-color: $main-title;
- 
-
-        // color: $main-title;
-        font-size: 12vmin;
-        font-family: 'Unbounded', cursive;
-        font-weight: bolder;
-    }
-}
-
-.main-title>h3,
-.main-title>h4 {
-    color: $secondary-title;
-    font-family: 'Unbounded', cursive;
-    font-weight: bolder;
-}
 
 .double-lined{
     h1{
+        color: $main-title;
         background-color: $main-title;
-                background-image: linear-gradient(180deg,  $main-title 70%, #232222 100%);
+                // background-image: linear-gradient(180deg,  $main-title 70%, #232222 100%);
             background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
     }
 }
 .single-lined{

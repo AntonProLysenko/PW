@@ -1,6 +1,8 @@
 $home-background:#1c1c1c;
 $welcoming-color:#5fcedc;
 $animation-collor:#0ac1d9;
+$main-title: #edb15d;
+$secondary-title: #ed815d;
 
 .home {
     background-color: $home-background;
@@ -22,7 +24,31 @@ $animation-collor:#0ac1d9;
     }
 }
 
+.main-title {
+    position: relative;
+    z-index: 1;
+}
 
+.main-title {
+    h1 {
+        // background-color: $main-title;
+
+
+        // color: $main-title;
+        font-size: 12vmin;
+        font-family: 'Unbounded', cursive;
+        font-weight: bolder;
+    }
+}
+
+.main-title>h3,
+.main-title>h4 {
+    color: $secondary-title;
+    font-family: 'Unbounded', cursive;
+    font-weight: bolder;
+    text-shadow: 0 0 1px $secondary-title;
+        ;
+}
 
 
 .welcoming {
@@ -30,6 +56,7 @@ $animation-collor:#0ac1d9;
     font-size: 2rem;
     font-weight: bolder;
     color: $welcoming-color;
+    text-shadow: 0 0 1px $animation-collor;;
 }
 
 #line-1,
@@ -44,6 +71,7 @@ $animation-collor:#0ac1d9;
     font-size: 1.2rem;
     font-weight: bold;
     color: $animation-collor;
+
     
 }
 

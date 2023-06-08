@@ -15,11 +15,31 @@
      object-fit: cover;
 }
 
+.main-title {
+  position: relative;
+  z-index: 1;
+}
+
+.main-title h1 {
+  font-size: 12vmin;
+  font-family: "Unbounded", cursive;
+  font-weight: bolder;
+}
+
+.main-title > h3,
+.main-title > h4 {
+  color: #ed815d;
+  font-family: "Unbounded", cursive;
+  font-weight: bolder;
+  text-shadow: 0 0 1px #ed815d;
+}
+
 .welcoming {
   font-family: "Unbounded", cursive;
   font-size: 2rem;
   font-weight: bolder;
   color: #5fcedc;
+  text-shadow: 0 0 1px #0ac1d9;
 }
 
 #line-1,
@@ -909,30 +929,11 @@ body {
   color: #5fcedc;
 }
 
-.main-title {
-  position: relative;
-  z-index: 1;
-}
-
-.main-title h1 {
-  font-size: 12vmin;
-  font-family: "Unbounded", cursive;
-  font-weight: bolder;
-}
-
-.main-title > h3,
-.main-title > h4 {
-  color: #ed815d;
-  font-family: "Unbounded", cursive;
-  font-weight: bolder;
-}
-
 .double-lined h1 {
+  color: #edb15d;
   background-color: #edb15d;
-  background-image: linear-gradient(180deg, #edb15d 70%, #232222 100%);
-  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+          background-clip: text;
 }
 
 .single-lined h1 {
