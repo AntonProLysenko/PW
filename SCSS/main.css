@@ -249,7 +249,7 @@ h3 {
 }
 
 .slider-container {
-  max-height: 40vh;
+  max-height: 35vh;
   display: flex;
   position: relative;
   box-sizing: border-box;
@@ -259,7 +259,7 @@ h3 {
 .slider {
   font-family: "Roboto", sans-serif;
   color: black;
-  max-height: 40vh;
+  max-height: 35vh;
   width: 100%;
   max-width: 100%;
   min-width: 100%;
@@ -584,7 +584,7 @@ input[type=submit]:active {
   }
   .slider-container {
     /*important! Prevent from jumping while sliding*/
-    height: 50vh;
+    height: 35vh;
     width: 45vw;
   }
   .welcome-wrapper {
@@ -772,7 +772,7 @@ input[type=submit]:active {
   }
   .slider-container {
     margin-right: 45px;
-    max-height: 50vh;
+    max-height: 45vh;
     height: 50vh;
   }
   @keyframes animated-text__1 {
