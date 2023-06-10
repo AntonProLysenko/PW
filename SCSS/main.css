@@ -739,6 +739,27 @@ input[type=submit]:active {
     font-size: 16px;
   }
 }
+@media only screen and (min-width: 541px) {
+  .home .content-container {
+    flex-direction: column;
+    width: 100vw;
+    padding-right: 0px;
+    justify-content: flex-start;
+  }
+  .welcome-wrapper {
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .profile-pic {
+    position: absolute;
+    top: 70%;
+    left: 102%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    min-width: 150%;
+  }
+}
 /*Vertical Tablet*/
 @media only screen and (min-width: 541px) and (orientation: portrait) {
   .home .content-container {

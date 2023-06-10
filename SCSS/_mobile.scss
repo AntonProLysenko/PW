@@ -87,7 +87,7 @@
         // min-width: 53vw;
         width:45vw;
         // height:35vh;
-        height: calc(45vw/1.94);
+        height: calc(45vw/1.94);//aspect ratio ~ 4:2
     }
 
     .welcome-wrapper {
@@ -283,8 +283,32 @@
 
 
 
+//for lanscape phone
+@media only screen and (min-width: 541px){
+  
+    .home {
+        .content-container {
+            @include dir(column);
+            padding-right: 0px;
+            justify-content: flex-start;
+        }
+    }
 
-
+    .welcome-wrapper {
+        margin-top: 20px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .profile-pic {
+        position: absolute;
+        top: 70%;
+        left: 102%;
+        transform: translate(-50%, -50%);
+        height: 100vh;
+        min-width: 150%;
+    }
+}
 
 /*Vertical Tablet*/
 @media only screen and (min-width: 541px) and (orientation: portrait) {
