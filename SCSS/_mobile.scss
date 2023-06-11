@@ -85,8 +85,9 @@
         // height: 50vmin;
         // max-width: 53vw;
         // min-width: 53vw;
-        height:35vh;
         width:45vw;
+        // height:35vh;
+        height: calc(45vw/1.94);
     }
 
     .welcome-wrapper {
