@@ -94,9 +94,7 @@
         max-height: 98vh;
     }
 
-    .main-title-secondary {
-        margin-left: -50px;
-    }
+  
 
     .info{
         max-width: 50vw;
@@ -299,7 +297,7 @@
         position: relative;
         z-index: 1;
     }
-    
+
     .profile-pic {
         position: absolute;
         top: 70%;
@@ -307,6 +305,12 @@
         transform: translate(-50%, -50%);
         height: 100vh;
         min-width: 150%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+.main-title-secondary {//prevent title overflow on sideBar
+        margin-left: -50px;
     }
 }
 
