@@ -6,7 +6,7 @@ document.onreadystatechange = function () {
     document.querySelector(".arrows").style.visibility="hidden"
     document.querySelector("#loader").style.visibility = "visible";
   } else {
-      document.querySelector(".arrows").style.visibility = "visible";
+     if(window.innerWidth <= 1200){ document.querySelector(".arrows").style.visibility = "visible";}
     document.querySelector("#loader").style.display = "none";
     document.querySelector("body").style.visibility = "visible";
   }
