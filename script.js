@@ -1,4 +1,20 @@
-// import { sobaka } from "./sobaka";
+
+
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector(".arrows").style.visibility="hidden"
+    document.querySelector("#loader").style.visibility = "visible";
+  } else {
+      document.querySelector(".arrows").style.visibility = "visible";
+    document.querySelector("#loader").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+  }
+};
+
+
+
+
 
 let nav = ['Home', 'About', 'Works', "Contact"]
 let icons = ['<i class="fa-sharp fa-solid fa-house"></i>','<i class="fa-solid fa-address-card"></i>','<i class="fa-solid fa-layer-group"></i>','<i class="fa-solid fa-comments"></i>']
@@ -269,6 +285,46 @@ connectObserver2.observe(animText[1])
 
 
 
+//Loading the whole page
+const page = document.querySelector(".parent-slider");
+const images = document.querySelectorAll("img")
+const slides = document.querySelectorAll(".swiper-slide")
+
+
+
+// images.forEach(img=>{
+//   img.addEventListener("load", ()=>{
+//     // page.style.visibility="visible"
+//       // alert(`slides are loaded`);
+//   })
+//   img.addEventListener("unload",()=>{
+//     alert("not loaded")
+//   })
+// })
+
+// const sliderContent = document.querySelectorAll(".slide_content");
+// sliderContent.forEach(slide=>{
+//   slide.addEventListener("load",()=>{
+//     alert(`slides are loaded`);
+//   })
+// })
+
+const salem = document.querySelector("#salem")
+const salemBg = salem.style.backgroundImage;
+// console.log(salem.style.backgroundImage);
+
+// console.log(images);
+
+// console.log(page);
+
+page.addEventListener("load", ()=>{
+  console.log("loaded page")
+})
+
+
+
+
+ 
 
 
 
