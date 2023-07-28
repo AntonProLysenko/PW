@@ -25,7 +25,7 @@ let mainSwiper = new Swiper(".parent-slider", {
   direction: "vertical",
   sliderPerView: 1,
   spaceBetween: 100000,
-  speed: 300,
+  speed: 600,
   mousewheel: {
     invert: false,
     sensivity: 0.1,
