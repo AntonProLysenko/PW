@@ -16,6 +16,7 @@
 }
 
 .main-title {
+  cursor: default;
   position: relative;
   z-index: 1;
 }
@@ -35,6 +36,7 @@
 }
 
 .welcoming {
+  cursor: default;
   font-family: "Unbounded", cursive;
   font-size: 2rem;
   font-weight: bolder;
@@ -45,6 +47,7 @@
 #line-1,
 #line-2,
 #line-3 {
+  cursor: default;
   white-space: nowrap;
   /* keep text in one line */
   overflow: hidden;
@@ -348,6 +351,9 @@ h3 {
 .slide_content .details p {
   width: 90%;
 }
+.slide_content .details h2, .slide_content .details p {
+  cursor: default;
+}
 
 /* Arrows */
 .right-arrow, .fake-right-arrow,
@@ -501,6 +507,7 @@ input[type=submit]:active {
 }
 
 .line-4 {
+  cursor: default;
   white-space: nowrap;
   /* keep text in one line */
   overflow: hidden;
@@ -514,6 +521,7 @@ input[type=submit]:active {
 }
 
 .line-5 {
+  cursor: default;
   white-space: nowrap;
   /* keep text in one line */
   overflow: hidden;
@@ -904,6 +912,9 @@ body {
 }
 
 #loader {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   color: #5fcedc;
   position: absolute;
   top: 0;
@@ -947,6 +958,9 @@ body {
 
 /*Scroll-navbar*/
 .swiper-pagination-bullet {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   margin-bottom: 30px;
   padding: 5px 10px;
   border-radius: 0;
@@ -969,6 +983,10 @@ body {
 }
 
 .double-lined h1 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  cursor: default;
   color: #edb15d;
   background-color: #edb15d;
   -webkit-background-clip: text;
@@ -976,6 +994,10 @@ body {
 }
 
 .single-lined h1 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  cursor: default;
   background-color: transparent;
   background-color: #edb15d;
   background-image: linear-gradient(168deg, #f79029 5%, #edb15d 65%, #232222 100%);

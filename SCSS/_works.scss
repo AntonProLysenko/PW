@@ -111,11 +111,12 @@
     .details {
         opacity: 1;
         background-color: rgba(0, 0, 0, 0.5);
-        // background-color: rgba(0, 0, 0, 0.7);
+            // background-color: rgba(0, 0, 0, 0.7);
         // filter: blur(3px);
         backdrop-filter: blur(3px);
-            -webkit-backdrop-filter: blur(3px);
-            -moz-background-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        -moz-background-filter: blur(3px);
+      
     }
    
 
@@ -205,6 +206,9 @@ background-size: 100% 100%;
 
         p {
             width: 90%
+        }
+        h2,p {
+            cursor: default;
         }
     }
 }

@@ -95,6 +95,7 @@ input[type="submit"]:active {
 
 
 .line-4 {
+    cursor: default;
     white-space: nowrap;
     /* keep text in one line */
     overflow: hidden;
@@ -114,6 +115,7 @@ input[type="submit"]:active {
 
 }
 .line-5{
+    cursor: default;
     white-space: nowrap;
         /* keep text in one line */
         overflow: hidden;

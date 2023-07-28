@@ -25,6 +25,7 @@ $secondary-title: #ed815d;
 }
 
 .main-title {
+    cursor: default;
     position: relative;
     z-index: 1;
 }
@@ -52,6 +53,7 @@ $secondary-title: #ed815d;
 
 
 .welcoming {
+    cursor: default;
     font-family: 'Unbounded', cursive;
     font-size: 2rem;
     font-weight: bolder;
@@ -62,6 +64,7 @@ $secondary-title: #ed815d;
 #line-1,
 #line-2,
 #line-3 {
+    cursor: default;
     white-space: nowrap;
     /* keep text in one line */
     overflow: hidden;
