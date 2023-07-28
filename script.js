@@ -6,7 +6,8 @@ document.onreadystatechange = function () {
     document.querySelector(".arrows").style.visibility="hidden"
     document.querySelector("#loader").style.visibility = "visible";
   } else {
-     if(window.innerWidth >= 541){ document.querySelector(".arrows").style.visibility = "visible";}
+    arrows = document.querySelector(".arrows");
+     if(window.innerWidth >= 541){ arrows.style.visibility = "visible";}else{ arrows.style.visibility = "hidden";}
     document.querySelector("#loader").style.display = "none";
     document.querySelector("body").style.visibility = "visible";
   }
