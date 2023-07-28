@@ -1,12 +1,12 @@
 
-
+//Showing Loader
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
     document.querySelector("body").style.visibility = "hidden";
     document.querySelector(".arrows").style.visibility="hidden"
     document.querySelector("#loader").style.visibility = "visible";
   } else {
-     if(window.innerWidth <= 1200){ document.querySelector(".arrows").style.visibility = "visible";}
+     if(window.innerWidth >= 541){ document.querySelector(".arrows").style.visibility = "visible";}
     document.querySelector("#loader").style.display = "none";
     document.querySelector("body").style.visibility = "visible";
   }
@@ -29,7 +29,7 @@ let mainSwiper = new Swiper(".parent-slider", {
   mousewheel: {
     invert: false,
     sensitivity: 0.5,
-    thresholdTime: 900,//time in ms how long to apply scroll to change for the next slide, since sensitivity doesn't work on touchPads
+    thresholdTime: 900,//time in ms how long to apply scroll to jump to the next slide, since sensitivity doesn't work on touchPads
     // thresholdDelta:9000000000,
     // releaseOnEdges: true,
   },

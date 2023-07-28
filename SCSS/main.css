@@ -927,6 +927,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+#loader h3 {
+  text-align: center;
+}
 
 .swiper-container {
   width: 100%;
