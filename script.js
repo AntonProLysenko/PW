@@ -21,13 +21,18 @@ let icons = ['<i class="fa-sharp fa-solid fa-house"></i>','<i class="fa-solid fa
 
 
 //Swiper
-let mainSwiper = new Swiper('.parent-slider', {
-    direction: 'vertical',
-    sliderPerView: 1,
-    spaceBetween: 0,
-    mousewheel: true,
-    
-    effect: 'creative',
+let mainSwiper = new Swiper(".parent-slider", {
+  direction: "vertical",
+  sliderPerView: 1,
+  spaceBetween: 100000,
+  speed: 300,
+  mousewheel: {
+    invert: false,
+    sensivity: 0.1,
+    // releaseOnEdges: true,
+  },
+
+  effect: "creative",
   creativeEffect: {
     prev: {
       // directions of slide dissapiring[x,y,z]
@@ -38,14 +43,15 @@ let mainSwiper = new Swiper('.parent-slider', {
       translate: ["-10%", "100%", 0],
     },
   },
-    pagination: {//navbar
-        el:'.swiper-pagination',
-        clickable: true,
-        renderBullet:(index, className)=>{
-          return '<span class="' + className + '">' + (nav[index]) + '</span>';
-        }
-    }
-}) 
+  //navbar
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: (index, className) => {
+      return '<span class="' + className + '">' + nav[index] + "</span>";
+    },
+  },
+}); 
 
 
 let mainTitleDescription = document.querySelector(".main-title-description");
