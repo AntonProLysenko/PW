@@ -24,11 +24,13 @@ let icons = ['<i class="fa-sharp fa-solid fa-house"></i>','<i class="fa-solid fa
 let mainSwiper = new Swiper(".parent-slider", {
   direction: "vertical",
   sliderPerView: 1,
-  spaceBetween: 100000,
-  speed: 600,
+  spaceBetween: 0,
+  speed: 300,
   mousewheel: {
     invert: false,
-    sensivity: 0.1,
+    sensitivity: 0.5,
+    thresholdTime: 900,//time in ms how long to apply scroll to change for the next slide, since sensitivity doesn't work on touchPads
+    // thresholdDelta:9000000000,
     // releaseOnEdges: true,
   },
 
