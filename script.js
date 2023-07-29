@@ -7,7 +7,13 @@ document.onreadystatechange = function () {
     document.querySelector("#loader").style.visibility = "visible";
   } else {
     arrows = document.querySelector(".arrows");
-     if(window.innerWidth >= 541){ arrows.style.visibility = "visible";}else{ arrows.style.visibility = "hidden";}
+     if(window.innerWidth >= 541){
+        setTimeout(function () {
+          arrows.style.visibility = "visible";
+        }, 2900);;
+      }else{
+         arrows.style.visibility = "hidden";
+      }
     document.querySelector("#loader").style.display = "none";
     document.querySelector("body").style.visibility = "visible";
   }
@@ -95,12 +101,7 @@ function mobileView() {
 
   }else{
 //Showing arrows with delay
-    setTimeout(function(){
-      scrollArrows.style.visibility = "visible";
-
-      // console.log("here");
-      
-        },1700);
+    
       //Swaping nav to text
     navLinks.forEach((link,idx)=>{
       link.innerHTML = nav[idx]
