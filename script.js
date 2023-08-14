@@ -112,22 +112,22 @@ function mobileView() {
 mobileView();
 window.addEventListener("resize", mobileView);
 
-let checkr = false
-document.addEventListener("click", (evt)=>{
-  //  navLinks[1] === evt.target || navLinks[1].firstChild === evt.target;
+// let checkr = false
+// document.addEventListener("click", (evt)=>{
+//   //  navLinks[1] === evt.target || navLinks[1].firstChild === evt.target;
   
 
-   navLinks.forEach((link)=>{
-      if(link === evt.target || link.firstChild === evt.target){
-        return checkr = true
-      }
+//    navLinks.forEach((link)=>{
+//       if(link === evt.target || link.firstChild === evt.target){
+//         return checkr = true
+//       }
       
-   })
+//    })
 
-  //  console.log(checkr);
+//   //  console.log(checkr);
    
-})
-checkr = false
+// })
+// checkr = false
 
 
 //Modal
@@ -296,40 +296,40 @@ connectObserver2.observe(animText[1])
 
 
 //Loading the whole page
-const page = document.querySelector(".parent-slider");
-const images = document.querySelectorAll("img")
-const slides = document.querySelectorAll(".swiper-slide")
+// const page = document.querySelector(".parent-slider");
+// const images = document.querySelectorAll("img")
+// const slides = document.querySelectorAll(".swiper-slide")
 
 
 
-// images.forEach(img=>{
-//   img.addEventListener("load", ()=>{
-//     // page.style.visibility="visible"
-//       // alert(`slides are loaded`);
-//   })
-//   img.addEventListener("unload",()=>{
-//     alert("not loaded")
-//   })
+// // images.forEach(img=>{
+// //   img.addEventListener("load", ()=>{
+// //     // page.style.visibility="visible"
+// //       // alert(`slides are loaded`);
+// //   })
+// //   img.addEventListener("unload",()=>{
+// //     alert("not loaded")
+// //   })
+// // })
+
+// // const sliderContent = document.querySelectorAll(".slide_content");
+// // sliderContent.forEach(slide=>{
+// //   slide.addEventListener("load",()=>{
+// //     alert(`slides are loaded`);
+// //   })
+// // })
+
+// const salem = document.querySelector("#salem")
+// const salemBg = salem.style.backgroundImage;
+// // console.log(salem.style.backgroundImage);
+
+// // console.log(images);
+
+// // console.log(page);
+
+// page.addEventListener("load", ()=>{
+//   console.log("loaded page")
 // })
-
-// const sliderContent = document.querySelectorAll(".slide_content");
-// sliderContent.forEach(slide=>{
-//   slide.addEventListener("load",()=>{
-//     alert(`slides are loaded`);
-//   })
-// })
-
-const salem = document.querySelector("#salem")
-const salemBg = salem.style.backgroundImage;
-// console.log(salem.style.backgroundImage);
-
-// console.log(images);
-
-// console.log(page);
-
-page.addEventListener("load", ()=>{
-  console.log("loaded page")
-})
 
 
 

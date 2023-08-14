@@ -255,7 +255,6 @@ h3 {
   display: flex;
   position: relative;
   box-sizing: border-box;
-  aspect-ratio: 9/3;
 }
 
 .slider {
@@ -586,7 +585,7 @@ input[type=submit]:active {
   .slider-container {
     width: 90vw;
     margin-top: -10vh;
-    max-height: 30vh;
+    height: 46.3917525773vw;
   }
 }
 @media only screen and (orientation: landscape) {
@@ -806,7 +805,6 @@ input[type=submit]:active {
   .slider-container {
     margin-right: 45px;
     max-height: 45vh;
-    height: 50vh;
   }
   @keyframes animated-text__1 {
     from {

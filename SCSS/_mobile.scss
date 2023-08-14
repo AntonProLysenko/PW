@@ -63,7 +63,8 @@
    .slider-container {
         width:90vw;
         margin-top: -10vh;
-        max-height: 30vh;
+        // max-height: 30vh;
+        height: calc(90vw/1.94); //aspect ratio ~ 4:2
     }
 
 }
@@ -352,7 +353,8 @@
     .slider-container{
         margin-right: 45px;
         max-height: 45vh;
-        height: 50vh;
+        // height: 50vh;
+        
     }
 
 

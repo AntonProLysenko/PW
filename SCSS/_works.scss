@@ -58,7 +58,8 @@
     display: flex;
     position: relative;
     box-sizing: border-box;
-    aspect-ratio: 9/3;
+    // aspect-ratio: 9/3;
+    // height: calc(45vw/1.94); //aspect ratio ~ 4:2
   
 }
 
