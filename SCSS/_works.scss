@@ -204,15 +204,17 @@ background-size: 100% 100%;
         opacity: 0;
 
         color: whitesmoke;
+        padding: 5px 20px;
+        text-wrap: balance;
 
-        p {
-            width: 90%
-        }
+        
         h2,p {
             cursor: default;
         }
     }
 }
+
+
 
 
 

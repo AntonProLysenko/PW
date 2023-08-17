@@ -346,9 +346,8 @@ h3 {
   transition: 0.5s ease;
   opacity: 0;
   color: whitesmoke;
-}
-.slide_content .details p {
-  width: 90%;
+  padding: 5px 20px;
+  text-wrap: balance;
 }
 .slide_content .details h2, .slide_content .details p {
   cursor: default;
@@ -992,6 +991,7 @@ body {
   background-color: #edb15d;
   -webkit-background-clip: text;
           background-clip: text;
+  text-wrap: balance;
 }
 
 .single-lined h1 {
