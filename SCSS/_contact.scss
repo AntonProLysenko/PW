@@ -5,6 +5,11 @@ $active-link: #33bbce;
 .contact {
     background-color: #13182e;
     background-image: linear-gradient(45deg, #101220 0%, #162834 100%);
+    .links {
+            font-size: 35px;
+            max-width: 200px;
+            justify-content: space-around;
+        }
 }
 
 /* .contact>.content-container{
@@ -73,12 +78,9 @@ input[type="submit"]:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .links {
-        font-size: 35px;
-        max-width:200px;
-        justify-content: space-around;
-    }
+    
 }
+
 
 .email {
     min-width: 250px;
@@ -129,6 +131,10 @@ input[type="submit"]:active {
     animation: animated-text__2 5s steps(29, end) 1s 1 normal both;
         -webkit-animation-delay: 6.5s;
         animation-delay: 6.5s;
+}
+
+.links-portrait{
+    margin:-5vh 0px;
 }
 
 /* #line-1 {
