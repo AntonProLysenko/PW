@@ -1,4 +1,5 @@
 $active-link: #33bbce;
+$sub-text: #0ac1d9;
 
 
 
@@ -87,7 +88,7 @@ input[type="submit"]:active {
     max-width: 350px;
 
     p {
-        color: #0ac1d9;
+        color: $sub-text;
     }
 }
 

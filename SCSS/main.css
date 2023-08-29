@@ -251,6 +251,11 @@ h3 {
   background-image: -moz-linear-gradient(45deg, #1C1C1C, #0f1b1e);
 }
 
+.works-description {
+  color: whitesmoke;
+  text-wrap: balance;
+}
+
 .slider-container {
   display: flex;
   position: relative;
@@ -775,10 +780,8 @@ body {
     width: 50vw;
     max-height: 98vh;
   }
-  .timeline-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  .works-description {
+    max-width: 40vw;
   }
   .links-portrait {
     display: none;
@@ -961,6 +964,9 @@ body {
   }
   .wrapper p {
     align-self: flex-start;
+  }
+  .works-description {
+    max-width: 100vw;
   }
   .slider-container {
     margin-right: 45px;

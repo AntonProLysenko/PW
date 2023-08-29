@@ -123,11 +123,14 @@
         max-height: 98vh;
     }
 
-    .timeline-container{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+    // .timeline-container{
+    //     display: flex;
+    //     flex-direction: row;
+    //     align-items: center;
+    // }
+         .works-description {
+             max-width: 40vw;
+         }
     .links-portrait{
         display: none;
     }
@@ -359,6 +362,10 @@
         p {
             align-self: flex-start;
         }
+    }
+
+    .works-description{
+        max-width: 100vw;
     }
     .slider-container{
         margin-right: 45px;
