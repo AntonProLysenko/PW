@@ -6,6 +6,8 @@ document.onreadystatechange = function () {
     document.querySelector(".arrows").style.visibility="hidden"
     document.querySelector("#loader").style.visibility = "visible";
   } else {
+    document.querySelector("#loader").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
     arrows = document.querySelector(".arrows");
      if(window.innerWidth >= 541){
         setTimeout(function () {
@@ -14,8 +16,6 @@ document.onreadystatechange = function () {
       }else{
          arrows.style.visibility = "hidden";
       }
-    document.querySelector("#loader").style.display = "none";
-    document.querySelector("body").style.visibility = "visible";
   }
 };
 
