@@ -70,7 +70,7 @@ let scrollArrows = document.getElementById('line-3');
 let myPicture = document.querySelector('.profile-pic')
 let navLinks = document.querySelectorAll('.swiper-pagination-bullet')
 let activeNav = document.querySelector(".swiper-pagination");
-let modal = document.querySelector(".modal");
+let modal = document.querySelector(".about-modal");
 
 // navLinks.forEach((link,idx)=>{
 //   link.addEventListener("click",(evt)=>{

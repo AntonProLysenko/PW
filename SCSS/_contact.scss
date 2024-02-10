@@ -104,7 +104,7 @@ input[type="submit"]:active {
     overflow: hidden;
     /* hide text behind the cursor */
     margin: 1rem auto;
-    font-family: "Major Mono Display", monospace;
+    // font-family: "Major Mono Display", monospace;
     font-size: 0.9rem;
     font-weight: bold;
     color: $animation-collor;
@@ -118,17 +118,7 @@ input[type="submit"]:active {
 
 }
 .line-5{
-    cursor: default;
-    white-space: nowrap;
-        /* keep text in one line */
-        overflow: hidden;
-        /* hide text behind the cursor */
-        margin: 1rem auto;
-        font-family: "Major Mono Display", monospace;
-        font-size: 0.9rem;
-        font-weight: bold;
-        color: $animation-collor;
-
+    @extend .line-4;
     animation: animated-text__2 5s steps(29, end) 1s 1 normal both;
         -webkit-animation-delay: 6.5s;
         animation-delay: 6.5s;
