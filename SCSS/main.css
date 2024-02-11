@@ -264,6 +264,7 @@ h3 {
 }
 
 .works-description {
+  padding: 0px 2.5px;
   font-size: 0.9rem;
   color: whitesmoke;
   text-wrap: balance;
