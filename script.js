@@ -138,24 +138,13 @@ let drag = document.querySelector(".profile-pic")
 // drag.onclick = ()=>{alert("asdf"); console.log("asdf")}
 // console.log(drag)
 
-drag.addEventListener("click", function(){
-  console.log('scrolling');
-});
-
-
-function hello (){
-  console.log("HELLO")
-}
-
-
 dragElement(drag);
-
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   
-  if (document.getElementById(elmnt.id)) {
-    console.dir(elmnt)
+  if (document.getElementById(elmnt.idnm)) {
+    // console.dir(elmnt)
     /* if present, the header is where you move the DIV from:*/
     elmnt.addEventListener("mousedown", dragMouseDown)
     elmnt.addEventListener("touchstart", dragMouseDown)
@@ -170,11 +159,14 @@ function dragElement(elmnt) {
 
     console.log("dragg Started");
 
+    console.log();
+    
+
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
-    pos4 = e.clientY;
+    // pos4 = e.clientY;
     document.onmouseup = closeDragElement;
     document.ontouchend = closeDragElement;
     // call a function whenever the cursor moves:
@@ -183,17 +175,33 @@ function dragElement(elmnt) {
   }
 
   function elementDrag(e) {
+
     console.log("dragging")
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
+    // 
+
+    if( e.clientX) {
+      pos1 = pos3 - e.clientX;
+      pos3 = e.clientX
+    }else{
+      pos1 = pos3 - e.touches[0].clientX;
+      pos3 = e.touches[0].clientX ;
+
+    }
+    console.log(e.clientX, "CLIENT");
+    
+    // pos2 = pos4 - e.clientY;
+
+    // pos4 = e.clientY;
     // set the element's new position:
+
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+
+  
+
   }
 
   function closeDragElement() {
