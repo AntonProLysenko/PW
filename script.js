@@ -187,7 +187,7 @@ function dragElement(elmnt) {
       pos2 = pos4 - e.touches[0].clientY;
       pos4 = e.touches[0].clientY;
       console.log('YSCROLL', pos4);
-      if (pos2!=0){
+      if (pos2 <=-1.5 && pos2 >=1.5){
         pos1 = 0
         // pos3 = null
       }else{
