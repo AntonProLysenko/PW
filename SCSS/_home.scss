@@ -10,6 +10,7 @@ $secondary-title: #ed815d;
 }
 
 .profile-pic {
+    position: absolute;
     width: 50%;
     /* position: relative;
   align-self: flex-end; */
@@ -17,6 +18,10 @@ $secondary-title: #ed815d;
 }
 
 .profile-pic{
+    .draggable_horizontal{
+        // position: absolute;
+        z-index: 10000;
+    }
     img {
         max-width: 100%;
         height: 100%;

@@ -30,6 +30,7 @@ let icons = ['<i class="fa-sharp fa-solid fa-house"></i>','<i class="fa-solid fa
 //Swiper
 let mainSwiper = new Swiper(".parent-slider", {
   direction: "vertical",
+  touchStartPreventDefault: false,//for alowing mouse up/down events
   sliderPerView: 1,
   spaceBetween: 0,
   speed: 300,
@@ -62,6 +63,8 @@ let mainSwiper = new Swiper(".parent-slider", {
   },
 }); 
 
+// mainSwiper.simulateTouch = false;
+// mainSwiper.touchStartPreventDefault = false
 
 let mainTitleDescription = document.querySelector(".main-title-description");
 let secondWelcoming = document.getElementById('line-2')
@@ -81,7 +84,7 @@ let modal = document.querySelector(".about-modal");
 
 
 
-
+//Mobile views
 function mobileView() {
   if(window.innerWidth <= 1200){
     scrollArrows.style.visibility = "hidden";
@@ -128,6 +131,76 @@ window.addEventListener("resize", mobileView);
    
 // })
 // checkr = false
+
+
+//Draggable Picture
+let drag = document.querySelector(".profile-pic")
+// drag.onclick = ()=>{alert("asdf"); console.log("asdf")}
+// console.log(drag)
+
+drag.addEventListener("click", function(){
+  console.log('scrolling');
+});
+
+
+function hello (){
+  console.log("HELLO")
+}
+
+
+dragElement(drag);
+
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  
+  if (document.getElementById(elmnt.id)) {
+    console.dir(elmnt)
+    /* if present, the header is where you move the DIV from:*/
+    elmnt.addEventListener("mousedown", dragMouseDown)
+    
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+
+    console.log("dragging");
+
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    // pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    console.log("elem_dtag")
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    // pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    // pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
+
 
 
 //Modal
@@ -250,8 +323,6 @@ slider.addEventListener("click", function (ev) {
     console.log("slider.clientWidth " + slider.clientWidth);
     console.log("slider.scrollLeft " + slider.scrollLeft);
     console.log("calcul " + (slider.scrollWidth - slider.clientWidth));
-    
-    
   }
 });
 
