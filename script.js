@@ -134,11 +134,9 @@ window.addEventListener("resize", mobileView);
 
 
 //Draggable Picture
-let drag = document.querySelector(".profile-pic")
-// drag.onclick = ()=>{alert("asdf"); console.log("asdf")}
-// console.log(drag)
+let dragable = document.querySelector(".profile-pic")
 
-dragElement(drag);
+dragElement(dragable);
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -156,12 +154,6 @@ function dragElement(elmnt) {
   }
 
   function dragMouseDown(e) {
-
-    console.log("dragg Started");
-
-    console.log();
-    
-
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
@@ -176,28 +168,39 @@ function dragElement(elmnt) {
 
   function elementDrag(e) {
 
-    console.log("dragging")
+    console.log("DRAGGING");
+    
     e = e || window.event;
     e.preventDefault();
-    // calculate the new cursor position:
-    // 
 
+    // calculate the new cursor position:
     if( e.clientX) {
       pos1 = pos3 - e.clientX;
       pos3 = e.clientX
     }else{
-      pos1 = pos3 - e.touches[0].clientX;
-      pos3 = e.touches[0].clientX ;
+
+      // let yscroll = e.clientY
+      // let posy = yscroll - e.touches[0].clientY
+      // console.log('POSY', window.scrollY);
+      console.log('YSCROLL', pos2);
+      // console.log('e.touches[0]', e.touches[0]);
+      pos2 = pos4 - e.touches[0].clientY;
+      pos4 = e.touches[0].clientY;
+
+      if (pos2>0){
+        pos1 = null
+        pos3 = null
+      }else{
+        pos1 = pos3 - e.touches[0].clientX;
+        pos3 = e.touches[0].clientX ;
+      }
 
     }
-    console.log(e.clientX, "CLIENT");
     
     // pos2 = pos4 - e.clientY;
-
     // pos4 = e.clientY;
     // set the element's new position:
-
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    // elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
 
   
