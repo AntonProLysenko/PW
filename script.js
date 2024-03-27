@@ -80,6 +80,9 @@ let dragable = document.querySelector(".profile-pic")
   let ImageDefaultTop = getComputedStyle(dragable).top;
   let ImageDefaultLeft = getComputedStyle(dragable).left;
 
+let aboutText = document.querySelector(".about-text")
+let aboutTitle = document.querySelector("#about-title")
+
 //changing link to icon
 // navLinks.forEach((link,idx)=>{
 //   link.addEventListener("click",(evt)=>{
@@ -264,6 +267,18 @@ function closeHandler(evt){
     mainSwiper.allowTouchMove = true;
     mainSwiper.mousewheel.enable()
 }
+
+
+//Toggling about title galaxy background
+aboutText
+aboutTitle
+
+aboutText.addEventListener('mouseover', function(event) {
+  aboutTitle.classList.add("animated-title")
+})
+aboutText.addEventListener('mouseleave', function(event) {
+  aboutTitle.classList.remove("animated-title")
+})
 
 
 

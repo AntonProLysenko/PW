@@ -254,6 +254,22 @@ body {
     }
 }
 
+.animated-title{
+
+    h1{
+        // background: linear-gradient(to right, midnightblue, midnightblue 50%, linear-gradient(168deg, #f79029 5%, $main-title 65%, #232222 100%) 50%);
+        background-clip: text;
+        // background-size: 200% 100%;
+        background-position: 100%;
+        background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3U0M3l1ejE5MGIwaTVvNWxiZXFuc2RxdXQ3d3NvcmZ2dXZkbmhrZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3og0INtldac8gncQO4/giphy.gif);
+        background-size: cover;
+        transition: background-position 275ms ease;
+    }
+    h1:hover{
+        background-position: 0 100%;
+    }
+}
+
 //  .main-title-description{
 //     color:   #5fcedc  ;
 // } 
