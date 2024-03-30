@@ -75,6 +75,7 @@ let navLinks = document.querySelectorAll('.swiper-pagination-bullet')
 let navContainer = document.querySelector(".swiper-pagination");
 let modal = document.querySelector(".about-modal");
 
+//changing link to icon
 // navLinks.forEach((link,idx)=>{
 //   link.addEventListener("click",(evt)=>{
 //     // evt.stopPropagation()
@@ -82,6 +83,19 @@ let modal = document.querySelector(".about-modal");
 //   })
 // })
 
+
+
+//Reseting image position when Home navLink is not active
+let imagePositionreset = new MutationObserver(function() {
+        if(!navLinks[0].classList.contains('swiper-pagination-bullet-active')){
+          //added timeout until animation finished
+          setTimeout(function() {
+            dragable.style.top = ImageDefaultTop
+            dragable.style.left = ImageDefaultLeft;
+          }, 250);
+        }
+});
+imagePositionreset.observe(navLinks[0],  {attributes: true});
 
 
 //Mobile views
@@ -236,15 +250,7 @@ function openHandler(evt){
   overlay.style.display = "block"
   mainSwiper.allowTouchMove = false;
   mainSwiper.mousewheel.disable()
-  navContainer.style.display= "none" 
-
-  
-  
-  dragable.style.top = ImageDefaultTop
-  dragable.style.left = ImageDefaultLeft
-  
-  
-  
+  navContainer.style.display= "none"  
 }
 
 
