@@ -58,7 +58,7 @@ let mainSwiper = new Swiper(".parent-slider", {
     el: ".swiper-pagination",
     clickable: true,
     renderBullet: (index, className) => {
-      return '<span class="' + className + '">' + nav[index] + "</span>";
+      return '<span class="' + className + '" index="' + index + '">' + nav[index] + "</span>";
     },
   },
 }); 
@@ -72,7 +72,7 @@ let firstWelcoming = document.getElementById('line-1')
 let scrollArrows = document.getElementById('line-3');
 let myPicture = document.querySelector('.profile-pic')
 let navLinks = document.querySelectorAll('.swiper-pagination-bullet')
-let activeNav = document.querySelector(".swiper-pagination");
+let navContainer = document.querySelector(".swiper-pagination");
 let modal = document.querySelector(".about-modal");
 
 // navLinks.forEach((link,idx)=>{
@@ -135,6 +135,8 @@ window.addEventListener("resize", mobileView);
 
 //Draggable Picture
 let dragable = document.querySelector(".profile-pic")
+let ImageDefaultTop = getComputedStyle(dragable).top;
+let ImageDefaultLeft = getComputedStyle(dragable).left;
 
 dragElement(dragable);
 
@@ -164,29 +166,27 @@ function dragElement(elmnt) {
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
     document.ontouchmove = elementDrag
+
+    console.log("Document", document);
+    
   }
 
-  function elementDrag(e) {
-
-    console.log("DRAGGING");
-    
+  function elementDrag(e) {    
     e = e || window.event;
     e.preventDefault();
-
     // calculate the new cursor position:
     if( e.clientX) {
       pos1 = pos3 - e.clientX;
       pos3 = e.clientX
     }else{
-
       // let yscroll = e.clientY
       // let posy = yscroll - e.touches[0].clientY
       // console.log('POSY', window.scrollY);
-      console.log('YSCROLL', pos2);
+      // console.log('YSCROLL', pos2);
       // console.log('e.touches[0]', e.touches[0]);
       pos2 = pos4 - e.touches[0].clientY;
       pos4 = e.touches[0].clientY;
-      console.log('YSCROLL', pos4);
+      // console.log('YSCROLL', pos4);
       if (pos2 <=-1.7 && pos2 >=1.7){
         pos1 = 0
         // pos3 = null
@@ -232,12 +232,19 @@ closeButton.addEventListener("click", closeHandler)
 overlay.addEventListener("click",closeHandler)
 
 function openHandler(evt){
-
   modal.style.display = "block"
   overlay.style.display = "block"
   mainSwiper.allowTouchMove = false;
   mainSwiper.mousewheel.disable()
-  activeNav.style.display= "none" 
+  navContainer.style.display= "none" 
+
+  
+  
+  dragable.style.top = ImageDefaultTop
+  dragable.style.left = ImageDefaultLeft
+  
+  
+  
 }
 
 
@@ -246,7 +253,7 @@ function closeHandler(evt){
     modal.style.display = "none";
     overlay.style.display = "none";
   }
-    activeNav.style.display= "block"  
+    navContainer.style.display= "block"  
     mainSwiper.allowTouchMove = true;
     mainSwiper.mousewheel.enable()
 }
