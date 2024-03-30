@@ -73,7 +73,12 @@ let scrollArrows = document.getElementById('line-3');
 let myPicture = document.querySelector('.profile-pic')
 let navLinks = document.querySelectorAll('.swiper-pagination-bullet')
 let navContainer = document.querySelector(".swiper-pagination");
+  let navContainerDefaultDisplay = getComputedStyle(navContainer).display
 let modal = document.querySelector(".about-modal");
+
+let dragable = document.querySelector(".profile-pic")
+  let ImageDefaultTop = getComputedStyle(dragable).top;
+  let ImageDefaultLeft = getComputedStyle(dragable).left;
 
 //changing link to icon
 // navLinks.forEach((link,idx)=>{
@@ -85,7 +90,7 @@ let modal = document.querySelector(".about-modal");
 
 
 
-//Reseting image position when Home navLink is not active
+//Reseting image position when the Home navLink is not active
 let imagePositionreset = new MutationObserver(function() {
         if(!navLinks[0].classList.contains('swiper-pagination-bullet-active')){
           //added timeout until animation finished
@@ -148,10 +153,6 @@ window.addEventListener("resize", mobileView);
 
 
 //Draggable Picture
-let dragable = document.querySelector(".profile-pic")
-let ImageDefaultTop = getComputedStyle(dragable).top;
-let ImageDefaultLeft = getComputedStyle(dragable).left;
-
 dragElement(dragable);
 
 function dragElement(elmnt) {
@@ -259,7 +260,7 @@ function closeHandler(evt){
     modal.style.display = "none";
     overlay.style.display = "none";
   }
-    navContainer.style.display= "block"  
+    navContainer.style.display= navContainerDefaultDisplay  
     mainSwiper.allowTouchMove = true;
     mainSwiper.mousewheel.enable()
 }
