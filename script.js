@@ -237,6 +237,7 @@ function openHandler(evt){
   overlay.style.display = "block"
   mainSwiper.allowTouchMove = false;
   mainSwiper.mousewheel.disable()
+  activeNav.style.display= "none" 
 }
 
 
@@ -245,6 +246,7 @@ function closeHandler(evt){
     modal.style.display = "none";
     overlay.style.display = "none";
   }
+    activeNav.style.display= "block"  
     mainSwiper.allowTouchMove = true;
     mainSwiper.mousewheel.enable()
 }
