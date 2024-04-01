@@ -81,7 +81,7 @@ let dragable = document.querySelector(".profile-pic")
   let ImageDefaultLeft = getComputedStyle(dragable).left;
 
 let aboutText = document.querySelector(".about-text")
-let aboutTitle = document.querySelector("#about-title")
+let universeSpan = document.querySelector("#universe")
 
 //changing link to icon
 // navLinks.forEach((link,idx)=>{
@@ -269,15 +269,15 @@ function closeHandler(evt){
 }
 
 
-//Toggling about title galaxy background
-aboutText
-aboutTitle
+//Toggling universe galaxy background
+
+
 
 aboutText.addEventListener('mouseover', function(event) {
-  aboutTitle.classList.add("animated-title")
+  universeSpan.classList.add("galaxy-font")
 })
 aboutText.addEventListener('mouseleave', function(event) {
-  aboutTitle.classList.remove("animated-title")
+  universeSpan.classList.remove("galaxy-font")
 })
 
 
