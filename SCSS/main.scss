@@ -49,13 +49,13 @@ html {
   }
    
   /* Handle */
-  ::-webkit-scrollbar-thumb-piece {
+  ::-webkit-scrollbar-thumb {
     background: $main-title; 
     border-radius: 2px;
   }
   
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb-piece:hover {
+  ::-webkit-scrollbar-thumb:hover {
     background:$secondary-title; 
   }
 

@@ -208,27 +208,6 @@ h3 {
   overflow-x: auto;
 }
 
-::-webkit-scrollbar {
-  width: 2.5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px transparent;
-  border-radius: 2px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #edb15d;
-  border-radius: 2px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
-}
-
 #modal-text {
   padding: 7.5px;
   display: flex;
@@ -279,6 +258,20 @@ h3 {
 .timeline-item p {
   width: 150px;
   color: rgb(246, 232, 206);
+}
+
+.skills {
+  justify-self: center;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 1rem;
+}
+
+.skill {
+  height: 60px;
+  width: 100%;
+  border: 1px solid #ed815d;
 }
 
 .projects {
@@ -601,13 +594,13 @@ html {
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb-piece {
+::-webkit-scrollbar-thumb {
   background: #edb15d;
   border-radius: 2px;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb-piece:hover {
+::-webkit-scrollbar-thumb:hover {
   background: #ed815d;
 }
 
@@ -1028,6 +1021,9 @@ body {
   .about-modal {
     font-size: 16px;
   }
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media only screen and (min-width: 541px) {
   .home .content-container {
@@ -1048,6 +1044,9 @@ body {
     transform: translate(-50%, -50%);
     height: 100vh;
     min-width: 150%;
+  }
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {

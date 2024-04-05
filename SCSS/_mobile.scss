@@ -60,10 +60,10 @@
         padding-top: 1px;
     }
 
-    #modal-text{
-        // height: 100%;
-        // margin-top: 2vh;
-    }
+    // #modal-text{
+    //     // height: 100%;
+    //     // margin-top: 2vh;
+    // }
 
     .timeline-container{
        display: none;
@@ -304,10 +304,12 @@
     .about-modal {
         font-size: 16px;
     }
-    #modal-text{
-        // height: 100%;
-        // margin-top: 2.3vh;
-    }
+    // #modal-text{
+    //     // height: 100%;
+    //     // margin-top: 2.3vh;
+    // }
+
+    .skills { grid-template-columns: repeat(2, 1fr); }
 
 }
 
@@ -341,6 +343,7 @@
         height: 100vh;
         min-width: 150%;
     }
+    .skills { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media only screen and (min-width: 1200px) {
