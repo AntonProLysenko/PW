@@ -73,7 +73,6 @@ let scrollArrows = document.getElementById('line-3');
 let myPicture = document.querySelector('.profile-pic')
 let navLinks = document.querySelectorAll('.swiper-pagination-bullet')
 let navContainer = document.querySelector(".swiper-pagination");
-  let navContainerDefaultDisplay = getComputedStyle(navContainer).display
 let modal = document.querySelector(".about-modal");
 
 let dragable = document.querySelector(".profile-pic")
@@ -248,13 +247,13 @@ let openButton = document.querySelector(".open")
 openButton.addEventListener("click", openHandler)
 closeButton.addEventListener("click", closeHandler)
 overlay.addEventListener("click",closeHandler)
-
 function openHandler(evt){
+
   modal.style.display = "block"
   overlay.style.display = "block"
   mainSwiper.allowTouchMove = false;
   mainSwiper.mousewheel.disable()
-  navContainer.style.display= "none"  
+  navContainer.style.visibility= "hidden"
 }
 
 
@@ -263,16 +262,13 @@ function closeHandler(evt){
     modal.style.display = "none";
     overlay.style.display = "none";
   }
-    navContainer.style.display= navContainerDefaultDisplay  
+    navContainer.style.visibility= "visible"
     mainSwiper.allowTouchMove = true;
     mainSwiper.mousewheel.enable()
 }
 
 
 //Toggling universe galaxy background
-
-
-
 aboutText.addEventListener('mouseover', function(event) {
   universeSpan.classList.add("galaxy-font")
 })
