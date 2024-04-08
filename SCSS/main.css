@@ -269,9 +269,18 @@ h3 {
 }
 
 .skill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  font-weight: 100;
+  font-size: 0.9rem;
+  color: #edb15d;
   height: 60px;
   width: 100%;
-  border: 1px solid #ed815d;
+}
+.skill .skill-name {
+  color: white;
 }
 
 .projects {

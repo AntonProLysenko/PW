@@ -162,9 +162,19 @@ color: $active-link;
   grid-gap: 1rem;
 }
 .skill{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:start;
+  font-weight: 100;
+  font-size: 0.9rem;
+  color: $main-title;
   height: 60px;
   width: 100%;
-  border: 1px solid $secondary-title
+  // border: 1px soli;
+  .skill-name{
+    color: white;
+  }
 }
 
 
