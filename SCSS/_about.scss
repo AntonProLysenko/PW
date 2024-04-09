@@ -155,11 +155,12 @@ color: $active-link;
 }
 
 .skills{
-  justify-self: center;
+  align-self: center;
+  width: 90%;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
 }
 .skill{
   display: flex;
@@ -174,6 +175,9 @@ color: $active-link;
   // border: 1px soli;
   .skill-name{
     color: white;
+  }
+  .skill-icon{
+    font-size: x-large;
   }
 }
 

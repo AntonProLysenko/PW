@@ -261,11 +261,12 @@ h3 {
 }
 
 .skills {
-  justify-self: center;
+  align-self: center;
+  width: 90%;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
 }
 
 .skill {
@@ -281,6 +282,9 @@ h3 {
 }
 .skill .skill-name {
   color: white;
+}
+.skill .skill-icon {
+  font-size: x-large;
 }
 
 .projects {
@@ -604,7 +608,7 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #edb15d;
+  background: #ed815d;
   border-radius: 2px;
 }
 
@@ -1032,6 +1036,12 @@ body {
   }
   .skills {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .skills .skill {
+    height: 30px;
+  }
+  .skills .skill .skill-icon {
+    font-size: medium;
   }
 }
 @media only screen and (min-width: 541px) {

@@ -309,7 +309,15 @@
     //     // margin-top: 2.3vh;
     // }
 
-    .skills { grid-template-columns: repeat(2, 1fr); }
+    .skills {
+         grid-template-columns: repeat(2, 1fr); 
+         .skill{
+            height: 30px;
+            .skill-icon{
+                font-size: medium;
+            }
+         }
+    }
 
 }
 
