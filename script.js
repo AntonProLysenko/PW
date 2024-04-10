@@ -249,7 +249,7 @@ closeButton.addEventListener("click", closeHandler)
 overlay.addEventListener("click",closeHandler)
 function openHandler(evt){
 
-  modal.style.display = "block"
+  modal.style.display = "flex"
   overlay.style.display = "block"
   mainSwiper.allowTouchMove = false;
   mainSwiper.mousewheel.disable()
