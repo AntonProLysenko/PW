@@ -156,9 +156,11 @@ color: $active-link;
 
 .skills{
   align-self: center;
-  width: 90%;
+  width: 70%;
+  min-width: max-content;
   display: grid;
-  align-items: center;
+  place-items: center stretch;
+  // align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 1.5rem;
 }

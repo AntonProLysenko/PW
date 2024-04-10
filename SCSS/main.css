@@ -262,9 +262,11 @@ h3 {
 
 .skills {
   align-self: center;
-  width: 90%;
+  width: 70%;
+  min-width: -moz-max-content;
+  min-width: max-content;
   display: grid;
-  align-items: center;
+  place-items: center stretch;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 1.5rem;
 }
@@ -899,7 +901,9 @@ body {
   .about-modal {
     top: 50%;
     left: 50%;
-    width: 50vw;
+    width: 80vw;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
     max-height: 98vh;
   }
   .contact-title {
