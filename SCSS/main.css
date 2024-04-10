@@ -203,9 +203,12 @@ h3 {
   transform: translate(-50%, -50%);
   padding: 15px;
   padding-top: 1px;
-  display: flex !important;
+  display: flex;
   flex-direction: column;
-  overflow-x: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
 #modal-text {
