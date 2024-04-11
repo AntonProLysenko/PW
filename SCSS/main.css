@@ -190,18 +190,17 @@ h3 {
 }
 
 .about-modal {
-  background-color: #13182e;
-  background-image: linear-gradient(120deg, #2a2b32 0%, #222c33 100%);
+  background-image: linear-gradient(120deg, rgba(42, 43, 50, 0.8784313725) 0%, rgba(34, 44, 51, 0.8784313725) 20%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 7px;
   color: white;
   font-weight: 100;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-family: "Unbounded", cursive;
   text-align: justify;
   position: absolute;
   transform: translate(-50%, -50%);
-  padding: 15px;
+  padding: 22.5px;
   padding-top: 1px;
   display: flex;
   flex-direction: column;
@@ -212,7 +211,6 @@ h3 {
 }
 
 #modal-text {
-  padding: 7.5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -261,6 +259,15 @@ h3 {
 .timeline-item p {
   width: 150px;
   color: rgb(246, 232, 206);
+}
+
+#skills-title {
+  width: 100%;
+  border-bottom: 1.5px solid white;
+}
+
+hr {
+  color: #5fcedc;
 }
 
 .skills {
@@ -1043,6 +1050,7 @@ body {
   }
   .skills {
     grid-template-columns: repeat(2, 1fr);
+    align-self: flex-start;
   }
   .skills .skill {
     height: 30px;

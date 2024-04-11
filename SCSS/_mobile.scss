@@ -312,6 +312,7 @@
 
     .skills {
          grid-template-columns: repeat(2, 1fr); 
+         align-self: flex-start;
          .skill{
             height: 30px;
             .skill-icon{

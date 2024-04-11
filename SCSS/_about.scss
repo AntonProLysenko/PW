@@ -66,21 +66,20 @@ color: $active-link;
 
 
 .about-modal{
-  background-color: #13182e;
-  background-image: linear-gradient(120deg, #2a2b32 0%, #222c33 100%);
+  background-image: linear-gradient(120deg, #2a2b32e0 0%, #222c33e0 20%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 7px;
 
   color: white; 
   font-weight: 100;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   // font-family: 'Noto Sans Lepcha', sans-serif;
   font-family: 'Unbounded', cursive;
   text-align: justify;
    
   position: absolute;
   transform: translate(-50%,-50%);
-  padding: 15px;
+  padding: 22.5px;
   padding-top: 1px;
 
   display: flex;
@@ -96,7 +95,7 @@ color: $active-link;
   // margin-top: 1vh;
   // max-height: fit-content;
   // overflow-x: auto;
-  padding: 7.5px;
+  // padding: 7.5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -154,6 +153,14 @@ color: $active-link;
     width: 150px;
     color:rgb(246, 232, 206)
   }
+}
+#skills-title{
+  width:100%;
+  border-bottom: 1.5px solid white;
+  // padding: 7.5px;
+}
+hr{
+  color: $active-link;
 }
 
 .skills{
