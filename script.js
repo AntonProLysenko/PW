@@ -251,11 +251,12 @@ let overlay = document.querySelector(".overlay")
 let closeButton = document.querySelector(".close")
 let openButton = document.querySelector(".open")
 
-let skillTitle = document.querySelector("#skill-title")
-
 openButton.addEventListener("click", openHandler)
 closeButton.addEventListener("click", closeHandler)
 overlay.addEventListener("click",closeHandler)
+
+
+
 function openHandler(evt){
 
   modal.style.display = "flex"
@@ -275,6 +276,11 @@ function closeHandler(evt){
     mainSwiper.mousewheel.enable()
   }
 }
+//painting underline
+let skillContainer = document.querySelector("#skills-container")
+let underline = document.querySelector(".underline")
+skillContainer.addEventListener("mouseenter", ()=>{underline.style.backgroundPosition="left bottom"})
+skillContainer.addEventListener("mouseleave", ()=>{underline.style.backgroundPosition="right bottom"})
 
 
 

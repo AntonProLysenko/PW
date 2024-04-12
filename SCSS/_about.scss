@@ -155,28 +155,14 @@ color: $active-link;
   }
 }
 #skills-title{
-  width:100%;
-  border-bottom: 1.5px solid;
-  border-image:linear-gradient(to right, $main-title -300%, white 100%);
-  border-image-slice: 1;
-  // background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all .5s ease-in-out; 
-
-
-  // background-image:linear-gradient(to right, $main-title -300%, white 100%);
-
-
-  // border-width: 2px;
-  // border-bottom: solid;
-
-  // padding: 7.5px;
+  margin-bottom: 0;
 }
-#skills-title:hover{
-  border-image:linear-gradient(to right, $secondary-title 300%, white 100%);
-  border-image-slice: 1;
-  transition: all .5s ease-in-out; 
+#skills-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
+
 
 
 .skills{

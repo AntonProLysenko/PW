@@ -262,20 +262,13 @@ h3 {
 }
 
 #skills-title {
-  width: 100%;
-  border-bottom: 1.5px solid;
-  -o-border-image: linear-gradient(to right, #edb15d -300%, white 100%);
-     border-image: linear-gradient(to right, #edb15d -300%, white 100%);
-  border-image-slice: 1;
-  background-position: right bottom;
-  transition: all 0.5s ease-in-out;
+  margin-bottom: 0;
 }
 
-#skills-title:hover {
-  -o-border-image: linear-gradient(to right, #ed815d 300%, white 100%);
-     border-image: linear-gradient(to right, #ed815d 300%, white 100%);
-  border-image-slice: 1;
-  transition: all 0.5s ease-in-out;
+#skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .skills {
@@ -727,6 +720,17 @@ body {
   100% {
     transform: translate(24px, 0);
   }
+}
+
+.underline {
+  min-height: 2px;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #edb15d 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.25s ease-in;
 }
 
 .swiper-container {
