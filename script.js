@@ -237,12 +237,21 @@ function dragElement(elmnt) {
 
 
 
+//Toggling universe galaxy background
+aboutText.addEventListener('mouseover', function(event) {
+  universeSpan.classList.add("galaxy-font")
+})
+aboutText.addEventListener('mouseleave', function(event) {
+  universeSpan.classList.remove("galaxy-font")
+})
 
 //Modal
 let overlay = document.querySelector(".overlay")
 
 let closeButton = document.querySelector(".close")
 let openButton = document.querySelector(".open")
+
+let skillTitle = document.querySelector("#skill-title")
 
 openButton.addEventListener("click", openHandler)
 closeButton.addEventListener("click", closeHandler)
@@ -268,13 +277,9 @@ function closeHandler(evt){
 }
 
 
-//Toggling universe galaxy background
-aboutText.addEventListener('mouseover', function(event) {
-  universeSpan.classList.add("galaxy-font")
-})
-aboutText.addEventListener('mouseleave', function(event) {
-  universeSpan.classList.remove("galaxy-font")
-})
+
+
+
 
 
 

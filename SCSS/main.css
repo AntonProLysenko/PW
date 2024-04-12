@@ -263,11 +263,19 @@ h3 {
 
 #skills-title {
   width: 100%;
-  border-bottom: 1.5px solid white;
+  border-bottom: 1.5px solid;
+  -o-border-image: linear-gradient(to right, #edb15d -300%, white 100%);
+     border-image: linear-gradient(to right, #edb15d -300%, white 100%);
+  border-image-slice: 1;
+  background-position: right bottom;
+  transition: all 0.5s ease-in-out;
 }
 
-hr {
-  color: #5fcedc;
+#skills-title:hover {
+  -o-border-image: linear-gradient(to right, #ed815d 300%, white 100%);
+     border-image: linear-gradient(to right, #ed815d 300%, white 100%);
+  border-image-slice: 1;
+  transition: all 0.5s ease-in-out;
 }
 
 .skills {
