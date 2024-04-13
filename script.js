@@ -266,14 +266,14 @@ function openHandler(evt){
 }
 
 
-function closeHandler(evt){
-  if (evt.target == overlay || evt.target == closeButton || evt.target == navLinks){
+function closeHandler(evt){  
+  if (evt.target === overlay || evt.target === closeButton){
     modal.style.display = "none";
     overlay.style.display = "none";
-  }
     navContainer.style.visibility= "visible"
     mainSwiper.allowTouchMove = true;
     mainSwiper.mousewheel.enable()
+  }
 }
 
 
