@@ -306,7 +306,7 @@ const emailBox = document.querySelector('.email')
 
    btn.value = 'Sending...';
 
-   const serviceID = "default_service";
+   const serviceID = "service_o03tfmk";
    const templateID = "template_qrke2c8";
 
    emailjs.sendForm(serviceID, templateID, this)
