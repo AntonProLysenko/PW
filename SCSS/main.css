@@ -308,6 +308,7 @@ h3 {
 }
 .skill .skill-name {
   color: white;
+  transition: all 0.25s ease-in;
 }
 .skill .skill-icon {
   font-size: x-large;
@@ -750,7 +751,7 @@ body {
   background: linear-gradient(to right, #edb15d 50%, transparent 50%);
   background-size: 200% 100%;
   background-position: right bottom;
-  transition: all 0.25s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 .swiper-container {

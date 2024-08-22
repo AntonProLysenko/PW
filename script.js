@@ -287,12 +287,13 @@ skillsContainer.addEventListener("mouseleave", ()=>{underline.style.backgroundPo
 
 let singleSkills = document.querySelectorAll(".skill")
 console.dir(singleSkills);
-//find underline in each 
 singleSkills.forEach((skill)=>{
-  console.log(skill.firstChild.children)
+
+  //underline element
   let skillUnderline = skill.lastElementChild.lastElementChild
-  skill.addEventListener("mouseenter", ()=>{skillUnderline.style.backgroundPosition="left bottom"})
-  skill.addEventListener("mouseleave", ()=>{skillUnderline.style.backgroundPosition="right bottom"})
+  let skillText = skill.lastElementChild.firstElementChild.lastElementChild
+  skill.addEventListener("mouseenter", ()=>{skillUnderline.style.backgroundPosition="left bottom"; skillText.style.color="#edb15d"})
+  skill.addEventListener("mouseleave", ()=>{skillUnderline.style.backgroundPosition="right bottom"; skillText.style.color="#ffffff"})
 })
 
 
