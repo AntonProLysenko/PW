@@ -284,14 +284,27 @@ h3 {
 
 .skill {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   justify-content: start;
   font-weight: 100;
   font-size: 0.8rem;
   color: #edb15d;
   height: 60px;
-  width: 100%;
+}
+.skill .skill-title {
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.skill .skill-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .skill .skill-name {
   color: white;
@@ -722,12 +735,19 @@ body {
   }
 }
 
-.underline {
+.underline, .underline-skill {
   min-height: 2px;
   width: 100%;
   border-radius: 15px;
   margin-bottom: 0.5rem;
   background: linear-gradient(to right, #edb15d 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.25s ease-in;
+}
+
+.underline-skill {
+  background: linear-gradient(to right, #edb15d 50%, transparent 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.25s ease-in;

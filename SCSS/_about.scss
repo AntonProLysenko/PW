@@ -177,15 +177,27 @@ color: $active-link;
 }
 .skill{
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   justify-content:start;
   font-weight: 100;
   font-size: 0.8rem;
   color: $main-title;
   height: 60px;
-  width: 100%;
+  // width: 100%;
   // border: 1px soli;
+  .skill-title{
+    display: flex;
+    flex-direction:column;
+    width:fit-content
+  }
+  .skill-title-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:start;
+    align-items: center;
+    width: fit-content
+  }
   .skill-name{
     color: white;
   }

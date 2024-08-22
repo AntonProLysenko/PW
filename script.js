@@ -277,13 +277,23 @@ function closeHandler(evt){
   }
 }
 //painting underline
-let skillContainer = document.querySelector("#skills-container")
+let skillsContainer = document.querySelector("#skills-container")
 let underline = document.querySelector(".underline")
-skillContainer.addEventListener("mouseenter", ()=>{underline.style.backgroundPosition="left bottom"})
-skillContainer.addEventListener("mouseleave", ()=>{underline.style.backgroundPosition="right bottom"})
+skillsContainer.addEventListener("mouseenter", ()=>{underline.style.backgroundPosition="left bottom"})
+skillsContainer.addEventListener("mouseleave", ()=>{underline.style.backgroundPosition="right bottom"})
 
 
 
+
+let singleSkills = document.querySelectorAll(".skill")
+console.dir(singleSkills);
+//find underline in each 
+singleSkills.forEach((skill)=>{
+  console.log(skill.firstChild.children)
+  let skillUnderline = skill.lastElementChild.lastElementChild
+  skill.addEventListener("mouseenter", ()=>{skillUnderline.style.backgroundPosition="left bottom"})
+  skill.addEventListener("mouseleave", ()=>{skillUnderline.style.backgroundPosition="right bottom"})
+})
 
 
 
