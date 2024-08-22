@@ -112,8 +112,12 @@ color: $active-link;
   backdrop-filter: blur(8px);
 
   z-index: 1000;
+}
+
+.about-overlay{
   display: none;
 }
+
 
 .fa-user-tie{
   font-size: x-large;

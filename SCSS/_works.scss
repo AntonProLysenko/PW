@@ -15,6 +15,17 @@
     text-wrap:balance;
 }
 
+.projects-overlay{
+    display: none;
+}
+
+
+.projects-modal{
+    @extend .about-modal;
+    width:50%;
+    height: 50%;
+  }
+
 
 
 

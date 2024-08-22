@@ -73,7 +73,7 @@ let scrollArrows = document.getElementById('line-3');
 let myPicture = document.querySelector('.profile-pic')
 let navLinks = document.querySelectorAll('.swiper-pagination-bullet')
 let navContainer = document.querySelector(".swiper-pagination");
-let modal = document.querySelector(".about-modal");
+
 
 let dragable = document.querySelector(".profile-pic")
   let ImageDefaultTop = getComputedStyle(dragable).top;
@@ -136,22 +136,6 @@ function mobileView() {
 mobileView();
 window.addEventListener("resize", mobileView);
 
-// let checkr = false
-// document.addEventListener("click", (evt)=>{
-//   //  navLinks[1] === evt.target || navLinks[1].firstChild === evt.target;
-  
-
-//    navLinks.forEach((link)=>{
-//       if(link === evt.target || link.firstChild === evt.target){
-//         return checkr = true
-//       }
-      
-//    })
-
-//   //  console.log(checkr);
-   
-// })
-// checkr = false
 
 
 //Draggable Picture
@@ -245,22 +229,44 @@ aboutText.addEventListener('mouseleave', function(event) {
   universeSpan.classList.remove("galaxy-font")
 })
 
-//Modal
-let overlay = document.querySelector(".overlay")
 
-let closeButton = document.querySelector(".close")
+
+
+
+//Modals
+let aboutOverlay = document.querySelector(".about-overlay")
+let aboutModal = document.querySelector(".about-modal");
+let closeButton = document.querySelectorAll(".close")
 let openButton = document.querySelector(".open")
 
-openButton.addEventListener("click", openHandler)
-closeButton.addEventListener("click", closeHandler)
-overlay.addEventListener("click",closeHandler)
+let projectOpenBtn = document.querySelectorAll(".project-open")
+let projectsOverlay = document.querySelector(".projects-overlay")
+let projectModal = document.querySelector(".projects-modal")
+projectOpenBtn.forEach((btn)=>{
+  btn.addEventListener("click", openHandler) //openHandler)
+})
+//projectOpenBtn.addEventListener("click", openHandler)
 
+
+closeButton.forEach((btn)=>{
+  btn.addEventListener("click", closeHandler)
+})
+
+openButton.addEventListener("click", openHandler)
+aboutOverlay.addEventListener("click",closeHandler)
+projectsOverlay.addEventListener("click",closeHandler)
 
 
 function openHandler(evt){
-
-  modal.style.display = "flex"
-  overlay.style.display = "block"
+  
+  if (evt.target.dataset.target == "about-more"){
+    aboutModal.style.display = "flex"
+    aboutOverlay.style.display = "block"
+  }else if(evt.target.dataset.target == "project-more"){
+    projectsOverlay.style.display = "block"
+    projectModal.style.display = "flex"
+  }
+  
   mainSwiper.allowTouchMove = false;
   mainSwiper.mousewheel.disable()
   navContainer.style.visibility= "hidden"
@@ -268,14 +274,21 @@ function openHandler(evt){
 
 
 function closeHandler(evt){  
-  if (evt.target === overlay || evt.target === closeButton){
-    modal.style.display = "none";
-    overlay.style.display = "none";
+  if (evt.target === aboutOverlay || evt.target === closeButton || evt.target === projectsOverlay){
+    aboutModal.style.display = "none";
+    aboutOverlay.style.display = "none";
+    projectsOverlay.style.display = "none";
+    projectModal.style.display = "none";
     navContainer.style.visibility= "visible"
     mainSwiper.allowTouchMove = true;
     mainSwiper.mousewheel.enable()
   }
 }
+
+
+
+
+
 //painting underline
 let skillsContainer = document.querySelector("#skills-container")
 let underline = document.querySelector(".underline")
@@ -286,7 +299,6 @@ skillsContainer.addEventListener("mouseleave", ()=>{underline.style.backgroundPo
 
 
 let singleSkills = document.querySelectorAll(".skill")
-console.dir(singleSkills);
 singleSkills.forEach((skill)=>{
 
   //underline element
@@ -386,10 +398,10 @@ slider.addEventListener("click", function (ev) {
     scrollRight();
     // resetTimer();
 
-    console.log("slider.scrollWidth " + slider.scrollWidth);
-    console.log("slider.clientWidth " + slider.clientWidth);
-    console.log("slider.scrollLeft " + slider.scrollLeft);
-    console.log("calcul " + (slider.scrollWidth - slider.clientWidth));
+    // console.log("slider.scrollWidth " + slider.scrollWidth);
+    // console.log("slider.clientWidth " + slider.clientWidth);
+    // console.log("slider.scrollLeft " + slider.scrollLeft);
+    // console.log("calcul " + (slider.scrollWidth - slider.clientWidth));
   }
 });
 
