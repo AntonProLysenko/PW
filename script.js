@@ -249,6 +249,7 @@ projectOpenBtn.forEach((btn)=>{
 
 
 closeButton.forEach((btn)=>{
+  console.log(btn)
   btn.addEventListener("click", closeHandler)
 })
 
@@ -274,7 +275,8 @@ function openHandler(evt){
 
 
 function closeHandler(evt){  
-  if (evt.target === aboutOverlay || evt.target === closeButton || evt.target === projectsOverlay){
+  console.log(evt.target.className)
+  if (evt.target === aboutOverlay || evt.target.className === "close" || evt.target === projectsOverlay){
     aboutModal.style.display = "none";
     aboutOverlay.style.display = "none";
     projectsOverlay.style.display = "none";
