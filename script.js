@@ -259,11 +259,12 @@ projectsOverlay.addEventListener("click",closeHandler)
 
 
 function openHandler(evt){
-  
+  console.log("Open Activated")
   if (evt.target.dataset.target == "about-more"){
     aboutModal.style.display = "flex"
     aboutOverlay.style.display = "block"
   }else if(evt.target.dataset.target == "project-more"){
+    projectModal.innerHTML = choseDisplayContent(evt.target.dataset.subtarget)
     projectsOverlay.style.display = "block"
     projectModal.style.display = "flex"
   }
@@ -284,6 +285,20 @@ function closeHandler(evt){
     navContainer.style.visibility= "visible"
     mainSwiper.allowTouchMove = true;
     mainSwiper.mousewheel.enable()
+  }
+}
+
+function choseDisplayContent(target){  
+  if (target == "Apartments"){
+     return ("<button class='close'>x</button> <h1> Apatrments Websitee Info </h1>")
+  }else if (target == "Coinbase"){    
+    return("<button class='close'>x</button> <h1> Coinbase Clone Website Info </h1>")
+  }else if (target == "Trello"){
+    return("<button class='close'>x</button> <h1> Task Manager Website Info </h1> ")
+  }else if (target =="Trivia"){    
+    return(" <button class='close'>x</button><h1> Trivia Game Info </h1> ")
+  }else if (target == "Frog"){
+      return("<button class='close'>x</button> <h1> The Frog Game Info </h1>")
   }
 }
 
