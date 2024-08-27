@@ -556,11 +556,29 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   background-color: #32393e;
   min-width: 90%;
   max-width: 90%;
   border-radius: 15px;
+}
+
+.toggle-button {
+  position: absolute;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  transition: transform 300ms ease 0s, background-color 0s cubic-bezier(0.6, 0, 0.15, 1) 0s;
 }
 
 .header-navigation {
@@ -1321,6 +1339,36 @@ body {
 @media only screen and (min-width: 1200px) {
   .main-title-secondary {
     margin-left: -50px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .project-modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .close-btn-wrapper {
+    align-self: flex-start;
+  }
+  .toggle-button {
+    display: flex;
+  }
+  .header-navigation {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .active-links {
+    display: flex;
+  }
+  .active-navbar #top-bar {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .active-navbar #middle-bar {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .active-navbar #bottom-bar {
+    display: none;
   }
 }
 /*Vertical Tablet*/

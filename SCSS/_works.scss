@@ -371,6 +371,8 @@ background-size: 100% 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: relative;
     
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -381,6 +383,25 @@ background-size: 100% 100%;
     border-radius: 15px;
 }
 
+
+.toggle-button {
+    position: absolute;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+    .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+    
+        transition: transform 300ms ease 0s, background-color 0s cubic-bezier(0.6, 0, 0.15, 1) 0s;
+    }
+}
 
 
 

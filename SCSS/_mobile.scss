@@ -388,8 +388,51 @@
 }
 
 @media only screen and (min-width: 1200px) {
-.main-title-secondary {//prevent title overflow on sideBar
+    .main-title-secondary {//prevent title overflow on sideBar
         margin-left: -50px;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 1300px){
+    .project-modal-header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .close-btn-wrapper{
+        align-self: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .header-navigation{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    .active-links{
+        display: flex;
+    }
+
+    .active-navbar {
+
+        #top-bar{
+        transform: translateY(9px) rotate(45deg);
+        }
+      
+        #middle-bar{
+          transform: translateY(-9px) rotate(-45deg);
+        }
+      
+        #bottom-bar{
+          display: none
+        }
     }
 }
 

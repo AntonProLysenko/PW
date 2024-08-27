@@ -289,6 +289,18 @@ function closeHandler(evt){
   }
 }
 
+const toggleButton = document.querySelector(".toggle-button") ;
+const navbarLinks = document.querySelector(".header-navigation") ;
+
+toggleButton.addEventListener("click", () => {
+
+  console.log("Clicked");
+  
+  navbarLinks.classList.toggle("active-links");
+  
+  toggleButton.classList.toggle("active-navbar")
+});
+
 
 function choseDisplayContent(target){  
   console.dir(draft)
