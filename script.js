@@ -243,7 +243,7 @@ let projectModal = document.querySelector(".projects-modal")
 
 
 projectOpenBtn.forEach((btn)=>{
-  btn.style.display = "none"
+  // btn.style.display = "none"
   btn.addEventListener("click", openHandler) //openHandler)
 })
 //projectOpenBtn.addEventListener("click", openHandler)
