@@ -562,6 +562,7 @@ h3 {
 .nav-item {
   color: white;
   padding: 0px 0.75rem;
+  cursor: pointer;
 }
 
 .nav-item-main h1 {
@@ -569,12 +570,14 @@ h3 {
   color: #edb15d;
   font-family: "Unbounded", cursive;
   font-weight: bolder;
+  cursor: default;
 }
 
 .tiles-wrapper {
   width: 90%;
-  height: 100vh;
-  max-height: 100vh;
+  height: 150vh;
+  max-height: 150vh;
+  overflow-y: scroll;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 2fr 2fr;
@@ -602,6 +605,11 @@ h3 {
 
 .tools {
   grid-area: 2/2/3/3;
+}
+
+.screenshot {
+  grid-area: 3/1/4/4;
+  height: 75vh;
 }
 
 .contact {

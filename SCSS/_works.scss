@@ -385,7 +385,7 @@ background-size: 100% 100%;
 .nav-item{
     color:white;
     padding: 0px 0.75rem;
-
+    cursor: pointer;
 }
 
 .nav-item-main{
@@ -394,6 +394,7 @@ background-size: 100% 100%;
         color:$main-title;
         font-family: 'Unbounded', cursive;
         font-weight: bolder;
+        cursor: default;
     }
 }
 
@@ -403,8 +404,9 @@ background-size: 100% 100%;
     // justify-content: center;
     
     width: 90%;
-    height: 100vh;
-    max-height: 100vh;
+    height: 150vh;
+    max-height: 150vh;
+    overflow-y:scroll;
     display: grid;
     // grid-template-columns: 2fr 1fr 0.5fr;
     grid-template-columns:repeat(2, 1fr);
@@ -434,4 +436,9 @@ background-size: 100% 100%;
 
 .tools{
     grid-area: 2 / 2 / 3 / 3 ;
+}
+
+.screenshot{
+    grid-area: 3 /1 / 4 / 4 ;
+    height: 75vh;
 }
