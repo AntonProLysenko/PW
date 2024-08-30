@@ -525,6 +525,7 @@ h3 {
   align-items: center;
   min-width: 100vw;
   max-width: 100vw;
+  font-family: "Unbounded", cursive;
 }
 
 .project-modal-header-wrapper {
@@ -593,18 +594,69 @@ h3 {
   margin: 10px;
   padding: 10px 55px;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .overview {
   grid-area: 1/1/3/2;
 }
+.overview .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 70%;
+}
+.overview .text-wrapper p {
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+}
 
 .highlights {
   grid-area: 1/2/2/3;
 }
+.highlights .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.highlights .text-wrapper p {
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+}
 
 .tools {
   grid-area: 2/2/3/3;
+}
+.tools .tools-wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #edb15d;
+}
+.tools .tools-wrapper .tool-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+.tools .tools-wrapper .tool-title-wrapper .tool-name {
+  color: white;
+  transition: all 0.25s ease-in;
+}
+.tools .tools-wrapper .tool-title-wrapper .tool-icon {
+  font-size: x-large;
 }
 
 .screenshot {
