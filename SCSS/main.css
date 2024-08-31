@@ -336,7 +336,8 @@ h3 {
 
 .projects-modal {
   width: 50%;
-  height: 50%;
+  height: 99%;
+  overflow-y: hidden;
 }
 
 .slider-container {

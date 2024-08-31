@@ -203,9 +203,6 @@ function dragElement(elmnt) {
     // set the element's new position:
     // elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-
-  
-
   }
 
   function closeDragElement() {
@@ -242,7 +239,11 @@ let openButton = document.querySelector(".open")
 let projectOpenBtn = document.querySelectorAll(".project-open")
 let projectsOverlay = document.querySelector(".projects-overlay")
 let projectModal = document.querySelector(".projects-modal")
+
+
+
 projectOpenBtn.forEach((btn)=>{
+  btn.style.display = "none"
   btn.addEventListener("click", openHandler) //openHandler)
 })
 //projectOpenBtn.addEventListener("click", openHandler)
@@ -264,7 +265,7 @@ function openHandler(evt){
     aboutModal.style.display = "flex"
     aboutOverlay.style.display = "block"
   }else if(evt.target.dataset.target == "project-more"){
-    projectModal.innerHTML = choseDisplayContent(evt.target.dataset.subtarget)
+    // projectModal.innerHTML = choseDisplayContent(evt.target.dataset.subtarget)
     projectsOverlay.style.display = "block"
     projectModal.style.display = "flex"
   }
@@ -288,9 +289,11 @@ function closeHandler(evt){
   }
 }
 
+
 function choseDisplayContent(target){  
+  console.dir(draft)
   if (target == "Apartments"){
-     return ("<button class='close'>x</button> <h1> Apatrments Websitee Info </h1>")
+     return (`<button class='close'>x</button> <h1> Apatrments Websitee Info </h1> ${draft}`)
   }else if (target == "Coinbase"){    
     return("<button class='close'>x</button> <h1> Coinbase Clone Website Info </h1>")
   }else if (target == "Trello"){

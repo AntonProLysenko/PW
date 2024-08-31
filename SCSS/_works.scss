@@ -24,7 +24,8 @@ $main-title: #edb15d;
 .projects-modal{
     @extend .about-modal;
     width:50%;
-    height: 50%;
+    height: 99%;
+    overflow-y: hidden;
   }
 
 
@@ -407,7 +408,7 @@ background-size: 100% 100%;
     width: 90%;
     height: 150vh;
     max-height: 150vh;
-    overflow-y:scroll;
+    overflow-y: scroll;
     display: grid;
     // grid-template-columns: 2fr 1fr 0.5fr;
     grid-template-columns:repeat(2, 1fr);
