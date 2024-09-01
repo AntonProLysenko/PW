@@ -371,20 +371,19 @@ const emailBox = document.querySelector('.email')
 
 
 //Project Slider
-
-const leftArrow = document.querySelector(".left-arrow"),
-  rightArrow = document.querySelector(".right-arrow"),
-  slider = document.querySelector(".slider");
+const leftArrow = document.querySelector(".left-arrow")
+const rightArrow = document.querySelector(".right-arrow")
+const  slider = document.querySelector(".slider");
 
 function scrollRight() {
-  if ((slider.scrollWidth - slider.clientWidth)-20 <= slider.scrollLeft) {//added -20 for more stable scrolling statement(each browser measures with in own way)
+  if ((slider.scrollWidth - slider.clientWidth) <= slider.scrollLeft) {//added -20 for more stable scrolling statement(each browser measures with in own way)
     slider.scrollTo({
       left: 0,
       behavior: "smooth",
     });
   } else {
     slider.scrollBy({
-      left: slider.clientWidth-20,//again aded 20 since browsers measures width on own secret conditions//issue appears in safari
+      left: slider.clientWidth,//again aded 20 since browsers measures width on own secret conditions//issue appears in safari
       behavior: "smooth",
     });
   }
@@ -392,7 +391,7 @@ function scrollRight() {
 
 function scrollLeft() {
   slider.scrollBy({
-    left: -slider.clientWidth+20,//sama thing, Safari
+    left: -slider.clientWidth,//sama thing, Safari
     behavior: "smooth",
   });
 }
