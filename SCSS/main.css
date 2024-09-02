@@ -330,16 +330,6 @@ h3 {
   text-wrap: balance;
 }
 
-.projects-overlay {
-  display: none;
-}
-
-.projects-modal {
-  width: 50%;
-  height: 99%;
-  overflow-y: hidden;
-}
-
 .slider-container {
   display: flex;
   position: relative;
@@ -519,18 +509,29 @@ h3 {
   scrollbar-width: none;
 }
 
-.draft {
+.projects-overlay {
+  display: none;
+}
+
+.projects-modal {
+  width: 50vw;
+  height: 99vh;
+  overflow-y: hidden;
+  padding: 0px;
+}
+
+.project-modal-content-wrappera {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 100vw;
-  max-width: 100vw;
+  min-width: 100%;
+  max-width: 100%;
   font-family: "Unbounded", cursive;
 }
 
 .project-modal-header-wrapper {
-  max-width: 100vw;
-  min-width: 100vw;
+  max-width: 100%;
+  min-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -538,15 +539,15 @@ h3 {
 }
 
 #pseudo-first-box {
-  width: 5vw;
+  width: 5%;
 }
 
 .close-btn-wrapper {
-  width: 5vw;
+  width: 5%;
 }
 
 #close-project-btn {
-  padding-left: 2.5vw;
+  padding-left: 40%;
   font-size: xx-large;
 }
 
@@ -557,8 +558,8 @@ h3 {
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   background-color: #32393e;
-  min-width: 90vw;
-  max-width: 90vw;
+  min-width: 90%;
+  max-width: 90%;
   border-radius: 15px;
 }
 
@@ -592,7 +593,8 @@ h3 {
   width: 90%;
   height: 150vh;
   max-height: 150vh;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 2fr 2fr;
@@ -1083,6 +1085,31 @@ body {
     width: 90vw;
     margin-top: -10vh;
     height: 46.3917525773vw;
+  }
+  .project-modal-header {
+    flex-direction: column;
+  }
+  .tiles-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .tile {
+    padding: 0px;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    justify-content: flex-start;
+  }
+  .overview {
+    grid-area: 1/1/2/2;
+  }
+  .highlights {
+    grid-area: 2/1/3/2;
+  }
+  .tools {
+    grid-area: 3/1/4/2;
+  }
+  .screenshot {
+    grid-area: 4/1/5/2;
   }
   .links-ladscape {
     display: none;
