@@ -323,8 +323,8 @@ background-size: 100% 100%;
 
 .projects-modal{
     @extend .about-modal;
-    width:50vw;
-    height: 99vh;
+    width:50dvw;
+    height: 99dvh;
     overflow-y: hidden;
     padding: 0px 
   }
@@ -344,7 +344,7 @@ background-size: 100% 100%;
 
 .project-modal-header-wrapper{
     max-width: 100%;
-    min-width: 100%;
+    min-width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -387,9 +387,11 @@ background-size: 100% 100%;
 .toggle-button {
     position: absolute;
     right: 1rem;
+    top:1rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
+    
     width: 30px;
     height: 21px;
 
@@ -444,8 +446,8 @@ background-size: 100% 100%;
     // justify-content: center;
     
     width: 90%;
-    height: 150vh;
-    max-height: 150vh;
+    height: 150dvh;
+    max-height: 150dvh;
     overflow-y: auto;
     overflow-x: hidden;
     display: grid;
@@ -537,5 +539,5 @@ background-size: 100% 100%;
 
 .screenshot{
     grid-area: 3 /1 / 4 / 4 ;
-    height: 75vh;
+    height: 75dvh;
 }
