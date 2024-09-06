@@ -41,6 +41,7 @@ let mainSwiper = new Swiper(".parent-slider", {
     // thresholdDelta:9000000000,
     // releaseOnEdges: true,
   },
+  parallax: true,
 
   effect: "creative",
   creativeEffect: {
