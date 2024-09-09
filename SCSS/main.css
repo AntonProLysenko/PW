@@ -527,6 +527,7 @@ h3 {
   min-width: 100%;
   max-width: 100%;
   font-family: "Unbounded", cursive;
+  overflow-y: hidden;
 }
 
 .project-modal-header-wrapper {
@@ -610,19 +611,19 @@ h3 {
 }
 
 .tiles-wrapper {
-  width: 90%;
-  height: 150dvh;
-  max-height: 150dvh;
-  overflow-y: auto;
-  overflow-x: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 3fr;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  width: 90%;
 }
 
 .tile {
+  background: rgb(57, 56, 56);
   background: linear-gradient(45deg, rgba(50, 57, 62, 0.19) 0%, rgba(176, 174, 172, 0.19) 37%, rgba(50, 57, 62, 0.19) 100%);
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -697,7 +698,10 @@ h3 {
 
 .screenshot {
   grid-area: 3/1/4/4;
-  height: 75dvh;
+}
+.screenshot img {
+  height: 100%;
+  width: 100%;
 }
 
 .contact {

@@ -293,15 +293,18 @@ function closeHandler(evt){
 const toggleButton = document.querySelector(".toggle-button") ;
 const navbarLinks = document.querySelector(".header-navigation") ;
 
-toggleButton.addEventListener("click", () => {
-
-  console.log("Clicked");
-  
+toggleButton.addEventListener("click", () => {  
   navbarLinks.classList.toggle("active-links");
-  
   toggleButton.classList.toggle("active-navbar")
 });
 
+const screenShotLink = document.querySelector("#test-link")
+screenShotLink.addEventListener("click", ()=>{
+  var elem = document.getElementById("ele");
+  elem.scrollIntoView();
+  mainSwiper.slideTo(3,false,false)
+  mainSwiper.slideTo(2,false,false)
+})
 
 function choseDisplayContent(target){  
   console.dir(draft)
