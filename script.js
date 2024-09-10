@@ -305,6 +305,7 @@ projectInfonavLinks.forEach((navLink)=>{
 
 function goToTile(evt){
   console.log(evt.target.classList, "evtTargetClass")
+  alert('Go to tile executed')
   let infoTilesContainer = document.querySelector(".tiles-wrapper");
   let containerHeighth = infoTilesContainer.offsetHeight
 
