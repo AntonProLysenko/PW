@@ -306,9 +306,9 @@ projectInfonavLinks.forEach((navLink)=>{
 
 function goToTile(evt){
   console.log(evt.target.classList, "evtTargetClass")
-  alert(evt.target.id, 'Go to tile executed')
   let infoTilesContainer = document.querySelector(".tiles-wrapper");
   let containerHeighth = infoTilesContainer.offsetHeight
+  alert(containerHeighth, 'Hegth of div')
 
   //Each time the scroll heighth has to be resetet to not break the slider
   infoTilesContainer.scroll(0, 0);
