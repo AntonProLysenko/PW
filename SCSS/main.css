@@ -321,6 +321,8 @@ h3 {
   background-color: #2a2c3a;
   background-image: linear-gradient(45deg, #1C1C1C 0%, #0f1b1e 100%);
   background-image: -moz-linear-gradient(45deg, #1C1C1C, #0f1b1e);
+  overflow: auto;
+  overscroll-behavior-y: none;
 }
 
 .works-description {
@@ -528,6 +530,7 @@ h3 {
   max-width: 100%;
   font-family: "Unbounded", cursive;
   overflow-y: hidden;
+  overscroll-behavior-y: none;
 }
 
 .project-modal-header-wrapper {
@@ -618,6 +621,7 @@ h3 {
   grid-row-gap: 5px;
   overflow-y: scroll;
   overflow-x: hidden;
+  overscroll-behavior-y: none;
   height: 100%;
   width: 90%;
 }

@@ -300,10 +300,13 @@ toggleButton.addEventListener("click", () => {
 
 const screenShotLink = document.querySelector("#test-link")
 screenShotLink.addEventListener("click", ()=>{
-  var elem = document.getElementById("ele");
-  elem.scrollIntoView();
-  mainSwiper.slideTo(3,false,false)
-  mainSwiper.slideTo(2,false,false)
+
+  var elem = document.querySelector(".tiles-wrapper");
+console.log(elem)
+  // mainSwiper.allowSlideNext = false
+  elem.scroll(0, 1000);
+  // mainSwiper.slideTo(3,false,false)
+  // mainSwiper.slideTo(2,false,false)
 })
 
 function choseDisplayContent(target){  
