@@ -169,7 +169,6 @@ function dragElement(elmnt) {
     document.onmousemove = elementDrag;
     document.ontouchmove = elementDrag
 
-    console.log("Document", document);
     
   }
 
@@ -207,7 +206,6 @@ function dragElement(elmnt) {
   }
 
   function closeDragElement() {
-    console.log("Drag Ended")
     /* stop moving when mouse button is released:*/
     document.onmouseup = null;
     document.ontouchend = null;
@@ -251,7 +249,6 @@ projectOpenBtn.forEach((btn)=>{
 
 
 closeButton.forEach((btn)=>{
-  console.log(btn)
   btn.addEventListener("click", closeHandler)
 })
 
@@ -261,7 +258,7 @@ projectsOverlay.addEventListener("click",closeHandler)
 
 
 function openHandler(evt){
-  console.log("Open Activated")
+
   if (evt.target.dataset.target == "about-more"){
     aboutModal.style.display = "flex"
     aboutOverlay.style.display = "block"
@@ -278,7 +275,7 @@ function openHandler(evt){
 
 
 function closeHandler(evt){  
-  console.log(evt.target.className)
+
   if (evt.target === aboutOverlay || evt.target.className === "close" || evt.target === projectsOverlay){
     aboutModal.style.display = "none";
     aboutOverlay.style.display = "none";
@@ -293,24 +290,38 @@ function closeHandler(evt){
 const toggleButton = document.querySelector(".toggle-button") ;
 const navbarLinks = document.querySelector(".header-navigation") ;
 
-toggleButton.addEventListener("click", () => {  
+toggleButton.addEventListener("click", toggleMobileHeader);
+
+function toggleMobileHeader () {
   navbarLinks.classList.toggle("active-links");
   toggleButton.classList.toggle("active-navbar")
-});
+}
 
-const screenShotLink = document.querySelector("#test-link")
-screenShotLink.addEventListener("click", ()=>{
+const projectInfonavLinks = document.querySelectorAll(".nav-item")
 
-  var elem = document.querySelector(".tiles-wrapper");
-console.log(elem)
-  // mainSwiper.allowSlideNext = false
-  elem.scroll(0, 1000);
-  // mainSwiper.slideTo(3,false,false)
-  // mainSwiper.slideTo(2,false,false)
+projectInfonavLinks.forEach((navLink)=>{
+  navLink.addEventListener("click", goToTile)
 })
 
+function goToTile(evt){
+  console.log(evt.target.classList, "evtTargetClass")
+  let infoTilesContainer = document.querySelector(".tiles-wrapper");
+  let containerHeighth = infoTilesContainer.offsetHeight
+
+  //Each time the scroll heighth has to be resetet to not break the slider
+  infoTilesContainer.scroll(0, 0);
+  infoTilesContainer.scroll(0, containerHeighth);
+
+  //Hiding the navbar if it was opened before
+  if (navbarLinks.classList.contains("active-links")){
+    toggleMobileHeader()
+  }
+
+}
+
+
 function choseDisplayContent(target){  
-  console.dir(draft)
+
   if (target == "Apartments"){
      return (`<button class='close'>x</button> <h1> Apatrments Websitee Info </h1> ${draft}`)
   }else if (target == "Coinbase"){    
@@ -435,11 +446,6 @@ slider.addEventListener("click", function (ev) {
   if (ev.target === rightArrow) {
     scrollRight();
     // resetTimer();
-
-    // console.log("slider.scrollWidth " + slider.scrollWidth);
-    // console.log("slider.clientWidth " + slider.clientWidth);
-    // console.log("slider.scrollLeft " + slider.scrollLeft);
-    // console.log("calcul " + (slider.scrollWidth - slider.clientWidth));
   }
 });
 
