@@ -300,12 +300,13 @@ function toggleMobileHeader () {
 const projectInfonavLinks = document.querySelectorAll(".nav-item")
 
 projectInfonavLinks.forEach((navLink)=>{
+  // alert(navLink)
   navLink.addEventListener("click", goToTile)
 })
 
 function goToTile(evt){
   console.log(evt.target.classList, "evtTargetClass")
-  alert('Go to tile executed')
+  alert(evt.target.id, 'Go to tile executed')
   let infoTilesContainer = document.querySelector(".tiles-wrapper");
   let containerHeighth = infoTilesContainer.offsetHeight
 
