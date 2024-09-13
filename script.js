@@ -305,45 +305,37 @@ projectInfonavLinks.forEach((navLink)=>{
 })
 
 function goToTile(evt){
-  
-  let target = evt.target.dataset.target
-  
-  
-  
-  let infoTilesContainer = document.querySelector(".tiles-wrapper");
-  // let containerHeighth = infoTilesContainer.scrollHeight
-  
-  let yTarget = GetScrollCoordinate(infoTilesContainer, target)
-
-  // let toolsTile = document.querySelector(".tools")
-  
-  // let divInfo =  infoTilesContainer.getBoundingClientRect(toolsTile)
-  
-  //Each time the scroll heighth has to be resetet to not break the slider
-  // infoTilesContainer.scroll(0, 0);
-  infoTilesContainer.scroll(0, yTarget);
 
   //Hiding the navbar if it was opened before
   if (navbarLinks.classList.contains("active-links")){
     toggleMobileHeader()
   }
+  //Parent Element
+  let infoTilesContainer = document.querySelector(".tiles-wrapper");
 
+   //Each time the scroll heighth has to be resetet to not break the slider
+  infoTilesContainer.scroll(0, 0);
+  
+  let target = evt.target.dataset.target
+  
+
+  
+  let yTarget = GetScrollCoordinate(target, "tiles-wrapper")
+ 
+  infoTilesContainer.scroll(0, yTarget);
 }
 
-function GetScrollCoordinate(parent, target){
-  let tile = document.querySelector(`.${target}`);
-  let divInfo =  tile.getBoundingClientRect()
-  // let divInfo = target.offsetParent
+function GetScrollCoordinate(targetClassName, parentClassName){
+  let parentDiv = document.querySelector(`.${parentClassName}`);
+  let tile = document.querySelector(`.${targetClassName}`);
 
-  // const elem = document.getElementById("elem");
-  // const rect = elem.getBoundingClientRect();
+  let parentInfo = parentDiv.getBoundingClientRect()
+  let tileInfo =  tile.getBoundingClientRect()
+
+  let relativePos = tileInfo.y - parentInfo.y;
 
   
-  console.log(target);
-  
-  console.log(divInfo, "divInfo");
-  
-  return divInfo.y
+  return relativePos
 }
 
 
