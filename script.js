@@ -305,17 +305,19 @@ projectInfonavLinks.forEach((navLink)=>{
 })
 
 function goToTile(evt){
+  
   console.log(evt.target.classList, "evtTargetClass")
   let infoTilesContainer = document.querySelector(".tiles-wrapper");
   let containerHeighth = infoTilesContainer.scrollHeight
-  // let testHEigthMeasurment = infoTilesContainer.scrollHeight
-  alert(containerHeighth, 'Hegth of div')
+  
 
-  // console.log(testHEigthMeasurment, "Heigth")
+  let toolsTile = document.querySelector(".tools")
+  
+  let divInfo =  infoTilesContainer.getBoundingClientRect(toolsTile)
   
   //Each time the scroll heighth has to be resetet to not break the slider
   infoTilesContainer.scroll(0, 0);
-  infoTilesContainer.scroll(0, containerHeighth);
+  infoTilesContainer.scroll(0, divInfo.y);
 
   //Hiding the navbar if it was opened before
   if (navbarLinks.classList.contains("active-links")){
