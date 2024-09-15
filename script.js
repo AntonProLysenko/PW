@@ -298,31 +298,33 @@ function toggleMobileHeader () {
 }
 
 const projectInfonavLinks = document.querySelectorAll(".nav-item")
-
 projectInfonavLinks.forEach((navLink)=>{
-  // alert(navLink)
   navLink.addEventListener("click", goToTile)
 })
 
 function goToTile(evt){
-
+  let target = evt.target.dataset.target
+  let tile = document.querySelector(`.${target}`)
   //Hiding the navbar if it was opened before
   if (navbarLinks.classList.contains("active-links")){
     toggleMobileHeader()
   }
+
   //Parent Element
   let infoTilesContainer = document.querySelector(".tiles-wrapper");
 
    //Each time the scroll heighth has to be resetet to not break the slider
   infoTilesContainer.scroll(0, 0);
   
-  let target = evt.target.dataset.target
-  
-
-  
+    
   let yTarget = GetScrollCoordinate(target, "tiles-wrapper")
  
   infoTilesContainer.scroll(0, yTarget);
+
+
+  // tile.classList.toggle("tile-glow")
+  // tile.style.border="none"
+  // tile.style.boxShadow = "0 0 50px 15px #48abe0;"
 }
 
 function GetScrollCoordinate(targetClassName, parentClassName){
@@ -334,6 +336,10 @@ function GetScrollCoordinate(targetClassName, parentClassName){
 
   let relativePos = tileInfo.y - parentInfo.y;
 
+  //for showing element at the middle, not on top 
+  if (targetClassName !== "screenshot"){
+    relativePos -= tileInfo.height/2
+  }
   
   return relativePos
 }
