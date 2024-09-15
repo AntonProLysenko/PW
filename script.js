@@ -306,24 +306,44 @@ projectInfonavLinks.forEach((navLink)=>{
 
 function goToTile(evt){
   
-  console.log(evt.target.classList, "evtTargetClass")
+  let target = evt.target.dataset.target
+  
+  
+  
   let infoTilesContainer = document.querySelector(".tiles-wrapper");
-  let containerHeighth = infoTilesContainer.scrollHeight
+  // let containerHeighth = infoTilesContainer.scrollHeight
   
+  let yTarget = GetScrollCoordinate(infoTilesContainer, target)
 
-  let toolsTile = document.querySelector(".tools")
+  // let toolsTile = document.querySelector(".tools")
   
-  let divInfo =  infoTilesContainer.getBoundingClientRect(toolsTile)
+  // let divInfo =  infoTilesContainer.getBoundingClientRect(toolsTile)
   
   //Each time the scroll heighth has to be resetet to not break the slider
-  infoTilesContainer.scroll(0, 0);
-  infoTilesContainer.scroll(0, divInfo.y);
+  // infoTilesContainer.scroll(0, 0);
+  infoTilesContainer.scroll(0, yTarget);
 
   //Hiding the navbar if it was opened before
   if (navbarLinks.classList.contains("active-links")){
     toggleMobileHeader()
   }
 
+}
+
+function GetScrollCoordinate(parent, target){
+  let tile = document.querySelector(`.${target}`);
+  let divInfo =  tile.getBoundingClientRect()
+  // let divInfo = target.offsetParent
+
+  // const elem = document.getElementById("elem");
+  // const rect = elem.getBoundingClientRect();
+
+  
+  console.log(target);
+  
+  console.log(divInfo, "divInfo");
+  
+  return divInfo.y
 }
 
 
