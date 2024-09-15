@@ -321,9 +321,13 @@ function goToTile(evt){
  
   infoTilesContainer.scroll(0, yTarget);
 
-
-  // tile.classList.toggle("tile-glow")
+  if (tile.classList.contains("title-glove")){
+    tile.classList.remove("tile-glow")
+  }
+  tile.classList.add("tile-glow")
   // tile.style.border="none"
+  // 
+
   // tile.style.boxShadow = "0 0 50px 15px #48abe0;"
 }
 
@@ -340,7 +344,7 @@ function GetScrollCoordinate(targetClassName, parentClassName){
   if (targetClassName !== "screenshot"){
     relativePos -= tileInfo.height/2
   }
-  
+
   return relativePos
 }
 

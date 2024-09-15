@@ -596,7 +596,7 @@ h3 {
   row-gap: 10px;
   flex-direction: row;
   height: 40px;
-  transition: transform 900ms ease 0s, background-color 0s cubic-bezier(0.6, 0, 0.15, 1) 0s;
+  transition: transform 900ms ease 0s, 0s cubic-bezier(0.6, 0, 0.15, 1) 0s;
 }
 
 .nav-item {
@@ -640,12 +640,18 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  scroll-snap-align: center;
 }
 
 .tile-glow {
-  box-shadow: 0 0 50px 2px #edb15d;
+  animation: myHighlight 2s ease-in;
 }
 
+@keyframes myHighlight {
+  50% {
+    box-shadow: 0 0 50px 2px #edb15d;
+  }
+}
 .overview {
   grid-area: 1/1/3/2;
 }
@@ -1119,6 +1125,19 @@ body {
     margin-top: -10dvh;
     height: 46.3917525773dvw;
   }
+  .projects-modal {
+    top: 50%;
+    left: 50%;
+    height: 100dvh;
+    max-height: 99dvh;
+    width: 100dvw;
+  }
+  .projects-modal .tiles-wrapper {
+    width: 100%;
+  }
+  .projects-modal .tiles-wrapper .tile {
+    width: 90%;
+  }
   .links-ladscape {
     display: none;
   }
@@ -1364,6 +1383,7 @@ body {
   .tiles-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .tile {
     padding: 0px;
