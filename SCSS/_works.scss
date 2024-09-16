@@ -498,6 +498,14 @@ background-size: 100% 100%;
 
     scroll-snap-align:center; //probably unnesseary
 
+    .text-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // width: 90%;
+        // height: 70%;
+    }
 
 }
 
@@ -508,11 +516,7 @@ background-size: 100% 100%;
     grid-area: 1 / 1 / 3 / 2; 
     justify-self: end;
     .text-wrapper{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        height: 70%;
+        
         p{
             font-weight: 100;
             letter-spacing: 1px; 
