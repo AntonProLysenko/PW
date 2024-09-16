@@ -352,6 +352,7 @@ background-size: 100% 100%;
 .project-modal-header-wrapper{
     max-width: 100%;
     min-width: 95%;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -387,7 +388,7 @@ background-size: 100% 100%;
       background-color: rgba(59, 59, 59, 0.975);
     //  background-color: rgba(50, 57, 62, 0.975);
 
-    min-width:90%;
+    min-width:96%;
     max-width: 90%;
     border-radius: 15px;
 }
