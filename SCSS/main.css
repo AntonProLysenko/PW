@@ -223,9 +223,10 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(98, 96, 96, 0.3);
+  background-color: rgba(93, 91, 91, 0.6);
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  -moz-background-filter: blur(8px);
   z-index: 1000;
 }
 
@@ -312,6 +313,7 @@ h3 {
 }
 .skill .skill-name {
   color: white;
+  cursor: default;
   transition: all 0.25s ease-in;
 }
 .skill .skill-icon {
@@ -523,8 +525,6 @@ h3 {
   padding: 0px;
   background-image: none;
   background-color: rgba(31, 36, 41, 0.5);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
 }
 
 .project-modal-content-wrappera {
@@ -545,6 +545,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  z-index: 1;
 }
 
 #pseudo-first-box {
@@ -640,9 +641,6 @@ h3 {
   width: 90%;
   height: 90%;
   background-color: rgba(154, 160, 173, 0.2);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  z-index: -2;
   color: white;
   margin: 10px;
   padding: 10px 55px;

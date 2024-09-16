@@ -331,7 +331,7 @@ background-size: 100% 100%;
     padding: 0px; 
     background-image:none;
     background-color: rgba(31, 36, 41, 0.5);
-    backdrop-filter: blur(8px);
+    // backdrop-filter: blur(8px);
   }
 
 .project-modal-content-wrappera{
@@ -356,6 +356,7 @@ background-size: 100% 100%;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+    z-index: 1
 }
 
 #pseudo-first-box{
@@ -463,8 +464,9 @@ background-size: 100% 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     overscroll-behavior-y: none;
-
     scroll-behavior: smooth;
+
+    // z-index: -2;
 
     height: 100%;
     width: 100%;
@@ -480,8 +482,7 @@ background-size: 100% 100%;
     // background: rgb(57,56,56);
     // background: linear-gradient(45deg, rgba(50, 57, 62, 0.19) 0%, rgba(176, 174, 172, 0.19) 37%, rgba(50, 57, 62, 0.19) 100%);
     background-color: rgba(154, 160, 173, 0.2);
-    backdrop-filter: blur(10px);
-z-index: -2;
+    // backdrop-filter: blur(10px);
     // box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     // border: 1px solid rgba(255, 255, 255, 0.25);
     color: white;
