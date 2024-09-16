@@ -524,7 +524,7 @@ h3 {
   overflow-y: hidden;
   padding: 0px;
   background-image: none;
-  background-color: rgba(31, 36, 41, 0.5);
+  background-color: rgba(180, 180, 180, 0.5);
 }
 
 .project-modal-content-wrappera {
@@ -568,7 +568,7 @@ h3 {
   align-items: center;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  background-color: rgba(106, 108, 121, 0.975);
+  background-color: rgba(59, 59, 59, 0.975);
   min-width: 90%;
   max-width: 90%;
   border-radius: 15px;
@@ -640,7 +640,7 @@ h3 {
 .tile {
   width: 90%;
   height: 90%;
-  background-color: rgba(154, 160, 173, 0.2);
+  background-color: rgba(30, 30, 30, 0.5);
   color: white;
   margin: 10px;
   padding: 10px 55px;
