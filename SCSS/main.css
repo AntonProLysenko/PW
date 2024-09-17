@@ -223,7 +223,7 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(93, 91, 91, 0.6);
+  background-color: rgba(100, 100, 100, 0.6);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   -moz-background-filter: blur(8px);
@@ -524,7 +524,7 @@ h3 {
   overflow-y: hidden;
   padding: 0px;
   background-image: none;
-  background-color: rgba(180, 180, 180, 0.5);
+  background-image: linear-gradient(120deg, rgba(37, 42, 49, 0.578) 0%, rgba(28, 34, 39, 0.578) 90%);
 }
 
 .project-modal-content-wrappera {
@@ -568,8 +568,9 @@ h3 {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  background-color: rgba(59, 59, 59, 0.975);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px 5px;
+  background-image: linear-gradient(120deg, rgba(40, 42, 49, 0.578) 0%, rgba(28, 34, 39, 0.578) 90%);
+  background-color: rgba(40, 40, 40, 0.975);
   min-width: 96%;
   max-width: 90%;
   border-radius: 15px;
@@ -641,7 +642,7 @@ h3 {
 .tile {
   width: 90%;
   height: 90%;
-  background-color: rgba(30, 30, 30, 0.6);
+  background-color: rgba(13, 13, 13, 0.6);
   color: white;
   margin: 10px;
   padding: 10px 55px;
