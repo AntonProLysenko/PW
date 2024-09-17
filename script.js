@@ -284,6 +284,15 @@ function closeHandler(evt){
     navContainer.style.visibility= "visible"
     mainSwiper.allowTouchMove = true;
     mainSwiper.mousewheel.enable()
+
+    // let tiles = document.querySelectorAll(".tile")
+    // tiles.forEach((tile)=>{
+    //   console.log(tile.classList, "BOm")
+    //   if (tile.classList.contains("tile-glove")){
+    //     console.log(tile, "This one")
+    //     tile.classList.remove("tile-glow")
+    //   }
+    // })
   }
 }
 
@@ -321,14 +330,7 @@ function goToTile(evt){
  
   infoTilesContainer.scroll(0, yTarget);
 
-  if (tile.classList.contains("title-glove")){
-    tile.classList.remove("tile-glow")
-  }
-  tile.classList.add("tile-glow")
-  // tile.style.border="none"
-  // 
-
-  // tile.style.boxShadow = "0 0 50px 15px #48abe0;"
+  glowUpElement(tile)
 }
 
 function GetScrollCoordinate(targetClassName, parentClassName){
@@ -346,6 +348,21 @@ function GetScrollCoordinate(targetClassName, parentClassName){
   }
 
   return relativePos
+}
+
+
+function glowUpElement(element){
+  const boxLightUp = [
+    { boxShadow: "0 0 50px 2px #edb15d"}
+  ];
+
+  const GlowTiming = {
+    duration: 1500,
+    iterations: 1,
+  };
+
+
+  element.animate(boxLightUp, GlowTiming)
 }
 
 
