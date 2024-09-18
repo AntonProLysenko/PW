@@ -353,7 +353,7 @@ function GetScrollCoordinate(targetClassName, parentClassName){
 
 function glowUpElement(element){
   const boxLightUp = [
-    { boxShadow: "0 0 50px 2px #edb15d"}
+    { boxShadow: "0 0 50px 2px #edb15d", offset: 0.5}
   ];
 
   const GlowTiming = {
