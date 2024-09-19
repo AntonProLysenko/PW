@@ -207,8 +207,8 @@ h3 {
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
 }
 
 #modal-text {
@@ -641,7 +641,7 @@ h3 {
 .tile {
   width: 90%;
   height: 90%;
-  background-color: rgba(30, 30, 30, 0.5);
+  background-color: rgba(30, 30, 30, 0.6);
   color: white;
   margin: 10px;
   padding: 10px 55px;
@@ -1177,8 +1177,8 @@ body {
     top: 50%;
     left: 50%;
     width: 80dvw;
-    min-width: -moz-fit-content;
-    min-width: fit-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
     max-height: 98dvh;
   }
   .contact-title {
@@ -1315,7 +1315,6 @@ body {
   }
   .skills {
     grid-template-columns: repeat(2, 1fr);
-    align-self: flex-start;
   }
   .skills .skill {
     height: 30px;

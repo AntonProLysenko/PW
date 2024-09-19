@@ -147,7 +147,7 @@
         left: 50%;
         // height: fit-content;
         width: 80dvw;
-        min-width: fit-content;
+        min-width: min-content;
         max-height: 98dvh;
     }
 
@@ -327,7 +327,8 @@
 
     .skills {
          grid-template-columns: repeat(2, 1fr); 
-         align-self: flex-start;
+        //  width: 50%;
+
          .skill{
             height: 30px;
             .skill-icon{

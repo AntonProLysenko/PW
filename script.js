@@ -330,7 +330,15 @@ function goToTile(evt){
  
   infoTilesContainer.scroll(0, yTarget);
 
+  console.log(yTarget);
+  
   glowUpElement(tile)
+
+  // if(yTarget > 100){
+  //   let projectHeader = document.querySelector(".project-modal-header")
+  //   projectHeader.style.minWidth = "80%"
+  //   projectHeader.style.minHeight = "20px"
+  // }
 }
 
 function GetScrollCoordinate(targetClassName, parentClassName){
