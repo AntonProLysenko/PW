@@ -14,7 +14,7 @@ export default {
       "highlights":"",
       "tools":"",
       "codeLink":"https://github.com/AntonProLysenko/Coinbase",
-      "images":["./assets/img/CoinbaseDevicesMockup.png","screenshot2","screenshot3","screenshot4"]
+      "images":["./assets/img/CoinbaseDevicesMockup.png","./assets/img/CoinbaseHeaderDevices.png"]
   },
     "agileBoard":{
       "title":"Agile Board",
