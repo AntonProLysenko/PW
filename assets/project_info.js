@@ -4,31 +4,36 @@ export default {
       "title":"Apartments Website",
       "overview":"",
       "highlights":"",
-      "tools":""
+      "tools":"",
+      "codeLink":""
     },
     "coinbaseClone":{
       "title":"Coinbase Clone",
       "overview":"",
       "highlights":"",
-      "tools":""
+      "tools":"",
+      "codeLink":""
   },
     "agileBoard":{
       "title":"Agile Board",
       "overview":"",
       "highlights":"",
-      "tools":""
+      "tools":"",
+      "codeLink":""
     },
     "triviaGame":{
       "title":"Trivia Game",
       "overview":"",
       "highlights":"",
-      "tools":""
+      "tools":"",
+      "codeLink":""
     },
     "TheFrogGame":{
       "title":"The Frog Platformer",
       "overview":"",
       "highlights":"",
-      "tools":""
+      "tools":"",
+      "codeLink":""
     }
   }
 }

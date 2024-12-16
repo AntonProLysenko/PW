@@ -514,6 +514,10 @@ h3 {
   scrollbar-width: none;
 }
 
+.project-open {
+  cursor: pointer;
+}
+
 .projects-overlay {
   display: none;
 }

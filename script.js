@@ -378,28 +378,27 @@ function glowUpElement(element){
 
 
 
-
+//Projects Modal Display 
 function choseDisplayContent(target){  
-  console.log(projects_info)
   let data = projects_info.projects
 
+  let navTitle = document.querySelector("#project-nav-title")
 
-let navTitle = document.querySelector("#project-nav-title")
-  if (target == "Apartments"){
+    if (target == "Apartments"){
 
-    navTitle.textContent = data.apartmentWebsite.title
+      navTitle.textContent = data.apartmentWebsite.title
 
-  }else if (target == "Coinbase"){    
-    navTitle.textContent = data.coinbaseClone.title
+    }else if (target == "Coinbase"){    
+      navTitle.textContent = data.coinbaseClone.title
 
-  }else if (target == "Trello"){
-    navTitle.textContent = data.agileBoard.title
+    }else if (target == "Trello"){
+      navTitle.textContent = data.agileBoard.title
 
-  }else if (target =="Trivia"){    
-    navTitle.textContent = data.triviaGame.title
+    }else if (target =="Trivia"){    
+      navTitle.textContent = data.triviaGame.title
 
-  }else if (target == "Frog"){
-    navTitle.textContent = data.TheFrogGame.title
+    }else if (target == "Frog"){
+      navTitle.textContent = data.TheFrogGame.title
   }
 }
 
