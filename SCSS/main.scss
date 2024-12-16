@@ -328,7 +328,10 @@ body {
 
     a {
         color: whitesmoke;
-        text-decoration: none
+        text-decoration: none;
+        label{
+            cursor: pointer;
+        }
     }
 
     a:hover {

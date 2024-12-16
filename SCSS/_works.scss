@@ -442,10 +442,13 @@ background-size: 100% 100%;
     transition: transform 900ms ease 0s, 0s cubic-bezier(0.6, 0, 0.15, 1) 0s;
 }
 
-.nav-item{
+.nav-item, .nav-item>a{
     color:white;
     padding: 0px 0.75rem;
     cursor: pointer;
+    a{
+        text-decoration: none;
+    }
 }
 
 .nav-item-main{

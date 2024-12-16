@@ -260,8 +260,6 @@ projectsOverlay.addEventListener("click",closeHandler)
 
 function openHandler(evt){
 
-  console.log(evt.target)
-
   if (evt.target.dataset.target == "about-more"){
     aboutModal.style.display = "flex"
     aboutOverlay.style.display = "block"
@@ -380,29 +378,6 @@ function glowUpElement(element){
 
 
 
-//Projects Modal Display 
-function choseDisplayContent(target){  
-  let data = projects_info.projects
-
-  let navTitle = document.querySelector("#project-nav-title")
-
-    if (target == "Apartments"){
-
-      navTitle.textContent = data.apartmentWebsite.title
-
-    }else if (target == "Coinbase"){    
-      navTitle.textContent = data.coinbaseClone.title
-
-    }else if (target == "Trello"){
-      navTitle.textContent = data.agileBoard.title
-
-    }else if (target =="Trivia"){    
-      navTitle.textContent = data.triviaGame.title
-
-    }else if (target == "Frog"){
-      navTitle.textContent = data.TheFrogGame.title
-  }
-}
 
 
 
@@ -519,6 +494,40 @@ slider.addEventListener("click", function (ev) {
     // resetTimer();
   }
 });
+
+
+
+
+//Projects Modal Display 
+function choseDisplayContent(target){  
+  let data = projects_info.projects
+
+  let navTitle = document.querySelector("#project-nav-title")
+  let navCodeLink = document.querySelector("#project_nav_code")
+
+    if (target == "Apartments"){
+
+      navTitle.textContent = data.apartmentWebsite.title
+      navCodeLink.href = data.apartmentWebsite.codeLink
+
+    }else if (target == "Coinbase"){    
+      navTitle.textContent = data.coinbaseClone.title
+      navCodeLink.href = data.coinbaseClone.codeLink
+
+    }else if (target == "Trello"){
+      navTitle.textContent = data.agileBoard.title
+      navCodeLink.href = data.agileBoard.codeLink
+
+    }else if (target =="Trivia"){    
+      navTitle.textContent = data.triviaGame.title
+      navCodeLink.href = data.triviaGame.codeLink
+
+    }else if (target == "Frog"){
+      navTitle.textContent = data.TheFrogGame.title
+      navCodeLink.href = data.TheFrogGame.codeLink
+  }
+}
+
 
 
 
