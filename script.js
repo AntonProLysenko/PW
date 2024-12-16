@@ -260,6 +260,8 @@ projectsOverlay.addEventListener("click",closeHandler)
 
 function openHandler(evt){
 
+  console.log(evt.target)
+
   if (evt.target.dataset.target == "about-more"){
     aboutModal.style.display = "flex"
     aboutOverlay.style.display = "block"
