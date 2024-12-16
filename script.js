@@ -1,3 +1,4 @@
+import projects_info from './assets/project_info.js';
 
 //Showing Loader
 document.onreadystatechange = function () {
@@ -8,7 +9,7 @@ document.onreadystatechange = function () {
   } else {
     document.querySelector("#loader").style.display = "none";
     document.querySelector("body").style.visibility = "visible";
-    arrows = document.querySelector(".arrows");
+    let arrows = document.querySelector(".arrows");
      if(window.innerWidth >= 541){
         setTimeout(function () {
           arrows.style.visibility = "visible";
@@ -263,7 +264,8 @@ function openHandler(evt){
     aboutModal.style.display = "flex"
     aboutOverlay.style.display = "block"
   }else if(evt.target.dataset.target == "project-more"){
-    // projectModal.innerHTML = choseDisplayContent(evt.target.dataset.subtarget)
+    console.log("open modal fired", evt.target.dataset.subtarget)
+    choseDisplayContent(evt.target.dataset.subtarget)
     projectsOverlay.style.display = "block"
     projectModal.style.display = "flex"
   }
@@ -374,20 +376,34 @@ function glowUpElement(element){
 }
 
 
-function choseDisplayContent(target){  
 
+
+
+function choseDisplayContent(target){  
+  console.log(projects_info)
+  let data = projects_info.projects
+
+
+let navTitle = document.querySelector("#project-nav-title")
   if (target == "Apartments"){
-     return (`<button class='close'>x</button> <h1> Apatrments Websitee Info </h1> ${draft}`)
+
+    navTitle.textContent = data.apartmentWebsite.title
+
   }else if (target == "Coinbase"){    
-    return("<button class='close'>x</button> <h1> Coinbase Clone Website Info </h1>")
+    navTitle.textContent = data.coinbaseClone.title
+
   }else if (target == "Trello"){
-    return("<button class='close'>x</button> <h1> Task Manager Website Info </h1> ")
+    navTitle.textContent = data.agileBoard.title
+
   }else if (target =="Trivia"){    
-    return(" <button class='close'>x</button><h1> Trivia Game Info </h1> ")
+    navTitle.textContent = data.triviaGame.title
+
   }else if (target == "Frog"){
-      return("<button class='close'>x</button> <h1> The Frog Game Info </h1>")
+    navTitle.textContent = data.TheFrogGame.title
   }
 }
+
+
 
 
 
