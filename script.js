@@ -504,11 +504,13 @@ function choseDisplayContent(target){
 
   let navTitle = document.querySelector("#project-nav-title")
   let navCodeLink = document.querySelector("#project_nav_code")
+  let overview = document.querySelector("#overview_text")
 
     if (target == "Apartments"){
 
       navTitle.textContent = data.apartmentWebsite.title
       navCodeLink.href = data.apartmentWebsite.codeLink
+      overview.textContent = data.apartmentWebsite.overview
 
     }else if (target == "Coinbase"){    
       navTitle.textContent = data.coinbaseClone.title
