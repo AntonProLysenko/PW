@@ -532,6 +532,50 @@ function choseDisplayContent(target){
 
 
 
+const projectScreenshotsLeftArrow = document.querySelector(".project-screenshots-left-arrow")
+const projectScreenshotsRightArrow = document.querySelector(".project-screenshots-right-arrow")
+const  projectScreenshotsSlider = document.querySelector(".project-screenshots-slider");
+
+
+function scrollScreenshotRight() {
+  if ((projectScreenshotsSlider.scrollWidth - projectScreenshotsSlider.clientWidth) <= projectScreenshotsSlider.scrollLeft) {//added -20 for more stable scrolling statement(each browser measures with in own way)
+    projectScreenshotsSlider.scrollTo({
+      left: 0,
+      behavior: "smooth",
+    });
+  } else {
+    projectScreenshotsSlider.scrollBy({
+      left: projectScreenshotsSlider.clientWidth,//again aded 20 since browsers measures width on own secret conditions//issue appears in safari
+      behavior: "smooth",
+    });
+  }
+}
+
+function scrollScreenshotLeft() {
+  projectScreenshotsSlider.scrollBy({
+    left: -projectScreenshotsSlider.clientWidth,//sama thing, Safari
+    behavior: "smooth",
+  });
+}
+
+
+// Scroll Events
+projectScreenshotsSlider.addEventListener("click", function (ev) {
+  if (ev.target === projectScreenshotsLeftArrow) {
+    scrollScreenshotLeft();
+    // resetTimer();
+  }
+});
+
+projectScreenshotsSlider.addEventListener("click", function (ev) {
+  if (ev.target === projectScreenshotsRightArrow) {
+    scrollScreenshotRight();
+    // resetTimer();
+  }
+});
+
+
+
 
 
 
