@@ -1,5 +1,6 @@
 import projects_info from './assets/project_info.js';
 
+
 //Showing Loader
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
@@ -264,10 +265,28 @@ function openHandler(evt){
     aboutModal.style.display = "flex"
     aboutOverlay.style.display = "block"
   }else if(evt.target.dataset.target == "project-more"){
+    // const screenshotTile = document.querySelector(".screenshot")
+    // console.log(screenshotTile.offsetWidth)
     console.log("open modal fired", evt.target.dataset.subtarget)
     choseDisplayContent(evt.target.dataset.subtarget)
     projectsOverlay.style.display = "block"
     projectModal.style.display = "flex"
+
+     // Wait for the modal to be visible before accessing dimensions
+  setTimeout(() => {
+    const screenshotTile = document.querySelector(".screenshot");
+
+    if (screenshotTile) {
+      const screenshotWidth = screenshotTile.getBoundingClientRect().width;
+      const sliderContainer = screenshotTile.querySelector(".project-screenshots-slider-container");
+
+      // Set the height dynamically
+      if (sliderContainer) {
+        sliderContainer.style.height = `${screenshotWidth / 2}px`;
+        console.log(`Slider height set to ${screenshotWidth / 2}px`);
+      }
+    }
+  }, 50); // Delay ensures the modal has finished rendering
   }
   
   mainSwiper.allowTouchMove = false;
@@ -535,6 +554,10 @@ function choseDisplayContent(target){
 const projectScreenshotsLeftArrow = document.querySelector(".project-screenshots-left-arrow")
 const projectScreenshotsRightArrow = document.querySelector(".project-screenshots-right-arrow")
 const  projectScreenshotsSlider = document.querySelector(".project-screenshots-slider");
+
+
+const screenshotTile = document.querySelector(".screenshot")
+console.log(screenshotTile.offsetWidth)
 
 
 function scrollScreenshotRight() {
