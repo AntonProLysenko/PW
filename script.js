@@ -265,28 +265,18 @@ function openHandler(evt){
     aboutModal.style.display = "flex"
     aboutOverlay.style.display = "block"
   }else if(evt.target.dataset.target == "project-more"){
-    // const screenshotTile = document.querySelector(".screenshot")
-    // console.log(screenshotTile.offsetWidth)
+
     console.log("open modal fired", evt.target.dataset.subtarget)
     choseDisplayContent(evt.target.dataset.subtarget)
     projectsOverlay.style.display = "block"
     projectModal.style.display = "flex"
 
-     // Wait for the modal to be visible before accessing dimensions
-  setTimeout(() => {
+    //Setting Screenshot slider Height depending on tile's width 
     const screenshotTile = document.querySelector(".screenshot");
-
-    if (screenshotTile) {
-      const screenshotWidth = screenshotTile.getBoundingClientRect().width;
-      const sliderContainer = screenshotTile.querySelector(".project-screenshots-slider-container");
-
-      // Set the height dynamically
-      if (sliderContainer) {
-        sliderContainer.style.height = `${screenshotWidth / 2}px`;
-        console.log(`Slider height set to ${screenshotWidth / 2}px`);
-      }
-    }
-  }, 50); // Delay ensures the modal has finished rendering
+    const screenshotWidth = screenshotTile.getBoundingClientRect().width;
+    const sliderContainer = screenshotTile.querySelector(".project-screenshots-slider-container");
+    sliderContainer.style.height = `${screenshotWidth / 2}px`;
+    console.log(`Slider height set to ${screenshotWidth / 2}px`);
   }
   
   mainSwiper.allowTouchMove = false;
@@ -305,15 +295,6 @@ function closeHandler(evt){
     navContainer.style.visibility= "visible"
     mainSwiper.allowTouchMove = true;
     mainSwiper.mousewheel.enable()
-
-    // let tiles = document.querySelectorAll(".tile")
-    // tiles.forEach((tile)=>{
-    //   console.log(tile.classList, "BOm")
-    //   if (tile.classList.contains("tile-glove")){
-    //     console.log(tile, "This one")
-    //     tile.classList.remove("tile-glow")
-    //   }
-    // })
   }
 }
 
@@ -339,20 +320,14 @@ function goToTile(evt){
   if (navbarLinks.classList.contains("active-links")){
     toggleMobileHeader()
   }
-
   //Parent Element
   let infoTilesContainer = document.querySelector(".tiles-wrapper");
-
-   //Each time the scroll heighth has to be resetet to not break the slider
+  //Each time the scroll heighth has to be resetet to not break the slider
   infoTilesContainer.scroll(0, 0);
-  
-    
   let yTarget = GetScrollCoordinate(target, "tiles-wrapper")
- 
   infoTilesContainer.scroll(0, yTarget);
 
-  console.log(yTarget);
-  
+  // console.log(yTarget);  
   glowUpElement(tile)
 
   // if(yTarget > 100){
@@ -470,23 +445,23 @@ const leftArrow = document.querySelector(".left-arrow")
 const rightArrow = document.querySelector(".right-arrow")
 const  slider = document.querySelector(".slider");
 
-function scrollRight() {
-  if ((slider.scrollWidth - slider.clientWidth) <= slider.scrollLeft) {//added -20 for more stable scrolling statement(each browser measures with in own way)
-    slider.scrollTo({
+function scrollRight(sliderElement) {
+  if ((sliderElement.scrollWidth - sliderElement.clientWidth) <= sliderElement.scrollLeft) {//added -20 for more stable scrolling statement(each browser measures with in own way)
+    sliderElement.scrollTo({
       left: 0,
       behavior: "smooth",
     });
   } else {
-    slider.scrollBy({
-      left: slider.clientWidth,//again aded 20 since browsers measures width on own secret conditions//issue appears in safari
+    sliderElement.scrollBy({
+      left: sliderElement.clientWidth,//again aded 20 since browsers measures width on own secret conditions//issue appears in safari
       behavior: "smooth",
     });
   }
 }
 
-function scrollLeft() {
-  slider.scrollBy({
-    left: -slider.clientWidth,//sama thing, Safari
+function scrollLeft(sliderElement) {
+  sliderElement.scrollBy({
+    left: -sliderElement.clientWidth,//sama thing, Safari
     behavior: "smooth",
   });
 }
@@ -502,14 +477,14 @@ function scrollLeft() {
 // Scroll Events
 slider.addEventListener("click", function (ev) {
   if (ev.target === leftArrow) {
-    scrollLeft();
+    scrollLeft(slider);
     // resetTimer();
   }
 });
 
 slider.addEventListener("click", function (ev) {
   if (ev.target === rightArrow) {
-    scrollRight();
+    scrollRight(slider);
     // resetTimer();
   }
 });
@@ -524,12 +499,18 @@ function choseDisplayContent(target){
   let navTitle = document.querySelector("#project-nav-title")
   let navCodeLink = document.querySelector("#project_nav_code")
   let overview = document.querySelector("#overview_text")
+  let screenshotSlider = document.querySelector(".project-screenshots-slider")
+  let sliderInnerHtml = ""
 
     if (target == "Apartments"){
 
       navTitle.textContent = data.apartmentWebsite.title
       navCodeLink.href = data.apartmentWebsite.codeLink
       overview.textContent = data.apartmentWebsite.overview
+      
+      data.apartmentWebsite.images.forEach((img)=>{
+        sliderInnerHtml+= `<div class="project-screenshots-slider__slide"> <div class="project-screenshots-slide_content"> <h1>${img}</h1></div></div>`
+      })
 
     }else if (target == "Coinbase"){    
       navTitle.textContent = data.coinbaseClone.title
@@ -546,56 +527,34 @@ function choseDisplayContent(target){
     }else if (target == "Frog"){
       navTitle.textContent = data.TheFrogGame.title
       navCodeLink.href = data.TheFrogGame.codeLink
-  }
-}
-
-
-
-const projectScreenshotsLeftArrow = document.querySelector(".project-screenshots-left-arrow")
-const projectScreenshotsRightArrow = document.querySelector(".project-screenshots-right-arrow")
-const  projectScreenshotsSlider = document.querySelector(".project-screenshots-slider");
-
-
-const screenshotTile = document.querySelector(".screenshot")
-console.log(screenshotTile.offsetWidth)
-
-
-function scrollScreenshotRight() {
-  if ((projectScreenshotsSlider.scrollWidth - projectScreenshotsSlider.clientWidth) <= projectScreenshotsSlider.scrollLeft) {//added -20 for more stable scrolling statement(each browser measures with in own way)
-    projectScreenshotsSlider.scrollTo({
-      left: 0,
-      behavior: "smooth",
-    });
-  } else {
-    projectScreenshotsSlider.scrollBy({
-      left: projectScreenshotsSlider.clientWidth,//again aded 20 since browsers measures width on own secret conditions//issue appears in safari
-      behavior: "smooth",
-    });
-  }
-}
-
-function scrollScreenshotLeft() {
-  projectScreenshotsSlider.scrollBy({
-    left: -projectScreenshotsSlider.clientWidth,//sama thing, Safari
-    behavior: "smooth",
-  });
-}
-
-
-// Scroll Events
-projectScreenshotsSlider.addEventListener("click", function (ev) {
-  if (ev.target === projectScreenshotsLeftArrow) {
-    scrollScreenshotLeft();
+    }
+    //After adding dynamic slider slides have to add Arrows
+    sliderInnerHtml += '<div class="project-screenshots-left-arrow"></div> <div class="project-screenshots-right-arrow"></div> '
+    screenshotSlider.innerHTML = sliderInnerHtml
+    
+    
+    //Since regenerated arrows, they need scroll event too
+    const projectScreenshotsLeftArrow = document.querySelector(".project-screenshots-left-arrow")
+    const projectScreenshotsRightArrow = document.querySelector(".project-screenshots-right-arrow")
+    const  projectScreenshotsSlider = document.querySelector(".project-screenshots-slider");
+    
+    // Scroll Events
+    projectScreenshotsSlider.addEventListener("click", function (ev) {
+    if (ev.target === projectScreenshotsLeftArrow) {
+    scrollLeft(projectScreenshotsSlider);
     // resetTimer();
-  }
-});
+    }
+    });
 
-projectScreenshotsSlider.addEventListener("click", function (ev) {
-  if (ev.target === projectScreenshotsRightArrow) {
-    scrollScreenshotRight();
+    projectScreenshotsSlider.addEventListener("click", function (ev) {
+    if (ev.target === projectScreenshotsRightArrow) {
+    scrollRight(projectScreenshotsSlider);
     // resetTimer();
+    }
+    });
   }
-});
+
+
 
 
 

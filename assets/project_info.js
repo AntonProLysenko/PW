@@ -5,35 +5,40 @@ export default {
       "overview":"The Apartment Website project showcases two identical websites built for different apartment complexes. Each website provides an engaging and user-friendly interface for potential residents, combining modern design, interactivity, and practical tools for property management. Visitors can explore apartments virtually, view availability, and easily navigate the property location with interactive maps and dynamic content.",
       "highlights":"",
       "tools":"",
-      "codeLink":"https://github.com/AntonProLysenko/Apartments-Website"
+      "codeLink":"https://github.com/AntonProLysenko/Apartments-Website",
+      "images":["screenshot1","screenshot2","screenshot3","screenshot4","screenshot5","screenshot6","screenshot7","screenshot8","screenshot9","screenshot10"]
     },
     "coinbaseClone":{
       "title":"Coinbase Clone",
       "overview":"",
       "highlights":"",
       "tools":"",
-      "codeLink":"https://github.com/AntonProLysenko/Coinbase"
+      "codeLink":"https://github.com/AntonProLysenko/Coinbase",
+      "images":["screenshot1","screenshot2","screenshot3","screenshot4"]
   },
     "agileBoard":{
       "title":"Agile Board",
       "overview":"",
       "highlights":"",
       "tools":"",
-      "codeLink":"https://github.com/AntonProLysenko/Task-Tacker"
+      "codeLink":"https://github.com/AntonProLysenko/Task-Tacker",
+      "images":["screenshot1","screenshot2","screenshot3","screenshot4"]
     },
     "triviaGame":{
       "title":"Trivia Game",
       "overview":"",
       "highlights":"",
       "tools":"",
-      "codeLink":"https://github.com/AntonProLysenko/Trivia_minigame"
+      "codeLink":"https://github.com/AntonProLysenko/Trivia_minigame",
+      "images":["screenshot1","screenshot2","screenshot3","screenshot4"]
     },
     "TheFrogGame":{
       "title":"The Frog Platformer",
       "overview":"",
       "highlights":"",
       "tools":"",
-      "codeLink":"https://github.com/AntonProLysenko/Frog-Minigame"
+      "codeLink":"https://github.com/AntonProLysenko/Frog-Minigame",
+      "images":["screenshot1","screenshot2","screenshot3","screenshot4"]
     }
   }
 }
