@@ -496,65 +496,63 @@ slider.addEventListener("click", function (ev) {
 function choseDisplayContent(target){  
   let data = projects_info.projects
 
+  if (target == "Apartments"){
+    filloutProjectModalTiles(data.apartmentWebsite)
+  }else if (target == "Coinbase"){   
+    filloutProjectModalTiles(data.coinbaseClone) 
+  }else if (target == "Trello"){
+    filloutProjectModalTiles(data.agileBoard) 
+  }else if (target =="Trivia"){    
+    filloutProjectModalTiles(data.triviaGame) 
+  }else if (target == "Frog"){
+    filloutProjectModalTiles(data.TheFrogGame) 
+  }   
+}
+
+function filloutProjectModalTiles(objProject){
+
   let navTitle = document.querySelector("#project-nav-title")
   let navCodeLink = document.querySelector("#project_nav_code")
   let overview = document.querySelector("#overview_text")
   let screenshotSlider = document.querySelector(".project-screenshots-slider")
   let sliderInnerHtml = ""
 
-    if (target == "Apartments"){
+  //header
+  navTitle.textContent = objProject.title
+  navCodeLink.href = objProject.codeLink
 
-      navTitle.textContent = data.apartmentWebsite.title
-      navCodeLink.href = data.apartmentWebsite.codeLink
-      overview.textContent = data.apartmentWebsite.overview
-      
-      data.apartmentWebsite.images.forEach((img)=>{
-        sliderInnerHtml+= `<div class="project-screenshots-slider__slide"> <div class="project-screenshots-slide_content"> <h1>${img}</h1></div></div>`
-      })
+  //tiles
+  overview.textContent = objProject.overview
+  
 
-    }else if (target == "Coinbase"){    
-      navTitle.textContent = data.coinbaseClone.title
-      navCodeLink.href = data.coinbaseClone.codeLink
+  //Screenshots Slider
+  objProject.images.forEach((img)=>{
+    sliderInnerHtml+= `<div class="project-screenshots-slider__slide"> <div class="project-screenshots-slide_content"> <h1>${img}</h1></div></div>`
+  })
+  //Adding arrows since they got deleted inside the loop
+  sliderInnerHtml += '<div class="project-screenshots-left-arrow"></div> <div class="project-screenshots-right-arrow"></div> '
+  screenshotSlider.innerHTML = sliderInnerHtml
 
-    }else if (target == "Trello"){
-      navTitle.textContent = data.agileBoard.title
-      navCodeLink.href = data.agileBoard.codeLink
-
-    }else if (target =="Trivia"){    
-      navTitle.textContent = data.triviaGame.title
-      navCodeLink.href = data.triviaGame.codeLink
-
-    }else if (target == "Frog"){
-      navTitle.textContent = data.TheFrogGame.title
-      navCodeLink.href = data.TheFrogGame.codeLink
-    }
-    //After adding dynamic slider slides have to add Arrows
-    sliderInnerHtml += '<div class="project-screenshots-left-arrow"></div> <div class="project-screenshots-right-arrow"></div> '
-    screenshotSlider.innerHTML = sliderInnerHtml
-    
-    
-    //Since regenerated arrows, they need scroll event too
-    const projectScreenshotsLeftArrow = document.querySelector(".project-screenshots-left-arrow")
-    const projectScreenshotsRightArrow = document.querySelector(".project-screenshots-right-arrow")
-    const  projectScreenshotsSlider = document.querySelector(".project-screenshots-slider");
-    
-    // Scroll Events
-    projectScreenshotsSlider.addEventListener("click", function (ev) {
+  //Since regenerated arrows, they need scroll event too
+  const projectScreenshotsLeftArrow = document.querySelector(".project-screenshots-left-arrow")
+  const projectScreenshotsRightArrow = document.querySelector(".project-screenshots-right-arrow")
+  const  projectScreenshotsSlider = document.querySelector(".project-screenshots-slider");
+  
+  // Scroll Events
+  projectScreenshotsSlider.addEventListener("click", function (ev) {
     if (ev.target === projectScreenshotsLeftArrow) {
     scrollLeft(projectScreenshotsSlider);
     // resetTimer();
     }
-    });
+  });
 
-    projectScreenshotsSlider.addEventListener("click", function (ev) {
+  projectScreenshotsSlider.addEventListener("click", function (ev) {
     if (ev.target === projectScreenshotsRightArrow) {
     scrollRight(projectScreenshotsSlider);
     // resetTimer();
     }
-    });
-  }
-
-
+  });
+}
 
 
 
