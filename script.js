@@ -281,21 +281,26 @@ function openHandler(evt){
     screenshotTile.style.width = `${screenshotWidth}px`;
     // console.log(`Slider height set to ${screenshotWidth / 1.5}px`);
 
-    // Get the image element
+
+    //Image Full screen On Click
     const screenshotImg = sliderContainer.querySelectorAll('img'); 
 
-    // Add a click event listener to the image
-    screenshotImg.forEach((image)=>{
 
+    screenshotImg.forEach((image)=>{
       image.addEventListener('click', () => {
-      // Request fullscreen mode for the image
-      if (image.requestFullscreen) {
-        image.requestFullscreen();
-      } else if (image.webkitRequestFullscreen) { // For Safari
-        image.webkitRequestFullscreen();
-      } else if (image.msRequestFullscreen) { // For IE11
-        image.msRequestFullscreen();
-      }
+        if (document.fullscreenElement){
+          document.exitFullscreen()
+        }else{
+
+          // Request fullscreen mode for the image
+          if (image.requestFullscreen) {
+            image.requestFullscreen();
+          } else if (image.webkitRequestFullscreen) { // For Safari
+            image.webkitRequestFullscreen();
+          } else if (image.msRequestFullscreen) { // For IE11
+            image.msRequestFullscreen();
+          }
+        }
     })
   });
   }
