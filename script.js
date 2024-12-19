@@ -273,10 +273,31 @@ function openHandler(evt){
 
     //Setting Screenshot slider Height depending on tile's width 
     const screenshotTile = document.querySelector(".screenshot");
-    const screenshotWidth = screenshotTile.getBoundingClientRect().width;
     const sliderContainer = screenshotTile.querySelector(".project-screenshots-slider-container");
-    sliderContainer.style.height = `${screenshotWidth / 2.35}px`;
-    console.log(`Slider height set to ${screenshotWidth / 2}px`);
+    const screenshotWidth = sliderContainer.getBoundingClientRect().width;
+
+    sliderContainer.style.height = `${screenshotWidth / 1.787}px`;
+    screenshotTile.style.height = `${(screenshotWidth / 1.787)}px`;
+    screenshotTile.style.width = `${screenshotWidth}px`;
+    // console.log(`Slider height set to ${screenshotWidth / 1.5}px`);
+
+    // Get the image element
+    const screenshotImg = sliderContainer.querySelectorAll('img'); 
+
+    // Add a click event listener to the image
+    screenshotImg.forEach((image)=>{
+
+      image.addEventListener('click', () => {
+      // Request fullscreen mode for the image
+      if (image.requestFullscreen) {
+        image.requestFullscreen();
+      } else if (image.webkitRequestFullscreen) { // For Safari
+        image.webkitRequestFullscreen();
+      } else if (image.msRequestFullscreen) { // For IE11
+        image.msRequestFullscreen();
+      }
+    })
+  });
   }
   
   mainSwiper.allowTouchMove = false;

@@ -22,7 +22,7 @@ export default {
       "highlights":"",
       "tools":"",
       "codeLink":"https://github.com/AntonProLysenko/Task-Tacker",
-      "images":["./assets/img/TrelloDevicesMockup.png","screenshot2","screenshot3","screenshot4"]
+      "images":["./assets/img/TrelloDevicesMockup.png","./assets/img/TrelloLogin.jpg","./assets/img/TrelloCardView.jpg","./assets/img/TrelloEditCard.jpg","./assets/img/TrelloArchive.jpg"]
     },
     "triviaGame":{
       "title":"Trivia Game",

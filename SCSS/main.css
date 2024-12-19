@@ -724,6 +724,7 @@ h3 {
 
 .screenshot {
   grid-area: 3/1/4/4;
+  padding: 0;
   /* Arrows */
   /*Arrows Drawing*/
   /* .fake-right-arrow{
@@ -739,6 +740,9 @@ h3 {
 .screenshot img {
   height: 100%;
   width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 15px;
 }
 .screenshot .project-screenshots-slider-container {
   display: flex;
