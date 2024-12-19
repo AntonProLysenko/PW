@@ -275,7 +275,7 @@ function openHandler(evt){
     const screenshotTile = document.querySelector(".screenshot");
     const screenshotWidth = screenshotTile.getBoundingClientRect().width;
     const sliderContainer = screenshotTile.querySelector(".project-screenshots-slider-container");
-    sliderContainer.style.height = `${screenshotWidth / 2}px`;
+    sliderContainer.style.height = `${screenshotWidth / 2.35}px`;
     console.log(`Slider height set to ${screenshotWidth / 2}px`);
   }
   
@@ -526,8 +526,8 @@ function filloutProjectModalTiles(objProject){
   
 
   //Screenshots Slider
-  objProject.images.forEach((img)=>{
-    sliderInnerHtml+= `<div class="project-screenshots-slider__slide"> <div class="project-screenshots-slide_content"> <h1>${img}</h1></div></div>`
+  objProject.images.forEach((imgSrc)=>{
+    sliderInnerHtml+= `<div class="project-screenshots-slider__slide"> <div class="project-screenshots-slide_content"> <img src="${imgSrc}"  alt="Trivia Minigame Screenshot"></div></div>`
   })
   //Adding arrows since they got deleted inside the loop
   sliderInnerHtml += '<div class="project-screenshots-left-arrow"></div> <div class="project-screenshots-right-arrow"></div> '

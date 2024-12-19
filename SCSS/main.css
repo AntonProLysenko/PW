@@ -746,7 +746,6 @@ h3 {
   box-sizing: border-box;
   height: 46.3917525773vw;
   width: 100%;
-  border: 2px solid red;
 }
 .screenshot .project-screenshots-slider-container .project-screenshots-slider {
   width: 100%;
@@ -776,7 +775,6 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: orange;
 }
 .screenshot .project-screenshots-right-arrow,
 .screenshot .project-screenshots-left-arrow {
