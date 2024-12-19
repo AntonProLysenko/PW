@@ -258,7 +258,20 @@ openButton.addEventListener("click", openHandler)
 aboutOverlay.addEventListener("click",closeHandler)
 projectsOverlay.addEventListener("click",closeHandler)
 
-
+function imgFullScreenHandler(image){
+  if (document.fullscreenElement){
+    document.exitFullscreen()
+  }else{
+    // Request fullscreen mode for the image
+    if (image.requestFullscreen) {
+      image.requestFullscreen();
+    } else if (image.webkitRequestFullscreen) { // For Safari
+      image.webkitRequestFullscreen();
+    } else if (image.msRequestFullscreen) { // For IE11
+      image.msRequestFullscreen();
+    }
+  }
+}
 function openHandler(evt){
 
   if (evt.target.dataset.target == "about-more"){
@@ -284,24 +297,13 @@ function openHandler(evt){
 
     //Image Full screen On Click
     const screenshotImg = sliderContainer.querySelectorAll('img'); 
-
-
     screenshotImg.forEach((image)=>{
       image.addEventListener('click', () => {
-        if (document.fullscreenElement){
-          document.exitFullscreen()
-        }else{
-
-          // Request fullscreen mode for the image
-          if (image.requestFullscreen) {
-            image.requestFullscreen();
-          } else if (image.webkitRequestFullscreen) { // For Safari
-            image.webkitRequestFullscreen();
-          } else if (image.msRequestFullscreen) { // For IE11
-            image.msRequestFullscreen();
-          }
-        }
+        imgFullScreenHandler(image)
     })
+    image.addEventListener('touchStart', () => {
+      imgFullScreenHandler(image)
+  })
   });
   }
   
@@ -553,7 +555,7 @@ function filloutProjectModalTiles(objProject){
 
   //Screenshots Slider
   objProject.images.forEach((imgSrc)=>{
-    sliderInnerHtml+= `<div class="project-screenshots-slider__slide"> <div class="project-screenshots-slide_content"> <img src="${imgSrc}"  alt="Trivia Minigame Screenshot"></div></div>`
+    sliderInnerHtml+= `<div class="project-screenshots-slider__slide"> <div class="project-screenshots-slide_content"> <img src="${imgSrc}"  alt="${objProject.title} Screenshot"></div></div>`
   })
   //Adding arrows since they got deleted inside the loop
   sliderInnerHtml += '<div class="project-screenshots-left-arrow"></div> <div class="project-screenshots-right-arrow"></div> '
