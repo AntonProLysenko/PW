@@ -524,8 +524,9 @@ h3 {
 
 .projects-modal {
   width: 50dvw;
+  max-width: 99dvw;
   height: 99dvh;
-  overflow-y: hidden;
+  overflow-x: hidden;
   padding: 0px;
   background-image: none;
   background-image: linear-gradient(120deg, rgba(37, 42, 49, 0.578) 0%, rgba(28, 34, 39, 0.578) 90%);
@@ -538,8 +539,8 @@ h3 {
   min-width: 100%;
   max-width: 100%;
   font-family: "Unbounded", cursive;
-  overflow-y: hidden;
-  overscroll-behavior-y: none;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 .project-modal-header-wrapper {
@@ -621,7 +622,7 @@ h3 {
 }
 
 .nav-item-main h1 {
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: #edb15d;
   font-family: "Unbounded", cursive;
   font-weight: bolder;
