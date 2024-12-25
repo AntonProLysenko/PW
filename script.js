@@ -272,6 +272,7 @@ function imgFullScreenHandler(image){
     }
   }
 }
+
 function openHandler(evt){
 
   if (evt.target.dataset.target == "about-more"){
@@ -314,8 +315,13 @@ function openHandler(evt){
 
 
 function closeHandler(evt){  
-
+  const  projectScreenshotsSlider = document.querySelector(".project-screenshots-slider");
   if (evt.target === aboutOverlay || evt.target.className === "close" || evt.target === projectsOverlay){
+    projectScreenshotsSlider.scrollTo({
+      left: 0,
+      behavior: "instant",
+    });
+  console.log("Scrree")
     aboutModal.style.display = "none";
     aboutOverlay.style.display = "none";
     projectsOverlay.style.display = "none";
@@ -323,6 +329,8 @@ function closeHandler(evt){
     navContainer.style.visibility= "visible"
     mainSwiper.allowTouchMove = true;
     mainSwiper.mousewheel.enable()
+
+
   }
 }
 
@@ -569,14 +577,14 @@ function filloutProjectModalTiles(objProject){
   // Scroll Events
   projectScreenshotsSlider.addEventListener("click", function (ev) {
     if (ev.target === projectScreenshotsLeftArrow) {
-    scrollLeft(projectScreenshotsSlider);
+      scrollLeft(projectScreenshotsSlider);
     // resetTimer();
     }
   });
 
   projectScreenshotsSlider.addEventListener("click", function (ev) {
     if (ev.target === projectScreenshotsRightArrow) {
-    scrollRight(projectScreenshotsSlider);
+      scrollRight(projectScreenshotsSlider);
     // resetTimer();
     }
   });
