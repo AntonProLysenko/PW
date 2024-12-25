@@ -38,7 +38,7 @@ export default {
       "highlights":"",
       "tools":"",
       "codeLink":"https://github.com/AntonProLysenko/Frog-Minigame",
-      "images":["screenshot1","screenshot2","screenshot3","screenshot4"]
+      "images":[,"./assets/img/TheFrogMainMenu.jpg", "./assets/img/TheFrogGame.jpg","./assets/img/TheFrogGameOver.jpg"]
     }
   }
 }
