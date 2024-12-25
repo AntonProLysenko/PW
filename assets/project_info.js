@@ -6,7 +6,7 @@ export default {
       "highlights":"",
       "tools":"",
       "codeLink":"https://github.com/AntonProLysenko/Apartments-Website",
-      "images":["/assets/img/SalemDevicesMockup.png","screenshot2","screenshot3","screenshot4","screenshot5","screenshot6","screenshot7","screenshot8","screenshot9","screenshot10"]
+      "images":["/assets/img/SalemDevicesMockup.png","/assets/img/SalemContactUs.jpg","/assets/img/SalemAdminPage.jpg","assets/img/SalemEdit.jpg"]
     },
     "coinbaseClone":{
       "title":"Coinbase Clone",
