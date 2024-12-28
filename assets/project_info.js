@@ -4,7 +4,18 @@ export default {
       "title":"Apartments Website",
       "overview":"The Apartment Website project showcases two identical websites built for different apartment complexes. Each website provides an engaging and user-friendly interface for potential residents, combining modern design, interactivity, and practical tools for property management. Visitors can explore apartments virtually, view availability, and easily navigate the property location with interactive maps and dynamic content.",
       "highlights":"",
-      "tools":"",
+      "tools":[
+        {"Frontend": ["React.js", "HTML", "CSS"]},
+        {"Backend": ["Node.js"," MongoDB"]},
+        {"Authentication": ["JWT (JSON Web Token)"]},
+        {"Libraries & Tools":[
+          "FSLightbox (for gallery lightbox functionality)",
+          "EmailJS (email form integration)",
+          "AOS (Animation on Scroll for dynamic elements)"
+          ]
+        },
+        {"Other Features": ["Google Maps integration", "3D virtual tour"]}
+      ],
       "codeLink":"https://github.com/AntonProLysenko/Apartments-Website",
       "images":["/assets/img/SalemDevicesMockup.png","/assets/img/SalemContactUs.jpg","/assets/img/SalemAdminPage.jpg","assets/img/SalemEdit.jpg"]
     },
