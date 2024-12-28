@@ -321,7 +321,6 @@ function closeHandler(evt){
       left: 0,
       behavior: "instant",
     });
-  console.log("Scrree")
     aboutModal.style.display = "none";
     aboutOverlay.style.display = "none";
     projectsOverlay.style.display = "none";
@@ -550,8 +549,10 @@ function filloutProjectModalTiles(objProject){
   let navTitle = document.querySelector("#project-nav-title")
   let navCodeLink = document.querySelector("#project_nav_code")
   let overview = document.querySelector("#overview_text")
+  let toolsTitle = document.querySelector("#tools-tile-list")
   let screenshotSlider = document.querySelector(".project-screenshots-slider")
   let sliderInnerHtml = ""
+  let toolsInnerHtml = ""
 
   //header
   navTitle.textContent = objProject.title
@@ -560,6 +561,23 @@ function filloutProjectModalTiles(objProject){
   //tiles
   overview.textContent = objProject.overview
   
+
+
+  toolsInnerHtml+="<ul>"
+  objProject.tools.forEach((toolType)=>{
+    const type = Object.keys(toolType)[0];
+    toolsInnerHtml+=`<li>${type}</li>`
+    toolsInnerHtml+='<ul>'
+      toolType[type].forEach((tool)=>{
+        toolsInnerHtml+=`<li>${tool}</li>`
+      })
+     toolsInnerHtml+='</ul>'
+  })
+  
+  toolsInnerHtml+="</ul>"
+  console.log(toolsInnerHtml)
+  toolsTitle.innerHTML = toolsInnerHtml
+
 
   //Screenshots Slider
   objProject.images.forEach((imgSrc)=>{
