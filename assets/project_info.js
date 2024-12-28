@@ -23,7 +23,12 @@ export default {
       "title":"Coinbase Clone",
       "overview":"",
       "highlights":"",
-      "tools":"",
+      "tools":[
+        {"Frontend": ["React.js (TypeScript)", "HTML", "SCSS"]},
+        {"Backend": ["Node.js"]},
+        {"APIs": ["CryptoCompare", "CoinMarketCap"]},
+        {"Other Features": ["Responsive design for all devices"]}
+      ],
       "codeLink":"https://github.com/AntonProLysenko/Coinbase",
       "images":["./assets/img/CoinbaseDevicesMockup.png","./assets/img/CoinbaseHeaderDevices.png"]
   },
@@ -31,7 +36,16 @@ export default {
       "title":"Agile Board",
       "overview":"",
       "highlights":"",
-      "tools":"",
+      "tools":[
+        {"Frontend": ["React.js", "CSS"]},
+        {"Backend": ["Node.js"]},
+        {"Database": ["MongoDB"]},
+        {"Authentication": ["JWT (JSON Web Token)"]},
+        {"Libraries & Tools": [
+          "React Markdown Editor (task notes editing)",
+          "Picksome (dynamic background images)"
+        ]}
+      ],
       "codeLink":"https://github.com/AntonProLysenko/Task-Tacker",
       "images":["./assets/img/TrelloDevicesMockup.png","./assets/img/TrelloLogin.jpg","./assets/img/TrelloCardView.jpg","./assets/img/TrelloEditCard.jpg","./assets/img/TrelloArchive.jpg"]
     },
