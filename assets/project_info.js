@@ -61,7 +61,10 @@ export default {
       "title":"The Frog Platformer",
       "overview":"",
       "highlights":"",
-      "tools":"",
+      "tools":[
+        {"Frontend": ["HTML", "CSS", "Vanilla JavaScript"]},
+        {"Features": ["Parallax background"]}
+      ],
       "codeLink":"https://github.com/AntonProLysenko/Frog-Minigame",
       "images":[,"./assets/img/TheFrogMainMenu.jpg", "./assets/img/TheFrogGame.jpg","./assets/img/TheFrogGameOver.jpg"]
     }
