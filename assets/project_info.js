@@ -2,7 +2,7 @@ export default {
   "projects":{
     "apartmentWebsite":{
       "title":"Apartments Website",
-      "overview":"The Apartment Website project showcases two identical websites built for different apartment complexes. Each website provides an engaging and user-friendly interface for potential residents, combining modern design, interactivity, and practical tools for property management. Visitors can explore apartments virtually, view availability, and easily navigate the property location with interactive maps and dynamic content.",
+      "overview":"This Apartment Website I created provides an engaging and user-friendly interface for new and existing residents. The website combines the distinct design aesthetic of the apartment complex, interactivity, and practical tools for property management. Visitors can explore apartments virtually, check availability, navigate, and contact the property without extra steps like copying and pasting contact information or directions—everything is accessible with a single click on the website.",
       "highlights":"",
       "tools":[
         {"Frontend": ["React.js", "HTML", "CSS"]},
@@ -21,7 +21,7 @@ export default {
     },
     "coinbaseClone":{
       "title":"Coinbase Clone",
-      "overview":"",
+    "overview":"I created this project as a pixel-perfect clone of the Coinbase landing page to showcase my ability to replicate a web page from a provided design. I focused on making the layout fully responsive, so it    looks great on mobile, desktop, and tablets. To add a functional touch, I integrated live cryptocurrency data through API connections, making the page both visually accurate and dynamic.",
       "highlights":"",
       "tools":[
         {"Frontend": ["React.js (TypeScript)", "HTML", "SCSS"]},
@@ -34,7 +34,7 @@ export default {
   },
     "agileBoard":{
       "title":"Agile Board",
-      "overview":"",
+      "overview":"Agile Board is a light clone of the Trello board, designed to refine my skills in JWT authentication, dynamic data handling, and intuitive user interaction. This multi-user application allows each user to manage their own tasks seamlessly while using a single backend that processes requests efficiently. The app focuses on task organization, status tracking, and enhanced user experience with markdown editing and visually appealing backgrounds.",
       "highlights":"",
       "tools":[
         {"Frontend": ["React.js", "CSS"]},
@@ -59,7 +59,7 @@ export default {
     },
     "TheFrogGame":{
       "title":"The Frog Platformer",
-      "overview":"",
+      "overview":"The Frog is a single-level platformer game built completly with vanilla JavaScript.With this project I was trying to showcase my early programming skills and creative game design. The game features a parallax scrolling background, engaging gameplay with a variety of enemies, and a charming visual style.",
       "highlights":"",
       "tools":[
         {"Frontend": ["HTML", "CSS", "Vanilla JavaScript"]},
