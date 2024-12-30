@@ -33,8 +33,17 @@ export default {
     },
     "coinbaseClone":{
       "title":"Coinbase Clone",
-    "overview":"I created this project as a pixel-perfect clone of the Coinbase landing page to showcase my ability to replicate a web page from a provided design. I focused on making the layout fully responsive, so it    looks great on mobile, desktop, and tablets. To add a functional touch, I integrated live cryptocurrency data through API connections, making the page both visually accurate and dynamic.",
-      "highlights":"",
+      "overview":"I created this project as a pixel-perfect clone of the Coinbase landing page to showcase my ability to replicate a web page from a provided design. I focused on making the layout fully responsive, so it    looks great on mobile, desktop, and tablets. To add a functional touch, I integrated live cryptocurrency data through API connections, making the page both visually accurate and dynamic.",
+      "highlights":[
+        {"Pixel-Perfect Design": ["This app exactly replicates the original Coinbase landing page, with precise attention to padding, sizing, and layout.",
+                                  "Responsive design ensures the page looks perfect on all screen sizes, from small smartphones to large desktop monitors."
+                                  ]
+        },
+        {"Dynamic Cryptocurrency Pricing": ["Cryptocurrency prices are dynamically fetched from multiple APIs (CryptoCompare and CoinMarketCap).",
+          "A Node.js server combines the API data into a unified JSON file"
+        ]},
+        {"Skill Demonstration": ["Showcases the ability to deliver high-quality, design-driven applications by replicating professional-grade web page."]}
+      ],
       "tools":[
         {"Frontend": ["React.js (TypeScript)", "HTML", "SCSS"]},
         {"Backend": ["Node.js"]},
@@ -43,11 +52,20 @@ export default {
       ],
       "codeLink":"https://github.com/AntonProLysenko/Coinbase",
       "images":["./assets/img/CoinbaseDevicesMockup.png","./assets/img/CoinbaseHeaderDevices.png"]
-  },
+    },
+
     "agileBoard":{
       "title":"Agile Board",
       "overview":"Agile Board is a light clone of the Trello board, designed to refine my skills in JWT authentication, dynamic data handling, and intuitive user interaction. This multi-user application allows each user to manage their own tasks seamlessly while using a single backend that processes requests efficiently. The app focuses on task organization, status tracking, and enhanced user experience with markdown editing and visually appealing backgrounds.",
-      "highlights":"",
+      "highlights":[
+        {"Multi-User Simulation": ["Each user accesses only their unique board from the backend, showcasing multi-user simulation capabilities."]},
+        {"Dynamic Task Management": ["Tasks are categorized by status (To Do, Pending, Complete) and can be moved between columns with a button click.",
+          "The backend leverages the reduce function for efficient sorting of tasks into appropriate columns based on status."
+        ]},
+        {"Rich Task Notes": ["Each task supports notes, which can be edited directly in the frontend using the React Markdown Editor."]},
+        {"Trash Can Feature":["Archived tasks are stored in a trash can, with the ability to be restored to their original columns."]},
+        {"Backend Efficiency": ["Tasks are stored in a single MongoDB collection, reducing complexity and improving database management."]}
+      ],
       "tools":[
         {"Frontend": ["React.js", "CSS"]},
         {"Backend": ["Node.js"]},
@@ -72,7 +90,11 @@ export default {
     "TheFrogGame":{
       "title":"The Frog Platformer",
       "overview":"The Frog is a single-level platformer game built completly with vanilla JavaScript.With this project I was trying to showcase my early programming skills and creative game design. The game features a parallax scrolling background, engaging gameplay with a variety of enemies, and a charming visual style.",
-      "highlights":"",
+      "highlights":[
+        {"Core JavaScript Focus": ["Built entirely with vanilla JavaScript, showcasing an understanding of DOM manipulation, event handling, and game logic."]},
+        {"Parallax Scrolling": ["The dynamic background employs a parallax effect, creating an immersive sense of depth and movement."]},
+        {"Variety of Enemies": ["Players face multiple enemy types, each each with different speed of movement."]},
+      ],
       "tools":[
         {"Frontend": ["HTML", "CSS", "Vanilla JavaScript"]},
         {"Features": ["Parallax background"]}
