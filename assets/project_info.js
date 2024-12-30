@@ -3,7 +3,19 @@ export default {
     "apartmentWebsite":{
       "title":"Apartments Website",
       "overview":"This Apartment Website I created provides an engaging and user-friendly interface for new and existing residents. The website combines the distinct design aesthetic of the apartment complex, interactivity, and practical tools for property management. Visitors can explore apartments virtually, check availability, navigate, and contact the property without extra steps like copying and pasting contact information or directions—everything is accessible with a single click on the website.",
-      "highlights":"",
+      "highlights":[
+        {"Interactive Admin Dashboard": ["A separate admin site allows property managers to create, update, and manage apartment listings."]},
+        {"Visitor Statistics and Analytics": ["The website collects IP addresses to provide admins with detailed analytics on unique visitors by city."]},
+        {"Responsive Design for All Devices": ["The websites are optimized for excellent performance on devices of all sizes, from small mobile phones (e.g., iPhone 4) to tablets."]},
+        {"Interactive Contact Features":[
+          "A functional email form powered by EmailJS allows users to send inquiries directly from the site.",
+          "Clickable phone numbers and email links improve user convenience, pre-filling relevant details for quick communication.",
+          ]
+        },
+        {"Tech-Driven Backend": ["The backend, built with Node.js and MongoDB, provides efficient handling of user data and listings.",
+                                  "Secure admin authentication and account management using JWT"]},
+        {"Virtual Apartment Tours": ["An integrated 3D virtual tour lets potential residents explore the property directly on the website, providing a realistic experience."]}
+      ],
       "tools":[
         {"Frontend": ["React.js", "HTML", "CSS"]},
         {"Backend": ["Node.js"," MongoDB"]},

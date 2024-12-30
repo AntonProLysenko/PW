@@ -550,19 +550,39 @@ function filloutProjectModalTiles(objProject){
   let navCodeLink = document.querySelector("#project_nav_code")
   let overview = document.querySelector("#overview_text")
   let toolsTitle = document.querySelector("#tools-tile-list")
+  let highlightTile =document.querySelector("#highlights_text")
   let screenshotSlider = document.querySelector(".project-screenshots-slider")
   let sliderInnerHtml = ""
   let toolsInnerHtml = ""
+  let highlightsInnerHtml = ""
 
   //header
   navTitle.textContent = objProject.title
   navCodeLink.href = objProject.codeLink
 
   //tiles
+  //overview
   overview.textContent = objProject.overview
+
+
   
+  //highlights
+  highlightsInnerHtml+="<ul>"
+  objProject.highlights.forEach((highlightTitle)=>{
+    const title = Object.keys(highlightTitle)[0];
+    highlightsInnerHtml+=`<li>${title}</li>`
+    highlightsInnerHtml+='<ul>'
+    highlightTitle[title].forEach((highlight)=>{
+      highlightsInnerHtml+=`<li>${highlight}</li>`
+      })
+      highlightsInnerHtml+='</ul>'
+  })
+
+  highlightTile.innerHTML = highlightsInnerHtml
 
 
+
+  //tools
   toolsInnerHtml+="<ul>"
   objProject.tools.forEach((toolType)=>{
     const type = Object.keys(toolType)[0];
