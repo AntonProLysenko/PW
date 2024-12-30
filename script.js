@@ -383,9 +383,8 @@ function GetScrollCoordinate(targetClassName, parentClassName){
 
   //for showing element at the middle, not on top 
   if (targetClassName !== "screenshot"){
-    relativePos -= tileInfo.height/2
+    relativePos -= tileInfo.height/3
   }
-
   return relativePos
 }
 
@@ -441,33 +440,6 @@ singleSkills.forEach((skill)=>{
 
 
 
-
-
-//Sending Email
-const btn = document.getElementById('email-form-button');
-const frm = document.querySelector('#form')
-const emailBox = document.querySelector('.email')
-
- frm.addEventListener('submit', function(event) {
-  
-   event.preventDefault();
-
-   btn.value = 'Sending...';
-
-   const serviceID = "service_o03tfmk";
-   const templateID = "template_qrke2c8";
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      frm.reset();
-      emailBox.innerHTML = "<p>Thank You For Reaching Out to Me!</p><p>I’ll Get Back to You As Soon as I Read Your Emai1</p>"
-    }, (err) => {
-      btn.value = 'Send Email';
-      emailBox.innerHTML ="<p>Ooops...!</p><p>Seems like an error on my side, please email me <a href='mailto:mail@antonlys.com'>mail@antonlys.com</a></p>";
-      alert(JSON.stringify(err));
-    });
-});
 
 
 
@@ -565,12 +537,12 @@ function filloutProjectModalTiles(objProject){
   overview.textContent = objProject.overview
 
 
-  
+
   //highlights
   highlightsInnerHtml+="<ul>"
   objProject.highlights.forEach((highlightTitle)=>{
     const title = Object.keys(highlightTitle)[0];
-    highlightsInnerHtml+=`<li>${title}</li>`
+    highlightsInnerHtml+=`<li class="parent-list-item">${title}</li>`
     highlightsInnerHtml+='<ul>'
     highlightTitle[title].forEach((highlight)=>{
       highlightsInnerHtml+=`<li>${highlight}</li>`
@@ -586,7 +558,7 @@ function filloutProjectModalTiles(objProject){
   toolsInnerHtml+="<ul>"
   objProject.tools.forEach((toolType)=>{
     const type = Object.keys(toolType)[0];
-    toolsInnerHtml+=`<li>${type}</li>`
+    toolsInnerHtml+=`<li class="parent-list-item">${type}</li>`
     toolsInnerHtml+='<ul>'
       toolType[type].forEach((tool)=>{
         toolsInnerHtml+=`<li>${tool}</li>`
@@ -665,6 +637,33 @@ connectObserver1.observe(animText[0])
 connectObserver2.observe(animText[1])
 
 
+
+
+//Sending Email
+const btn = document.getElementById('email-form-button');
+const frm = document.querySelector('#form')
+const emailBox = document.querySelector('.email')
+
+ frm.addEventListener('submit', function(event) {
+  
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = "service_o03tfmk";
+   const templateID = "template_qrke2c8";
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      frm.reset();
+      emailBox.innerHTML = "<p>Thank You For Reaching Out to Me!</p><p>I’ll Get Back to You As Soon as I Read Your Emai1</p>"
+    }, (err) => {
+      btn.value = 'Send Email';
+      emailBox.innerHTML ="<p>Ooops...!</p><p>Seems like an error on my side, please email me <a href='mailto:mail@antonlys.com'>mail@antonlys.com</a></p>";
+      alert(JSON.stringify(err));
+    });
+});
 
 
 

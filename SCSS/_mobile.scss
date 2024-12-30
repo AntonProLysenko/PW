@@ -337,6 +337,27 @@
          }
     }
 
+
+
+    .tile{
+        padding: 10px;
+        h1{
+          text-align: center;
+        }
+        ul{
+            padding-left: 0.5rem;
+            color:white;
+            font-family: "Roboto", sans-serif;
+        //   color:white;  font-style: normal;
+        }
+        .parent-list-item{
+          font-family: "Unbounded", cursive;;
+          color: #f5cf9a;
+          font-weight: 500;
+          margin-top: 5px;
+        }
+      }
+
 }
 
 
@@ -435,7 +456,7 @@
     }
 
     .tile{
-        padding: 0px;
+        // padding: 0px;
         min-height: fit-content;
         justify-content: flex-start;
     }
