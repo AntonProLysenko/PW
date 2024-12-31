@@ -545,7 +545,7 @@ function filloutProjectModalTiles(objProject){
     highlightsInnerHtml+=`<li class="parent-list-item">${title}</li>`
     highlightsInnerHtml+='<ul>'
     highlightTitle[title].forEach((highlight)=>{
-      highlightsInnerHtml+=`<li>${highlight}</li>`
+      highlightsInnerHtml+=`<li class="child-list-item">${highlight}</li>`
       })
       highlightsInnerHtml+='</ul>'
   })
@@ -561,7 +561,7 @@ function filloutProjectModalTiles(objProject){
     toolsInnerHtml+=`<li class="parent-list-item">${type}</li>`
     toolsInnerHtml+='<ul>'
       toolType[type].forEach((tool)=>{
-        toolsInnerHtml+=`<li>${tool}</li>`
+        toolsInnerHtml+=`<li class="child-list-item">${tool}</li>`
       })
      toolsInnerHtml+='</ul>'
   })

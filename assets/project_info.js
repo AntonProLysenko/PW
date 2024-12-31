@@ -100,7 +100,27 @@ export default {
         {"Features": ["Parallax background"]}
       ],
       "codeLink":"https://github.com/AntonProLysenko/Frog-Minigame",
-      "images":[,"./assets/img/TheFrogMainMenu.jpg", "./assets/img/TheFrogGame.jpg","./assets/img/TheFrogGameOver.jpg"]
+      "images":["./assets/img/TheFrogMainMenu.jpg", "./assets/img/TheFrogGame.jpg","./assets/img/TheFrogGameOver.jpg"]
+    },
+    "FlyMeToTheMoon":{
+      "title":"Fly Me To The Moon",
+      "overview":"Fly Me to the Moon is a VB.NET Windows Forms application designed as a comprehensive flight management system. This app simulates a real-world airline operation by providing tailored experiences for employees (admins, pilots, and attendants) and passengers. The app includes advanced role-based functionality, a dynamic ticket pricing algorithm, and a SQL database backend for robust data management.",
+      "highlights":[
+        {"Dynamic Ticket Pricing Algorithm": ["Adjusts prices dynamically based on demand.","Offers discounts for seniors, children, and seat selection charges."]},
+        {"Advanced Input Validation": ["Ensures unique IDs for passengers and employees.",
+                                    "Prevents duplication in assigning individuals to flights.",
+                                    "Comprehensive input verification"]},
+        {"Interactive Seat Selection": ["Visual plane layout with interactive checkboxes for seat selection. Taken seats are marked as inactive for clarity."]},
+        {"Role-Based Employee System": ["Supports three distinct employee roles: Admin, Pilot, and Attendant.","Dynamic login system detects employee role and loads appropriate forms and content."]},
+        {"Normalized Database":["SQL Database passed 3 first forms of normalization"]},
+        {"Extra Features": ["Loading screens throughout the app for smooth user experience"]},
+      ],
+      "tools":[
+        {"VB.NET": ["For front-end Windows Forms development."]},
+        {"Microsoft SQL Database": ["For data storage"]}
+      ],
+      "codeLink":"https://github.com/AntonProLysenko/FlyMe2TheMoon",
+      "images":[]
     }
   }
 }
