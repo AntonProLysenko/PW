@@ -112,7 +112,7 @@ imagePositionreset.observe(navLinks[0],  {attributes: true});
 function mobileView() {
   if(window.innerWidth <= 1200){
     scrollArrows.style.visibility = "hidden";
-    mainTitleDescription.innerHTML = "</br> Software Engineer";
+    mainTitleDescription.innerHTML = "</br> Software Developer";
     mainTitleDescription.style.marginRight = "50px";
     secondWelcoming.style.fontSize = "1rem";
     // firstWelcoming.style.fontSize = "1rem"
