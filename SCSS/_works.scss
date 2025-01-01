@@ -142,7 +142,12 @@ $main-title: #edb15d;
  }
 }
 
-
+#flymetothemoon{
+    border-radius: 3px;
+    background: url(../assets/img/FlyMe2TheMoon.JPG)no-repeat center ;
+    // background-size: contain;
+    background-size: 100% 100%;
+}
 #salem {
     z-index: 0;
     border-radius: 3px;
