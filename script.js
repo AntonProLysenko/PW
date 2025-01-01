@@ -513,6 +513,8 @@ function choseDisplayContent(target){
     filloutProjectModalTiles(data.triviaGame) 
   }else if (target == "Frog"){
     filloutProjectModalTiles(data.TheFrogGame) 
+  }else if (target == "FlyMeToTheMoon"){
+    filloutProjectModalTiles(data.FlyMeToTheMoon) 
   }   
 }
 

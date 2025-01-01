@@ -120,7 +120,21 @@ export default {
         {"Microsoft SQL Database": ["For data storage"]}
       ],
       "codeLink":"https://github.com/AntonProLysenko/FlyMe2TheMoon",
-      "images":[]
+      "images":["./assets/img/FlyMe2TheMoonMainMenu.JPG",
+        "./assets/img/FlyMe2TheMoonLoadingScreen.JPG",
+        "./assets/img/FlyMe2TheMoonPassengerLogin.JPG",
+        "./assets/img/FlyMe2TheMoonPassengerMenu.JPG",
+        "./assets/img/FlyMe2TheMoonPassengerBookFlight.JPG",
+        "./assets/img/flyme2TheMoonPassengerSeatSelector.JPG",
+        "./assets/img/FlyMe2TheMoonPassengerEditInfo.JPG",
+        "./assets/img/FlyMe2TheMoonPassenger Past Flights.JPG",
+        "./assets/img/FlyMe2TheMoonAdminMenu.JPG",
+        "./assets/img/FlyMe2TheMoonAdminStatistics.JPG",
+        "./assets/img/FlyMe2TheMoonAdminManage.JPG",
+        "./assets/img/FlyMe2TheMoonAdminAddToFlight.JPG",
+        "./assets/img/FlyMe2TheMoonAdminAddFlight.JPG",
+        "./assets/img/FlyMe2TheMoonPilotMenu.JPG"
+      ]
     }
   }
 }
