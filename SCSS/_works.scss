@@ -469,7 +469,7 @@ background-size: 100% 100%;
 .tiles-wrapper{
     display: grid;
     grid-template-columns:repeat(2, 1fr);
-    grid-template-rows: auto 2fr 3fr;
+    grid-template-rows: auto auto auto;
     grid-column-gap: 0px;
     grid-row-gap: 5px;
 
