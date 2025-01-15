@@ -704,6 +704,7 @@ h3 {
 .highlights {
   grid-area: 1/1/3/2;
   justify-self: end;
+  min-height: 90%
 }
 .highlights .text-wrapper {
   display: flex;
