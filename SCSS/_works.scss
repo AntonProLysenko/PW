@@ -132,7 +132,9 @@ $main-title: #edb15d;
         backdrop-filter: blur(3px);
         -webkit-backdrop-filter: blur(3px);
         -moz-background-filter: blur(3px);
-      
+        .links{
+            font-size: unset;
+        }
     }
    
 
