@@ -18,6 +18,12 @@ $main-title: #edb15d;
     text-wrap:balance;
 }
 
+.slider-instructions{
+    @extend.works-description;
+    color: #5fcedc;
+    margin-top: 10px;
+}
+
 
 
 

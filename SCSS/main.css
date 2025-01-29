@@ -136,11 +136,16 @@
   overscroll-behavior-y: none;
 }
 
-.works-description {
+.works-description, .slider-instructions {
   padding: 0px 2.5px;
   font-size: 0.9rem;
   color: whitesmoke;
   text-wrap: balance;
+}
+
+.slider-instructions {
+  color: #5fcedc;
+  margin-top: 10px;
 }
 
 .slider-container {
@@ -1150,7 +1155,7 @@ body {
   .contact-title {
     min-width: 45dvw;
   }
-  .works-description {
+  .works-description, .slider-instructions {
     max-width: 40dvw;
   }
   .links-portrait {
@@ -1425,7 +1430,7 @@ body {
   .wrapper p {
     align-self: flex-start;
   }
-  .works-description {
+  .works-description, .slider-instructions {
     max-width: 100dvw;
   }
   .slider-container {
