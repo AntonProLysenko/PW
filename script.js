@@ -10,6 +10,7 @@ document.onreadystatechange = function () {
   } else {
     document.querySelector("#loader").style.display = "none";
     document.querySelector("body").style.visibility = "visible";
+    document.querySelector("#contactPhone").href="tel:5182322116"
     let arrows = document.querySelector(".arrows");
      if(window.innerWidth >= 541){
         setTimeout(function () {
