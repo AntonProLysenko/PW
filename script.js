@@ -12,7 +12,6 @@ document.onreadystatechange = function () {
     document.querySelector("body").style.visibility = "visible";
     document.querySelector("#contactPhone").href="tel:5182322116"
     document.querySelector("#contactPhoneMobile").href="tel:5182322116"
-    console.log(document.querySelector("#contactPhoneMobile").href,document.querySelector("#contactPhone").href)
     let arrows = document.querySelector(".arrows");
      if(window.innerWidth >= 541){
         setTimeout(function () {
