@@ -473,7 +473,6 @@
 
 .tile {
   width: 90%;
-  min-height: 90%;
   background-color: rgba(13, 13, 13, 0.6);
   color: white;
   margin: 10px;
