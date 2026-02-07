@@ -305,7 +305,7 @@ function openHandler(evt){
       image.addEventListener('click', () => {
         imgFullScreenHandler(image)
     })
-    image.addEventListener('touchStart', () => {
+    image.addEventListener('touchstart', () => {
       imgFullScreenHandler(image)
   })
   });
@@ -362,36 +362,25 @@ function goToTile(evt){
   }
   //Parent Element
   let infoTilesContainer = document.querySelector(".tiles-wrapper");
-  //Each time the scroll heighth has to be resetet to not break the slider
-  infoTilesContainer.scroll(0, 0);
-  let yTarget = GetScrollCoordinate(target, "tiles-wrapper")
-  console.log("Scroll")
-  infoTilesContainer.scroll(0, yTarget);
 
-  // console.log(yTarget);  
+ if (target !== "screenshot"){
+     scrollToTileInContainer(infoTilesContainer, tile, -100);
+  }else{
+    console.log("Scroll element", target)
+    scrollToTileInContainer(infoTilesContainer, tile);
+  }
   glowUpElement(tile)
 
-  // if(yTarget > 100){
-  //   let projectHeader = document.querySelector(".project-modal-header")
-  //   projectHeader.style.minWidth = "80%"
-  //   projectHeader.style.minHeight = "20px"
-  // }
+  
 }
 
-function GetScrollCoordinate(targetClassName, parentClassName){
-  let parentDiv = document.querySelector(`.${parentClassName}`);
-  let tile = document.querySelector(`.${targetClassName}`);
+function scrollToTileInContainer(container, tile, extraOffset = 0) {
+  const containerRect = container.getBoundingClientRect();
+  const tileRect = tile.getBoundingClientRect();
 
-  let parentInfo = parentDiv.getBoundingClientRect()
-  let tileInfo =  tile.getBoundingClientRect()
+  const y = (tileRect.top - containerRect.top) + container.scrollTop + extraOffset;
 
-  let relativePos = tileInfo.y - parentInfo.y;
-
-  //for showing element at the middle, not on top 
-  if (targetClassName !== "screenshot"){
-    relativePos -= tileInfo.height/3
-  }
-  return relativePos
+  container.scrollTo({ top: y, behavior: "smooth" });
 }
 
 
