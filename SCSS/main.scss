@@ -72,6 +72,7 @@ body {
     display: flex;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
+    visibility: hidden;
 }
 
 
@@ -79,19 +80,20 @@ body {
     @include noHighlight();
     color:#5fcedc;
     position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        h3{
-            text-align: center;
-        }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    h3{
+        text-align: center;
+    }
     .lds-ellipsis {
         display: inline-block;
         position: relative;

@@ -15,8 +15,7 @@
 .profile-pic img {
   max-width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .main-title {
@@ -71,6 +70,7 @@
    */
 #line-2 {
   animation: animated-text__2 5s steps(29, end) 1s 1 normal both;
+  -webkit-animation-delay: 1s;
   animation-delay: 1s;
   filter: drop-shadow(1px 1px 5px rgb(0, 0, 0));
 }
@@ -98,6 +98,20 @@
 }
 
 @keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes arrow {
   0% {
     opacity: 0;
   }
@@ -464,7 +478,6 @@
   overflow-x: hidden;
   scroll-behavior: smooth;
   height: 100%;
-  min-height: -moz-fit-content;
   min-height: fit-content;
   width: 100%;
   margin-top: -65px;
@@ -553,7 +566,6 @@
   align-items: center;
   justify-content: start;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 5px;
 }
@@ -568,17 +580,6 @@
 .screenshot {
   grid-area: 3/1/4/4;
   padding: 0;
-  /* Arrows */
-  /*Arrows Drawing*/
-  /* .fake-right-arrow{
-      @extend .right-arrow;
-      display: block;
-  }
-  .fake-left-arrow{
-      @extend .left-arrow;
-      display: block;
-  } */
-  /* Hide the scrollbar */
 }
 .screenshot img {
   height: 100%;
@@ -623,6 +624,9 @@
   justify-content: center;
   align-items: center;
 }
+.screenshot {
+  /* Arrows */
+}
 .screenshot .project-screenshots-right-arrow,
 .screenshot .project-screenshots-left-arrow {
   position: absolute;
@@ -638,6 +642,9 @@
 }
 .screenshot .project-screenshots-left-arrow {
   left: 0rem;
+}
+.screenshot {
+  /*Arrows Drawing*/
 }
 .screenshot .project-screenshots-right-arrow::before {
   transform: rotate(45deg);
@@ -667,6 +674,17 @@
   width: 25px;
   height: 10px;
   background-color: white;
+}
+.screenshot {
+  /* .fake-right-arrow{
+      @extend .right-arrow;
+      display: block;
+  }
+  .fake-left-arrow{
+      @extend .left-arrow;
+      display: block;
+  } */
+  /* Hide the scrollbar */
 }
 .screenshot .project-screenshots-slider::-webkit-scrollbar {
   display: none;
@@ -769,6 +787,7 @@ input[type=submit]:active {
 
 .line-5 {
   animation: animated-text__2 5s steps(29, end) 1s 1 normal both;
+  -webkit-animation-delay: 6.5s;
   animation-delay: 6.5s;
 }
 
@@ -788,12 +807,16 @@ input[type=submit]:active {
 }
 
 html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -835,8 +858,7 @@ body {
 
 #loader {
   -webkit-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   color: #5fcedc;
   position: absolute;
   top: 0;
@@ -958,8 +980,7 @@ body {
 /*Scroll-navbar*/
 .swiper-pagination-bullet {
   -webkit-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   margin-bottom: 30px;
   padding: 5px 10px;
   border-radius: 0;
@@ -983,20 +1004,17 @@ body {
 
 .double-lined h1 {
   -webkit-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   cursor: default;
   color: #edb15d;
   background-color: #edb15d;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   text-wrap: balance;
 }
 
 .single-lined h1 {
   -webkit-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   cursor: default;
   background-color: transparent;
   background-color: #edb15d;
@@ -1008,8 +1026,7 @@ body {
 
 .galaxy-font {
   color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   background-color: transparent;
   background-image: url(../assets/img/universe1.gif);
   background-position: 50%;
@@ -1153,7 +1170,6 @@ body {
     top: 50%;
     left: 50%;
     width: 80dvw;
-    min-width: -moz-min-content;
     min-width: min-content;
     max-height: 98dvh;
   }
@@ -1393,7 +1409,6 @@ body {
     align-items: center;
   }
   .tile {
-    min-height: -moz-fit-content;
     min-height: fit-content;
     height: auto;
   }
@@ -1527,7 +1542,6 @@ body {
     font-size: 2rem;
   }
   .about-modal, .projects-modal {
-    height: -moz-fit-content;
     height: fit-content;
     width: 70dvw;
     font-size: 1.5rem;
@@ -1577,7 +1591,6 @@ h3 {
   background-color: transparent;
   color: white;
   padding: 2px;
-  min-width: -moz-fit-content;
   min-width: fit-content;
 }
 
@@ -1617,7 +1630,6 @@ h3 {
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  min-width: -moz-min-content;
   min-width: min-content;
 }
 
@@ -1689,7 +1701,6 @@ h3 {
 .skills {
   align-self: center;
   width: 70%;
-  min-width: -moz-max-content;
   min-width: max-content;
   display: grid;
   place-items: center stretch;
@@ -1709,7 +1720,6 @@ h3 {
 .skill .skill-title {
   display: flex;
   flex-direction: column;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .skill .skill-title-wrapper {
@@ -1718,7 +1728,6 @@ h3 {
   align-items: center;
   justify-content: start;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .skill .skill-name {
@@ -1728,4 +1737,6 @@ h3 {
 }
 .skill .skill-icon {
   font-size: x-large;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

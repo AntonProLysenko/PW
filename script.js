@@ -3,6 +3,7 @@ import projects_info from './assets/project_info.js';
 
 //Showing Loader
 document.onreadystatechange = function () {
+  console.log("document.readyState ", document.readyState)
   if (document.readyState !== "complete") {
     document.querySelector("body").style.visibility = "hidden";
     document.querySelector(".arrows").style.visibility="hidden"
@@ -351,8 +352,10 @@ projectInfonavLinks.forEach((navLink)=>{
 })
 
 function goToTile(evt){
+  console.log("Scrolling")
   let target = evt.target.dataset.target
   let tile = document.querySelector(`.${target}`)
+  console.log("Scrolling to ", tile)
   //Hiding the navbar if it was opened before
   if (navbarLinks.classList.contains("active-links")){
     toggleMobileHeader()
@@ -362,6 +365,7 @@ function goToTile(evt){
   //Each time the scroll heighth has to be resetet to not break the slider
   infoTilesContainer.scroll(0, 0);
   let yTarget = GetScrollCoordinate(target, "tiles-wrapper")
+  console.log("Scroll")
   infoTilesContainer.scroll(0, yTarget);
 
   // console.log(yTarget);  
